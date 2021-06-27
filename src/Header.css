@@ -1,0 +1,16 @@
+.Header{
+    background-color: black;
+    color: white;
+font-family: PT Serif;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 28px;
+display: flex;
+align-items: center;
+letter-spacing: -0.02em;
+}
+
+.store{
+    color: #00ADEF;
+}

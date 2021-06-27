@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Startseite from "./Startseite";
+import Ziel from "./Ziel";
+import Fokus from "./Fokus";
+import Methodik from "./Methodik";
+import Allgemein from "./Allgemein";
+import Umfang from "./Umfang";
+import Grundbausteine from "./Grundbausteine";
+import Konfiguration from "./Konfiguration";
+import Zusatzleistungen from "./Zusatzleistungen";
+import Zusammenfassung from "./Zusammenfassung";
+import Kontaktformular from "./Kontaktformular";
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <main>
+            <Switch>
+                <Route path="/" component={Startseite} exact />
+                <Route path="/Ziel" component={Ziel} />
+                <Route path="/Fokus" component={Fokus} exact />
+                <Route path="/Methodik" component={Methodik} exact />
+                <Route path="/Allgemein" component={Allgemein} />
+                <Route path="/Umfang" component={Umfang} />
+                 <Route path="/Grundbausteine" component={Grundbausteine} />
+                <Route path="/Konfiguration" component={Konfiguration} />
+                <Route path="/Zusatzleistungen" component={Zusatzleistungen} />
+                <Route path="/Zusammenfassung" component={Zusammenfassung} />
+                <Route path="/Kontaktformular" component={Kontaktformular} />
+            </Switch>
+        </main>
   );
 }
 
