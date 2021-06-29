@@ -3,6 +3,8 @@ import './Ziel.css';
 import Header from './Header.js';
 import Footer from './Footer.js';
 import Button from '@material-ui/core/Button';
+import info_Icon from './info_Icon.png';
+import icon_shopping_bag from './icon_shopping_bag.png'
 
 function Kategorien() {
   return (
@@ -55,11 +57,13 @@ function Kategorien() {
         </div>
 
         <div className="infolabel">
+            <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
            <p>Bitte wählen Sie die gewünschte Paketgröße aus.</p>
         </div>
 
         <div className="einkaufswagen">
-            <p>Ihr Warenkorb ist leer.</p>
+            <img src={icon_shopping_bag} alt="icon" width="45px" height="45px" style={{paddingLeft: "100px"}}/>
+            <p className="leer">Ihr Warenkorb ist leer.</p>
         </div>
         <Button variant="contained"
                 style={{
