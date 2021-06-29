@@ -6,6 +6,9 @@ function Fokus() {
   return (
         <div>
             <Kategorien/>
+            <div>
+
+            </div>
         </div>
   );
 }

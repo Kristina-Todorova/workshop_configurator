@@ -2,6 +2,7 @@ import './App.css';
 import Header from './Header.js';
 import Button from '@material-ui/core/Button';
 import {Link} from "react-router-dom";
+import Footer from "./Footer";
 
 
 function Startseite() {
@@ -58,8 +59,6 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
 
         </div>
-
-
     </div>
   );
 }

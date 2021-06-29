@@ -1,0 +1,25 @@
+.footer{
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    background-color: black;
+    color: rgba(221, 221, 221, 0.5);
+    width: 1440px;
+    height: 90px;
+    text-align: center;
+    line-height: 90px;
+}
+
+.left{
+    text-align: left;
+}
+
+.center{
+    text-align: center;
+}
+
+.right{
+    text-align: right;
+}

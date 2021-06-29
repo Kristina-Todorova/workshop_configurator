@@ -24,7 +24,7 @@ function App() {
                 <Route path="/Methodik" component={Methodik} exact />
                 <Route path="/Allgemein" component={Allgemein} />
                 <Route path="/Umfang" component={Umfang} />
-                 <Route path="/Grundbausteine" component={Grundbausteine} />
+                <Route path="/Grundbausteine" component={Grundbausteine} />
                 <Route path="/Konfiguration" component={Konfiguration} />
                 <Route path="/Zusatzleistungen" component={Zusatzleistungen} />
                 <Route path="/Zusammenfassung" component={Zusammenfassung} />

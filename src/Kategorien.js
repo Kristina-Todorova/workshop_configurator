@@ -1,6 +1,7 @@
 import './Kategorien.css';
 import './Ziel.css';
 import Header from './Header.js';
+import Footer from './Footer.js';
 import Button from '@material-ui/core/Button';
 
 function Kategorien() {
@@ -74,6 +75,7 @@ function Kategorien() {
             Weiter
         </Button>
 
+        <Footer/>
 
     </div>
   );
