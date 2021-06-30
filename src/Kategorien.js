@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import info_Icon from './info_Icon.png';
 import icon_shopping_bag from './icon_shopping_bag.png'
 import {Link} from "react-router-dom";
+import Einkaufswagen from "./Einkaufswagen";
 
 function Kategorien() {
 
@@ -115,10 +116,8 @@ function Kategorien() {
            <p>Bitte wählen Sie die gewünschte Paketgröße aus.</p>
         </div>
 
-        <div className="einkaufswagen">
-            <img src={icon_shopping_bag} alt="icon" width="45px" height="45px" style={{paddingLeft: "100px"}}/>
-            <p className="leer">Ihr Warenkorb ist leer.</p>
-        </div>
+        <Einkaufswagen/>
+
         <Button variant="contained"
                 style={{
                     width: "140px",
