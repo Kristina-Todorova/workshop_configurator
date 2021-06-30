@@ -7,6 +7,7 @@ import info_Icon from './info_Icon.png';
 import icon_shopping_bag from './icon_shopping_bag.png'
 import {Link} from "react-router-dom";
 import Einkaufswagen from "./Einkaufswagen";
+import Weiter from "./Weiter";
 
 function Kategorien() {
 
@@ -15,10 +16,6 @@ function Kategorien() {
       }
       function MouseOut(event){
         event.target.style.background="";
-      }
-
-      function Click(event){
-          event.target.style.background="red";
       }
 
   return (
@@ -117,21 +114,6 @@ function Kategorien() {
         </div>
 
         <Einkaufswagen/>
-
-        <Button variant="contained"
-                style={{
-                    width: "140px",
-                    height: "50px",
-                    backgroundColor: "#00ADEF",
-                    fontFamily: "PT Serif",
-                    fontStyle: "normal",
-                    fontWeight: "bold",
-                    marginLeft: "1255px",
-                    marginTop: "40px"
-                }}>
-            Weiter
-        </Button>
-
         <Footer/>
 
     </div>

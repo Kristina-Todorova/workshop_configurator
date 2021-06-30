@@ -1,12 +1,17 @@
 import './Kategorien.css';
 import Kategorien from "./Kategorien";
-import Button from '@material-ui/core/Button';
+import Weiter from "./Weiter";
+import {Link} from "react-router-dom";
 
 function Ziel() {
   return (
 
     <div>
         <Kategorien/>
+
+        <Link to="/Fokus" style={{ textDecoration: 'none', color:'black' }}>
+        <Weiter/>
+        </Link>
         <div className="square1">
             <p className="title">Informative Sessions</p>
             <p className="textsquare"> SQUARE 1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore. </p>
@@ -26,7 +31,6 @@ function Ziel() {
             <p className="title">Informative Sessions</p>
             <p className="textsquare">SQUARE 4 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore. </p>
         </div>
-
     </div>
 
   );

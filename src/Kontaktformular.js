@@ -2,6 +2,7 @@ import React from "react";
 import Kategorien from "./Kategorien";
 import "./Kontaktformular.css"
 import {TextField} from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 
 function Kontaktformular() {
 
@@ -39,6 +40,21 @@ function Kontaktformular() {
                 </div>
 
             </form>
+
+            <Button variant="contained"
+
+                style={{
+                    width: "140px",
+                    height: "50px",
+                    fontFamily: "PT Serif",
+                    fontStyle: "normal",
+                    backgroundColor:"lightgray",
+                    fontWeight: "bold",
+                    marginLeft: "1255px",
+                    marginTop: "7px"
+                }}>
+            Absenden
+        </Button>
         </div>
   );
 }
