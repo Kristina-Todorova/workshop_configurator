@@ -6,7 +6,6 @@ function Konfiguration() {
   return (
         <div>
             <Kategorien/>
-            
         </div>
   );
 }

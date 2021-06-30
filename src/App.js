@@ -22,13 +22,13 @@ function App() {
                 <Route path="/Ziel" component={Ziel} />
                 <Route path="/Fokus" component={Fokus} exact />
                 <Route path="/Methodik" component={Methodik} exact />
-                <Route path="/Allgemein" component={Allgemein} />
-                <Route path="/Umfang" component={Umfang} />
-                <Route path="/Grundbausteine" component={Grundbausteine} />
-                <Route path="/Konfiguration" component={Konfiguration} />
-                <Route path="/Zusatzleistungen" component={Zusatzleistungen} />
-                <Route path="/Zusammenfassung" component={Zusammenfassung} />
-                <Route path="/Kontaktformular" component={Kontaktformular} />
+                <Route path="/Allgemein" component={Allgemein} exact />
+                <Route path="/Umfang" component={Umfang} exact />
+                <Route path="/Grundbausteine" component={Grundbausteine} exact />
+                <Route path="/Konfiguration" component={Konfiguration} exact />
+                <Route path="/Zusatzleistungen" component={Zusatzleistungen} exact />
+                <Route path="/Zusammenfassung" component={Zusammenfassung} exact />
+                <Route path="/Kontaktformular" component={Kontaktformular} exact />
             </Switch>
         </main>
   );

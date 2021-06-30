@@ -6,12 +6,11 @@
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
-  line-height: 50px;
-  margin-top: 1%;
+  line-height: 43px;
+  margin-top: -0.1%;
   letter-spacing: -0.02em;
   color: #000000;
   text-align: left;
-  vertical-align: middle;
 }
 
 .stripee{
@@ -24,7 +23,6 @@
   align-items: center;
   color: #000000;
   margin-left: 3%;
-  margin-top: -0.001%;
 }
 
 .configurator{
