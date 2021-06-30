@@ -1,0 +1,61 @@
+.anrede{
+    margin-top: -520px;
+    margin-left: 300px;
+    width: 106px;
+    height: 32px;
+}
+
+.vorname{
+    margin-left: 300px;
+    margin-top: 50px;
+    width: 221px;
+    height: 32px;
+
+}
+
+.nachname{
+    margin-left: 550px;
+    margin-top: -30px;
+    width: 221px;
+    height: 32px;
+
+}
+
+.firma{
+    margin-left: 300px;
+    margin-top: 55px;
+    width: 287px;
+    height: 32px;
+
+}
+
+.standort{
+    margin-left: 550px;
+    margin-top: -30px;
+    width: 221px;
+    height: 32px;
+
+}
+
+.email{
+    margin-left: 300px;
+    margin-top: 60px;
+
+}
+
+.tel{
+    margin-left: 550px;
+    margin-top: -55px;
+
+}
+
+.form{
+    margin-top: 2%;
+}
+
+
+
+
+
+
+
