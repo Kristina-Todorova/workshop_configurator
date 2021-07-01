@@ -1,33 +1,40 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import AlertTitle from 'react-alert-template-basic';
 import CookieConsent from "react-cookie-consent";
-import { Alert } from 'reactstrap';
+import "./Cookies.scss"
 
 function Cookies() {
 
     return (
 
     <div className="cookie">
-        <CookieConsent debug={true} buttonText="Einverstanden"
+        <CookieConsent debug={true} disableStyles buttonText="Einverstanden"
+        location="none"
+        cookieName="myAwesomeCookieName2"
+        overlayClasses="overlayclass"
+
+
         style={{
         background: "white",
-        color: "#00ADEF" }}
+        alignItems: "left",
+        color: "gray" }}
         buttonStyle={{
         background: "#00ADEF",
-         color: "white",
+        color: "white",
 
-  }}> Wir verwenden Cookies <p style={{
-   color: "black"
+  }}> <b>Wir verwenden Cookies</b>
+   <span style={{ fontSize: "10px" }}>
+   <p style={{
+   color: "gray"
    }}> Wir verwenden Cookies, Tracking- und (Re-)Targeting-Technologien. </p>
    <p style={{
-   color: "black"
+   color: "gray"
    }}>Damit wollen wir unsere Webseiten nutzerfreundlicher gestalten und fortlaufend verbessern sowie Ihnen für Sie passende Angebote und Werbung anzeigen. Wenn Sie die Webseiten weiter nutzen, stimmen Sie dadurch der Verwendung von Cookies zu mit der Ausnahme von Cookies für Google-Marketing-Produkte.
    }}
  </p>
   <p style={{
-   color: "black"
-   }}> Google-Marketing-Produkte kommen nur zum Einsatz, wenn Sie auf „Einverstanden“ klicken.</p> </CookieConsent>
+   color: "gray"
+   }}> Google-Marketing-Produkte kommen nur zum Einsatz, wenn Sie auf „Einverstanden“ klicken.</p> </span></CookieConsent>
         </div>
 
     );
