@@ -3,6 +3,7 @@ import Header from './Header.js';
 import Button from '@material-ui/core/Button';
 import {Link} from "react-router-dom";
 import Footer from "./Footer";
+import Cookies from "./Cookies";
 
 
 function Startseite() {
@@ -11,6 +12,7 @@ function Startseite() {
 
     <div className="App">
         <Header/>
+        <Cookies/>
         <div className="rectangle">
 
             <p className="stripe">
@@ -20,6 +22,7 @@ function Startseite() {
         <p className="layer1">
             Herzlich Willkommen
         </p>
+
 
         <p className={"layer2"}>im Mercedes-Benz Workshop Konfigurator</p>
 
