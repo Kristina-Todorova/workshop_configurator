@@ -3,6 +3,7 @@ import Kategorien from "./Kategorien";
 import "./Kontaktformular.css"
 import {TextField} from "@material-ui/core";
 import Button from "@material-ui/core/Button";
+import info_Icon from "./info_Icon.png";
 
 function Kontaktformular() {
 
@@ -55,6 +56,27 @@ function Kontaktformular() {
                 }}>
             Absenden
         </Button>
+            <div className="infolabel"
+                 style={{
+                    fontFamily: "Arial",
+                    fontStyle:"normal",
+                    fontWeight:"normal",
+                    fontSize:"14px",
+                    lineHeight:"16px",
+                    display:"flex",
+                    alignItems:"center",
+                    color:"#000000",
+                    width: "820px",
+                    height: "70px",
+                    left: "345px",
+                    top: "239px",
+                    background: "rgba(0, 173, 239, 0.25)",
+                    marginLeft: "300px",
+                    marginTop:"-485px"
+                    }}>
+                    <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
+                   <p>Bitte geben Sie nachfolgend Ihre Kontaktdaten an. </p>
+            </div>
         </div>
   );
 }

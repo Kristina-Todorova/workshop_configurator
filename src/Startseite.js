@@ -2,7 +2,6 @@ import './App.css';
 import Header from './Header.js';
 import Button from '@material-ui/core/Button';
 import {Link} from "react-router-dom";
-import Footer from "./Footer";
 import Cookies from "./Cookies";
 
 
@@ -53,13 +52,14 @@ function Startseite() {
             Über den Konfigurator
         </p>
 
-        <p className="layer4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+        <p className="layer4">Zielgerichtete Kompetenzentwicklung und -weiterbildung bilden den Grundstein für einen nachhaltigen Geschäftserfolg. Unser Ziel ist es daher, Kompetenzen in verschiedenen Fachbereichen zu vermitteln und bei der wirkungsvollen Umsetzung in der täglichen Praxis zu unterstützen.
 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            Durch ein breites Themenspektrum und erfahrene Trainer, Consultants und Coaches können wir Ihnen praxisnahe, topaktuelle Workshops bieten. </p>
+            <p className="layer5">Mithilfe der im Workshop neu erworbenen Kenntnisse können Sie Ihr Unternehmen für die Zukunft rüsten und Prozesse und Strategien weiter verbessern. Zudem haben Sie die Möglichkeit sich konstant weiterzubilden und bestehendes Wissen effektiv aufzufrischen.
 
-            <p className="layer5">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+Der Mercedes-Benz Consulting Workshop Konfigurator unterstützt Sie dabei in der Buchung Ihres Workshops um diesen Ihren individuellen Bedürfnissen nach zu gestalten. Damit wollen wir den größtmöglichen Erfolg Ihres Workshops erzielen.
 
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
+</p>
 
         </div>
     </div>

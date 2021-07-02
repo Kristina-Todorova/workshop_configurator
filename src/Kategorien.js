@@ -2,12 +2,10 @@ import './Kategorien.css';
 import './Ziel.css';
 import Header from './Header.js';
 import Footer from './Footer.js';
-import Button from '@material-ui/core/Button';
-import info_Icon from './info_Icon.png';
-import icon_shopping_bag from './icon_shopping_bag.png'
+
 import {Link} from "react-router-dom";
 import Einkaufswagen from "./Einkaufswagen";
-import Weiter from "./Weiter";
+
 
 function Kategorien() {
 
@@ -106,11 +104,6 @@ function Kategorien() {
             &nbsp;&nbsp;Zusammenfassung
             </p>
             </Link>
-        </div>
-
-        <div className="infolabel">
-            <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
-           <p>Bitte wählen Sie die gewünschte Paketgröße aus.</p>
         </div>
 
         <Einkaufswagen/>
