@@ -5,9 +5,17 @@ import Footer from './Footer.js';
 
 import {Link} from "react-router-dom";
 import Einkaufswagen from "./Einkaufswagen";
+import React from "react";
 
 
-function Kategorien() {
+
+function Kategorien(props) {
+
+    const informative = props.informative
+    const auftrag = props.auftrag
+    const ergebnis = props.ergebnis
+    const fort = props.fort
+
 
     function MouseOver(event) {
         event.target.style.background = '#00ADEF';
@@ -105,8 +113,24 @@ function Kategorien() {
             </p>
             </Link>
         </div>
+        <Einkaufswagen
+            ziel= {informative===true
+                ? <p className="cartitem">{"Informative Session"}</p>
+                : auftrag===true
+                    ? <p className="cartitem">{"Ergebnisorientierte Session"}</p>
+                    : ergebnis===true
+                        ? <p className="cartitem">{"Auftragsklärung"}</p>
+                        : fort===true
+                            ?<p className="cartitem">{"Coaching/Training Session"}</p>
+                                : <p className="leer">Ihr Warenkorb ist leer.</p>
+                    }
 
-        <Einkaufswagen/>
+            fokus="Digital Shift"
+            methodik="Design Thinking"
+            allgemein="Deutsch, Präsenz, 150 Teilnehmen"
+            umfang="Deep Dive"
+            konfiguration="Informative Session"
+            zusatzleistungen="Catering"/>
         <Footer/>
 
     </div>

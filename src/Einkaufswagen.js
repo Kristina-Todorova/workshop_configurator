@@ -1,16 +1,56 @@
 import React from "react";
 import icon_shopping_bag from "./icon_shopping_bag.png";
 import "./Einkaufswagen.css"
-import zeit from "./zeit.png"
 
-function Einkaufswagen() {
+function Einkaufswagen(props) {
+
+    const ziel = props.ziel;
+    const fokus = props.fokus;
+    const methodik = props.methodik;
+    const allgemein = props.allgemein;
+    const umfang = props.umfang;
+    const grundbausteine = props.grundbausteine;
+    const konfiguration = props.konfiguration;
+    const zusatzleistungen = props.zusatzleistungen;
+
 
   return (
         <div className="einkaufswagen">
             <img src={icon_shopping_bag} alt="icon" width="45px" height="45px" style={{paddingLeft: "100px"}}/>
-            <img src={zeit} alt="icon" width="45px" height="45px" style={{margin:"-20%",}}/>
 
-            <p className="leer">Ihr Warenkorb ist leer.</p>
+
+            {ziel
+                ? <p className="cartitem">{props.ziel}</p>
+                : <p className="leer">Ihr Warenkorb ist leer.</p>
+                }
+
+            {fokus
+                && <p className="cartitem">{props.fokus}</p>
+                }
+
+            {methodik
+                && <p className="cartitem">{props.methodik}</p>
+                }
+
+            {allgemein
+                && <p className="cartitem">{props.allgemein}</p>
+                }
+
+           {umfang
+                && <p className="cartitem">{props.umfang}</p>
+                }
+
+           {grundbausteine
+                && <p className="cartitem">{props.grundbausteine}</p>
+                }
+
+           {konfiguration
+                && <p className="cartitem">Zusätzlich: {props.konfiguration}</p>
+                }
+
+           {zusatzleistungen
+                && <p className="cartitem">{props.zusatzleistungen}</p>
+                }
         </div>
   );
 }
