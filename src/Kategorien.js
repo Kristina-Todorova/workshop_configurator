@@ -2,7 +2,6 @@ import './Kategorien.css';
 import './Ziel.css';
 import Header from './Header.js';
 import Footer from './Footer.js';
-
 import {Link} from "react-router-dom";
 import Einkaufswagen from "./Einkaufswagen";
 import React from "react";

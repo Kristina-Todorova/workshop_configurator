@@ -4,7 +4,9 @@ import Weiter from "./Weiter";
 import {Link} from "react-router-dom";
 import info_Icon from "./info_Icon.png";
 import React, {useState, useContext, useEffect} from "react";
-import GlobalState from "./GlobalState";
+import GlobalState from "./global/GlobalState";
+import GlobalCatering from "./global/GlobalCatering"
+import GlobalTechnik from "./global/GlobalTechnik";
 
 function Ziel(props) {
 
@@ -12,10 +14,11 @@ function Ziel(props) {
     let [auftrag,setAuftrag] = useState(false)
     let [ergebnis,setErgebnis] = useState(false)
     let [fort,setFort] = useState(false)
+
+
     let [movie,setMovie] = useContext(GlobalState)
-
-    console.log(movie)
-
+    let [catering,setCatering] = useContext(GlobalCatering)
+    let [technik,setTechnik] = useContext(GlobalTechnik)
 
 
     function handleClick() {
@@ -46,8 +49,6 @@ function Ziel(props) {
         setInformative(false)
     }
 
-
-
   return (
 
     <div>
@@ -57,6 +58,8 @@ function Ziel(props) {
             ergebnis={ergebnis}
             fort={fort}
             movie={movie}
+            catering={catering}
+            technik={technik}
         />
 
         <Link to="/Fokus" style={{ textDecoration: 'none', color:'black' }}>

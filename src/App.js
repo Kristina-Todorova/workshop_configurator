@@ -11,18 +11,25 @@ import Konfiguration from "./Konfiguration";
 import Zusatzleistungen from "./Zusatzleistungen";
 import Zusammenfassung from "./Zusammenfassung";
 import Kontaktformular from "./Kontaktformular";
-import GlobalState from "./GlobalState";
+import GlobalState from "./global/GlobalState";
+import GlobalCatering from "./global/GlobalCatering";
+import GlobalTechnik from "./global/GlobalTechnik";
 
 
 function App() {
 
 
     const [movie, setMovie] = useState(false);
+    const [catering, setCatering] = useState(false);
+    const [technik, setTechnik] = useState(false);
 
 
   return (
         <main>
+             <GlobalTechnik.Provider value={[technik, setTechnik]}>
+            <GlobalCatering.Provider value={[catering, setCatering]}>
             <GlobalState.Provider value={[movie, setMovie]}>
+
                 <Switch>
                     <Route exact path="/">
                         <Startseite/>
@@ -70,6 +77,8 @@ function App() {
 
                 </Switch>
             </GlobalState.Provider>
+            </GlobalCatering.Provider>
+             </GlobalTechnik.Provider>
         </main>
 
   );

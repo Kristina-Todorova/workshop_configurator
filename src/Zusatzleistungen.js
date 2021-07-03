@@ -4,13 +4,15 @@ import "./Zusatzleistungen.css"
 import Weiter from "./Weiter";
 import {Link} from "react-router-dom";
 import info_Icon from "./info_Icon.png";
-import GlobalState from "./GlobalState";
+import GlobalState from "./global/GlobalState";
+import GlobalCatering from "./global/GlobalCatering";
+import GlobalTechnik from "./global/GlobalTechnik";
 
 
 function Zusatzleistungen() {
 
-    let [catering,setCatering] = useState(false)
-    let [technik,setTechnik] = useState(false)
+    let [catering,setCatering] = useContext(GlobalCatering)
+    let [technik,setTechnik] = useContext(GlobalTechnik)
     let [movie,setMovie] = useContext(GlobalState)
 
     function chooseCatering() {
@@ -24,8 +26,6 @@ function Zusatzleistungen() {
     function chooseMovie() {
         setMovie(GlobalState => !GlobalState)
     }
-
-    console.log(movie);
 
   return (
         <div>
