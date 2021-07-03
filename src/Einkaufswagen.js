@@ -11,7 +11,9 @@ function Einkaufswagen(props) {
     const umfang = props.umfang;
     const grundbausteine = props.grundbausteine;
     const konfiguration = props.konfiguration;
-    const zusatzleistungen = props.zusatzleistungen;
+    const catering = props.catering;
+    const technik = props.technik;
+    const movie = props.movie;
 
 
   return (
@@ -48,8 +50,16 @@ function Einkaufswagen(props) {
                 && <p className="cartitem">Zusätzlich: {props.konfiguration}</p>
                 }
 
-           {zusatzleistungen
-                && <p className="cartitem">{props.zusatzleistungen}</p>
+           {catering
+                && <p className="cartitem">{props.catering}</p>
+                }
+
+           {technik
+                && <p className="cartitem">{props.technik}</p>
+                }
+
+           {movie
+                && <p className="cartitem">{props.movie}</p>
                 }
         </div>
   );

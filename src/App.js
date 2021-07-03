@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Startseite from "./Startseite";
 import Ziel from "./Ziel";
@@ -11,26 +11,67 @@ import Konfiguration from "./Konfiguration";
 import Zusatzleistungen from "./Zusatzleistungen";
 import Zusammenfassung from "./Zusammenfassung";
 import Kontaktformular from "./Kontaktformular";
+import GlobalState from "./GlobalState";
 
 
 function App() {
 
+
+    const [movie, setMovie] = useState(false);
+
+
   return (
         <main>
-            <Switch>
-                <Route path="/" component={Startseite} exact />
-                <Route path="/Ziel" component={Ziel} />
-                <Route path="/Fokus" component={Fokus} exact />
-                <Route path="/Methodik" component={Methodik} exact />
-                <Route path="/Allgemein" component={Allgemein} exact />
-                <Route path="/Umfang" component={Umfang} exact />
-                <Route path="/Grundbausteine" component={Grundbausteine} exact />
-                <Route path="/Konfiguration" component={Konfiguration} exact />
-                <Route path="/Zusatzleistungen" component={Zusatzleistungen} exact />
-                <Route path="/Zusammenfassung" component={Zusammenfassung} exact />
-                <Route path="/Kontaktformular" component={Kontaktformular} exact />
-            </Switch>
+            <GlobalState.Provider value={[movie, setMovie]}>
+                <Switch>
+                    <Route exact path="/">
+                        <Startseite/>
+                    </Route>
+
+                    <Route exact path="/Ziel">
+                        <Ziel/>
+                    </Route>
+
+                    <Route exact path="/Fokus">
+                        <Fokus/>
+                    </Route>
+
+                    <Route exact path="/Methodik">
+                        <Methodik/>
+                    </Route>
+
+                    <Route exact path="/Allgemein">
+                        <Allgemein/>
+                    </Route>
+
+                    <Route exact path="/Umfang">
+                        <Umfang/>
+                    </Route>
+
+                    <Route exact path="/Grundbausteine">
+                        <Grundbausteine/>
+                    </Route>
+
+                    <Route exact path="/Konfiguration">
+                        <Konfiguration/>
+                    </Route>
+
+                    <Route exact path="/Zusatzleistungen">
+                        <Zusatzleistungen/>
+                    </Route>
+
+                    <Route exact path="/Zusammenfassung">
+                        <Zusammenfassung/>
+                    </Route>
+
+                    <Route exact path="/Kontaktformular">
+                        <Kontaktformular/>
+                    </Route>
+
+                </Switch>
+            </GlobalState.Provider>
         </main>
+
   );
 }
 

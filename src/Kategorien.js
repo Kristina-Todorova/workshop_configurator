@@ -16,6 +16,9 @@ function Kategorien(props) {
     const ergebnis = props.ergebnis
     const fort = props.fort
 
+    const catering = props.catering
+    const technik = props.technik
+    const movie = props.movie
 
     function MouseOver(event) {
         event.target.style.background = '#00ADEF';
@@ -125,12 +128,20 @@ function Kategorien(props) {
                                 : <p className="leer">Ihr Warenkorb ist leer.</p>
                     }
 
-            fokus="Digital Shift"
-            methodik="Design Thinking"
-            allgemein="Deutsch, Präsenz, 150 Teilnehmen"
-            umfang="Deep Dive"
-            konfiguration="Informative Session"
-            zusatzleistungen="Catering"/>
+            fokus="D"
+            methodik="D"
+            allgemein="D"
+            umfang="D"
+            konfiguration="Inf"
+
+            catering={catering===true && <p className="cartitem">{"Catering"}</p>}
+            technik={technik===true && <p className="cartitem">{"Technik"}</p>}
+            movie={movie===true && <p className="cartitem">{"After-Movie"}</p>}
+
+
+            />
+
+
         <Footer/>
 
     </div>
