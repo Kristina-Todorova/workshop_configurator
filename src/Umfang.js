@@ -33,7 +33,7 @@ function Umfang() {
             paketL={PaketL}/>
 
              <Link to="/Grundbausteine" style={{ textDecoration: 'none', color:'black' }}>
-            <Weiter/>
+             <Weiter/>
              </Link>
              <div className="sqr01" onClick={choosePaketS}>
                  <p className="title">Paket S</p>

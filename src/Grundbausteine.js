@@ -3,16 +3,60 @@ import Kategorien from "./Kategorien";
 import Weiter from "./Weiter";
 import {Link} from "react-router-dom";
 import info_Icon from "./info_Icon.png";
+import GlobalKeynote from "./global/GlobalKeynote";
+import GlobalEinfuehrung from "./global/GlobalEinfuehrung";
+import GlobalErarbeitung from "./global/GlobalErarbeitung";
+import GlobalVortragZurUmsetzung from "./global/GlobalVortragZurUmsetzung";
 
 function Grundbausteine() {
+    let [keynote,setKeynote] = useContext(GlobalKeynote)
+    let [einfuehrung,setEinfuehrung] = useContext(GlobalEinfuehrung)
+    let [erarbeitung,setErarbeitung] = useContext(GlobalErarbeitung)
+    let [vortragZurUmsetzung,setVortragZurUmsetzung] = useContext(GlobalVortragZurUmsetzung)
+
+    function chooseKeynote() {
+        setKeynote(prevState => !prevState)
+    }
+
+    function chooseEinfuehrung() {
+        setEinfuehrung(prevState => !prevState)
+    }
+
+    function chooseErarbeitung() {
+        setErarbeitung(GlobalState => !GlobalState)
+    }
+    function chooseVortragZurUmsetzung() {
+        setVortragZurUmsetzung(GlobalState => !GlobalState)
+    }
 
   return (
         <div>
-            <Kategorien/>
+            <Kategorien
+
+            keynote={keynote}
+            einfuehrung={einfuehrung}
+            erarbeitung={erarbeitung}
+            vortragZurUmsetzung={vortragZurUmsetzung}/>
 
              <Link to="/Konfiguration" style={{ textDecoration: 'none', color:'black' }}>
              <Weiter/>
              </Link>
+             <div className="square0001" onClick={chooseKeynote} >
+                 <p className="title">Keynote</p>
+             </div>
+
+             <div className="square0002" onClick={chooseEinfuehrung} >
+                <p className="title">Einführung</p>
+             </div>
+
+             <div className="square0003" onClick={chooseErarbeitung} >
+                 <p className="title">Erarbeitung</p>
+             </div>
+
+             <div className="square0004" onClick={chooseVortragZurUmsetzung} >
+                 <p className="title">Vortrag zur Umsetzung</p>
+             </div>
+
             <div className="infolabel"
                  style={{
                     fontFamily: "Arial",
@@ -31,9 +75,9 @@ function Grundbausteine() {
                     marginLeft: "300px",
                     marginTop:"-615px"
                     }} >
-            <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
-           <p>Entsprechend Ihrer Auswahl wurden Ihnen folgende Grundbausteine zusammengestellt. Im nächsten Schritt können Sie Ihren Workshop personalisieren.</p>
-        </div>
+                    <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
+                    <p>Entsprechend Ihrer Auswahl wurden Ihnen folgende Grundbausteine zusammengestellt. Im nächsten Schritt können Sie Ihren Workshop personalisieren.</p>
+            </div>
         </div>
   );
 }

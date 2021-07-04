@@ -1,0 +1,85 @@
+.square0001{
+    height: 810px;
+    width: 50px;
+    background-color: lightgray;
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 300px;
+    margin-top: -530px;
+}
+
+.square0002{
+    height: 810px;
+    width: 50px;
+    background-color: lightgray;
+
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    color: #000000;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 300px;
+    margin-top: -470px;
+}
+
+.square0003{
+    height: 810px;
+    width: 50px;
+    background-color: lightgray;
+
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    color: #000000;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 300px;
+    margin-top: -410px;
+}
+
+.square0004{
+    height: 810px;
+    width: 50px;
+    background-color: lightgray;
+
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    color: #000000;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 300px;
+    margin-top: -350px;
+
+}
+
+
+.title{
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    padding-top: 20px;
+}
+
+.textsquare{
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    align-items: center;
+    padding: 10px;
+
+}
