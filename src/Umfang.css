@@ -1,0 +1,71 @@
+.sqr01{
+      height: 250px;
+      width: 800px;
+      background-color: lightgray;
+
+      font-family: PT Serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      color: #000000;
+      text-align: center;
+      vertical-align: middle;
+    margin-left: 300px;
+    margin-top: -500px;
+
+}
+
+.sqr02{
+    height: 250px;
+      width: 800px;
+      background-color: lightgray;
+
+      font-family: PT Serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      color: #000000;
+      text-align: center;
+      vertical-align: middle;
+    margin-left: 600px;
+    margin-top: -274px;
+}
+
+.sqr03{
+    height: 250px;
+      width: 800px;
+      background-color: lightgray;
+
+      font-family: PT Serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      color: #000000;
+      text-align: center;
+      vertical-align: middle;
+    margin-left: 900px;
+    margin-top: -270px;
+
+}
+
+.title{
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    padding-top: 20px;
+}
+
+.textsquare{
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    align-items: center;
+    padding: 10px;
+
+}
