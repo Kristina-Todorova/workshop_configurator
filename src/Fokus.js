@@ -4,7 +4,7 @@ import "./Fokus.css"
 import {Link} from "react-router-dom";
 import info_Icon from "./info_Icon.png";
 import React, {useState, useContext, useEffect} from "react";
-import GlobalDigitalShift from "./global/GlobalDigitalShift"
+import GlobalDigitalShift from "./global/GlobalDigitalShift";
 import GlobalFutureSales from "./global/GlobalFutureSales";
 import GlobalFutureRetail from "./global/GlobalFutureRetail";
 import GlobalFutureMobility from "./global/GlobalFutureMobility";
