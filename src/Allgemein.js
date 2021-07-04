@@ -1,17 +1,94 @@
-import React from "react";
 import Kategorien from "./Kategorien";
 import Weiter from "./Weiter";
 import {Link} from "react-router-dom";
 import info_Icon from "./info_Icon.png";
+import React, {useState, useContext, useEffect} from "react";
+import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
+import { makeStyles } from '@material-ui/core/styles';
+import GlobalSprache from "./global/GlobalSprache";
+import GlobalOrt from "./global/GlobalOrt";
+import GlobalTeilnehmer from "./global/GlobalTeilnehmer";
+import GlobalZeitraum from "./global/GlobalZeitraum";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  },
+}));
+
+export default function BasicButtonGroup() {
+  const classes = useStyles(); //das ist nicht korrekt
 
 function Allgemein() {
+    let [sprache, setSprache ] = useContext(GlobalSprache)
+    let [ort,setOrt] = useContext(GlobalOrt)
+    let [teilnehmer,setTeilnehmer] = useContext(GlobalTeilnehmer)
+    let [zeitraum,setZeitraum] = useContext(GlobalZeitraum)
+
+    function chooseSprache() {
+        setSprache(prevState => !prevState)
+    }
+
+    function chooseOrt() {
+        setOrt(prevState => !prevState)
+    }
+
+    function chooseTeilnehmer() {
+        setTeilnehmer(GlobalState => !GlobalState)
+    }
+    function chooseZeitraum() {
+        setVortragZeitraum(GlobalState => !GlobalState)
+    }
 
   return (
         <div>
-          <Kategorien/>
-             <Link to="/Umfang" style={{ textDecoration: 'none', color:'black' }}>
+
+            <Kategorien
+
+            sprache={sprache}
+            ort={ort}
+            teilnehmer={teilnehmer}
+            zeitraum={zeitraum}/>
+
+            <Link to="/Umfang" style={{ textDecoration: 'none', color:'black' }}>
             <Weiter/>
-             </Link>
+            </Link>
+
+            <div className="square00001" onClick={chooseSprache} >
+                <p className="title">Sprache</p>
+
+                <ButtonGroup color="primary" aria-label="outlined primary button group">
+                    <Button>Deutsch</Button>
+                    <Button>Englisch</Button>
+                    <Button>Andere</Button>
+                </ButtonGroup>
+            </div>
+
+            <div className="square00002" onClick={chooseOrt} >
+                <p className="title">Ort</p>
+                <ButtonGroup color="primary" aria-label="outlined primary button group">
+                    <Button>Online</Button>
+                    <Button>Präsenz</Button>
+                    <Button>Andere</Button>
+                </ButtonGroup>
+            </div>
+
+            <div className="square00003" onClick={chooseTeilnehmer} >
+                <p className="title">Teilnehmer</p>
+                <p className="textsquare"> </p>
+            </div>
+
+            <div className="square00004" onClick={chooseZeitraum} >
+                <p className="title">Zeitraum</p>
+                <p className="textsquare"> </p>
+            </div>
+
             <div className="infolabel"
                  style={{
                     fontFamily: "Arial",
