@@ -52,7 +52,7 @@ function Methodik() {
             techTalk={techTalk}/>
 
 
-            <Link to="/Methodik" style={{ textDecoration: 'none', color:'black' }}>
+            <Link to="/Allgemein" style={{ textDecoration: 'none', color:'black' }}>
             <Weiter/>
             </Link>
             <div className="square001" onClick={chooseDesignThinking} >
