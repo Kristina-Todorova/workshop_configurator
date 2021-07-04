@@ -1,8 +1,8 @@
-import React from "react";
 import Kategorien from "./Kategorien";
 import Weiter from "./Weiter";
 import {Link} from "react-router-dom";
 import info_Icon from "./info_Icon.png";
+import React, {useState, useContext, useEffect} from "react";
 import GlobalKeynote from "./global/GlobalKeynote";
 import GlobalEinfuehrung from "./global/GlobalEinfuehrung";
 import GlobalErarbeitung from "./global/GlobalErarbeitung";
