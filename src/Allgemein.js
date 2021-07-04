@@ -22,8 +22,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function BasicButtonGroup() {
-  const classes = useStyles(); //das ist nicht korrekt
 
 function Allgemein() {
     let [sprache, setSprache ] = useContext(GlobalSprache)
@@ -43,7 +41,7 @@ function Allgemein() {
         setTeilnehmer(GlobalState => !GlobalState)
     }
     function chooseZeitraum() {
-        setVortragZeitraum(GlobalState => !GlobalState)
+        setZeitraum(GlobalState => !GlobalState)
     }
 
   return (
