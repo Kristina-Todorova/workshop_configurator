@@ -19,6 +19,10 @@ function Kategorien(props) {
     const technik = props.technik
     const movie = props.movie
 
+    const gruppenarbeit = props.gruppenarbeit
+    const brainstorming = props.brainstorming
+    const deepdive = props.deepdive
+
 
 
     function MouseOver(event) {
@@ -33,6 +37,7 @@ function Kategorien(props) {
     <div>
         <Header/>
         <div>
+
             <p className="stripee">
             _________
         </p>
@@ -139,6 +144,10 @@ function Kategorien(props) {
             catering={catering===true && <p className="cartitem">{"Catering"}</p>}
             technik={technik===true && <p className="cartitem">{"Technik"}</p>}
             movie={movie===true && <p className="cartitem">{"After-Movie"}</p>}
+
+            deepdive={deepdive===true && <p className="cartitem">{"Deep Dive"}</p>}
+            brainstorming={brainstorming===true && <p className="cartitem">{"Brainstorming"}</p>}
+            gruppenarbeit={gruppenarbeit===true && <p className="cartitem">{"Gruppenarbeit"}</p>}
 
 
             />

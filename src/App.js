@@ -21,6 +21,9 @@ import GlobalAuftrag from "./global/GlobalAuftrag";
 import GlobalErgebnis from "./global/GlobalErgebnis";
 import GlobalFort from "./global/GlobalFort";
 
+import GlobalDeepDive from "./global/GlobalDeepDive";
+import GlobalGruppenarbeit from "./global/GlobalGruppenarbeit"
+import GlobalBrainstorming from "./global/GlobalBrainstorming";
 
 function App() {
 
@@ -32,6 +35,10 @@ function App() {
     const [movie, setMovie] = useState(false);
     const [catering, setCatering] = useState(false);
     const [technik, setTechnik] = useState(false);
+
+    const [brainstorming, setBrainstorming] = useState(false);
+    const [deepdive,setDeepdive] = useState(false);
+    const [gruppenarbeit, setGruppenarbeit] = useState (false);
 
 
   return (
@@ -45,6 +52,10 @@ function App() {
             <GlobalAuftrag.Provider value={[auftrag,setAuftrag]}>
             <GlobalErgebnis.Provider value={[ergebnis, setErgebnis]}>
             <GlobalFort.Provider value={[fort,setFort]}>
+
+            <GlobalBrainstorming.Provider value={[brainstorming, setBrainstorming]}>
+            <GlobalDeepDive.Provider value={[deepdive, setDeepdive]}>
+            <GlobalGruppenarbeit.Provider value={[gruppenarbeit, setGruppenarbeit]}>
 
 
                 <Switch>
@@ -94,6 +105,10 @@ function App() {
 
                 </Switch>
 
+            </GlobalGruppenarbeit.Provider>
+            </GlobalDeepDive.Provider>
+            </GlobalBrainstorming.Provider>
+
             </GlobalFort.Provider>
             </GlobalErgebnis.Provider>
             </GlobalAuftrag.Provider>
@@ -102,6 +117,8 @@ function App() {
             </GlobalState.Provider>
             </GlobalCatering.Provider>
             </GlobalTechnik.Provider>
+
+
 
 
         </main>

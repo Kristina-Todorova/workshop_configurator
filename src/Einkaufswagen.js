@@ -16,6 +16,10 @@ function Einkaufswagen(props) {
     const technik = props.technik;
     const movie = props.movie;
 
+    const deepdive = props.deepdive;
+    const brainstorming = props.brainstorming;
+    const gruppenarbeit = props.gruppenarbeit;
+
   return (
         <div className="einkaufswagen">
             <img src={icon_shopping_bag} alt="icon" width="45px" height="45px" style={{paddingLeft: "100px"}}/>
@@ -61,6 +65,19 @@ function Einkaufswagen(props) {
            {movie
                 && <p className="cartitem">{props.movie}</p>
                 }
+
+           {brainstorming
+                && <p className="cartitem">{props.brainstorming}</p>
+                }
+
+           {deepdive
+                && <p className="cartitem">{props.deepdive}</p>
+                }
+
+           {gruppenarbeit
+                && <p className="cartitem">{props.gruppenarbeit}</p>
+                }
+
         </div>
   );
 }
