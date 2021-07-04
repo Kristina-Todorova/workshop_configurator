@@ -3,23 +3,28 @@ import Kategorien from "./Kategorien";
 import Weiter from "./Weiter";
 import {Link} from "react-router-dom";
 import info_Icon from "./info_Icon.png";
-import React, {useState, useContext, useEffect} from "react";
+import React, {useState, useContext} from "react";
 import GlobalState from "./global/GlobalState";
 import GlobalCatering from "./global/GlobalCatering"
 import GlobalTechnik from "./global/GlobalTechnik";
+import GlobalInformative from "./global/GlobalInformative";
+import GlobalAuftrag from "./global/GlobalAuftrag";
+import GlobalErgebnis from "./global/GlobalErgebnis";
+import GlobalFort from "./global/GlobalFort";
 
-function Ziel(props) {
+function Ziel() {
 
-    let [informative,setInformative] = useState(false)
-    let [auftrag,setAuftrag] = useState(false)
-    let [ergebnis,setErgebnis] = useState(false)
-    let [fort,setFort] = useState(false)
+    let [informative,setInformative] = useContext(GlobalInformative)
+    let [auftrag,setAuftrag] = useContext(GlobalAuftrag)
+    let [ergebnis,setErgebnis] = useContext(GlobalErgebnis)
+    let [fort,setFort] = useContext(GlobalFort)
 
 
     let [movie,setMovie] = useContext(GlobalState)
     let [catering,setCatering] = useContext(GlobalCatering)
     let [technik,setTechnik] = useContext(GlobalTechnik)
 
+    console.log(informative)
 
     function handleClick() {
         setInformative(prevState => !prevState)

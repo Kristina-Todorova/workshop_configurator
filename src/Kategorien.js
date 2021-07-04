@@ -19,6 +19,8 @@ function Kategorien(props) {
     const technik = props.technik
     const movie = props.movie
 
+
+
     function MouseOver(event) {
         event.target.style.background = '#00ADEF';
       }
@@ -127,11 +129,12 @@ function Kategorien(props) {
                                 : <p className="leer">Ihr Warenkorb ist leer.</p>
                     }
 
-            fokus="D"
-            methodik="D"
-            allgemein="D"
-            umfang="D"
-            konfiguration="Inf"
+            fokus="Fokus"
+            grundbausteine="Grundbausteine"
+            methodik="Methodik"
+            allgemein="Allgemeine Infos"
+            umfang="Umfang"
+            konfiguration="Konfiguration"
 
             catering={catering===true && <p className="cartitem">{"Catering"}</p>}
             technik={technik===true && <p className="cartitem">{"Technik"}</p>}

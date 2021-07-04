@@ -7,6 +7,10 @@ import info_Icon from "./info_Icon.png";
 import GlobalState from "./global/GlobalState";
 import GlobalCatering from "./global/GlobalCatering";
 import GlobalTechnik from "./global/GlobalTechnik";
+import GlobalInformative from "./global/GlobalInformative";
+import GlobalAuftrag from "./global/GlobalAuftrag";
+import GlobalErgebnis from "./global/GlobalErgebnis";
+import GlobalFort from "./global/GlobalFort";
 
 
 function Zusatzleistungen() {
@@ -14,6 +18,14 @@ function Zusatzleistungen() {
     let [catering,setCatering] = useContext(GlobalCatering)
     let [technik,setTechnik] = useContext(GlobalTechnik)
     let [movie,setMovie] = useContext(GlobalState)
+
+
+    let [informative,setInformative] = useContext(GlobalInformative)
+    let [auftrag,setAuftrag] = useContext(GlobalAuftrag)
+    let [ergebnis,setErgebnis] = useContext(GlobalErgebnis)
+    let [fort,setFort] = useContext(GlobalFort)
+
+    console.log(informative)
 
     function chooseCatering() {
         setCatering(prevState => !prevState)
@@ -30,10 +42,13 @@ function Zusatzleistungen() {
   return (
         <div>
             <Kategorien
-
+            informative={informative}
+            auftrag={auftrag}
+            ergebnis={ergebnis}
+            fort={fort}
+            movie={movie}
             catering={catering}
-            technik={technik}
-            movie={movie}/>
+            technik={technik}/>
 
              <Link to="/Zusammenfassung" style={{ textDecoration: 'none', color:'black' }}>
             <Weiter/>

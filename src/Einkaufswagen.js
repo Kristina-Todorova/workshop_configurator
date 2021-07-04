@@ -11,10 +11,10 @@ function Einkaufswagen(props) {
     const umfang = props.umfang;
     const grundbausteine = props.grundbausteine;
     const konfiguration = props.konfiguration;
+
     const catering = props.catering;
     const technik = props.technik;
     const movie = props.movie;
-
 
   return (
         <div className="einkaufswagen">
