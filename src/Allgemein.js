@@ -1,3 +1,4 @@
+import './Allgemein.css';
 import Kategorien from "./Kategorien";
 import Weiter from "./Weiter";
 import {Link} from "react-router-dom";
@@ -5,6 +6,7 @@ import info_Icon from "./info_Icon.png";
 import React, {useState, useContext, useEffect} from "react";
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
+import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import GlobalSprache from "./global/GlobalSprache";
 import GlobalOrt from "./global/GlobalOrt";
@@ -60,7 +62,6 @@ function Allgemein() {
 
             <div className="square00001" onClick={chooseSprache} >
                 <p className="title">Sprache</p>
-
                 <ButtonGroup color="primary" aria-label="outlined primary button group">
                     <Button>Deutsch</Button>
                     <Button>Englisch</Button>
@@ -84,7 +85,24 @@ function Allgemein() {
 
             <div className="square00004" onClick={chooseZeitraum} >
                 <p className="title">Zeitraum</p>
-                <p className="textsquare"> </p>
+                <TextField
+                    id="date"
+                    label="von"
+                    type="date"
+                    defaultValue="2017-05-24"
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                  />
+                 <TextField
+                    id="date"
+                    label="bis"
+                    type="date"
+                    defaultValue="2017-05-24"
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                  />
             </div>
 
             <div className="infolabel"

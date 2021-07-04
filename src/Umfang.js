@@ -1,3 +1,4 @@
+import './Umfang.css';
 import React, {useContext} from "react";
 import Kategorien from "./Kategorien";
 import Weiter from "./Weiter";

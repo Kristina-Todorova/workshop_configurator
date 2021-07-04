@@ -43,7 +43,7 @@ function Methodik() {
 
   return (
         <div>
-            <Kategorien/>
+            <Kategorien
 
             designThinking={designThinking}
             designSprint={designSprint}

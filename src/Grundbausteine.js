@@ -1,3 +1,4 @@
+import './Grundbausteine.css';
 import Kategorien from "./Kategorien";
 import Weiter from "./Weiter";
 import {Link} from "react-router-dom";

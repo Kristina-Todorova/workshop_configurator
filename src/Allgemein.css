@@ -1,6 +1,6 @@
 .square00001{
-    height: 810px;
-    width: 50px;
+    height: 50px;
+    width: 810px;
     background-color: lightgray;
     font-family: PT Serif;
     font-style: normal;
@@ -13,8 +13,8 @@
 }
 
 .square00002{
-    height: 810px;
-    width: 50px;
+    height: 50px;
+    width: 810px;
     background-color: lightgray;
 
     font-family: PT Serif;
@@ -29,8 +29,8 @@
 }
 
 .square00003{
-    height: 810px;
-    width: 50px;
+    height: 50px;
+    width: 810px;
     background-color: lightgray;
 
     font-family: PT Serif;
@@ -45,8 +45,8 @@
 }
 
 .square00004{
-    height: 810px;
-    width: 50px;
+    height: 50px;
+    width: 810px;
     background-color: lightgray;
 
     font-family: PT Serif;
@@ -73,7 +73,7 @@
     padding-top: 20px;
 }
 
-.textsquare{
+.textsquare {
     font-family: Arial;
     font-style: normal;
     font-weight: normal;
@@ -81,4 +81,4 @@
     line-height: 140%;
     align-items: center;
     padding: 10px;
-
+}

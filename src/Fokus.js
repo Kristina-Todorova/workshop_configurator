@@ -46,7 +46,7 @@ function Fokus() {
 
   return (
         <div>
-            <Kategorien/>
+            <Kategorien
 
             digitalShift={digitalShift}
             futureSales={futureSales}
@@ -54,7 +54,6 @@ function Fokus() {
             futureMobility={futureMobility}
             sustainability={sustainability}
             afterSales={afterSales}/>
-
 
             <Link to="/Methodik" style={{ textDecoration: 'none', color:'black' }}>
             <Weiter/>
