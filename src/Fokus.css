@@ -1,0 +1,117 @@
+.square01{
+    height: 190px;
+    width: 250px;
+    background-color: lightgray;
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 300px;
+    margin-top: -530px;
+}
+
+.square02{
+    height: 190px;
+    width: 250px;
+    background-color: lightgray;
+
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    color: #000000;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 300px;
+    margin-top: 5px;
+}
+
+.square03{
+    height: 190px;
+    width: 250px;
+    background-color: lightgray;
+
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    color: #000000;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 560px;
+    margin-top: -530px;
+}
+
+.square04{
+    height: 190px;
+    width: 250px;
+    background-color: lightgray;
+
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    color: #000000;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 560px;
+    margin-top: 5px;
+
+}
+
+.square05{
+    height: 190px;
+    width: 380px;
+    background-color: lightgray;
+
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    color: #000000;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 810px;
+    margin-top: -530px;
+}
+
+.square06{
+    height: 190px;
+    width: 380px;
+    background-color: lightgray;
+
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    color: #000000;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 810px;
+    margin-top: 5px;
+}
+
+
+.title{
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    padding-top: 20px;
+}
+
+.textsquare{
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    align-items: center;
+    padding: 10px;
+
+}
