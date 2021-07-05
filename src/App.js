@@ -32,6 +32,10 @@ import GlobalFutureRetail from "./global/GlobalFutureRetail";
 import GlobalFutureMobility from "./global/GlobalFutureMobility";
 import GlobalSustainability from "./global/GlobalSustainability";
 
+import GlobalPaketS from "./global/GlobalPaketS";
+import GlobalPaketM  from "./global/GlobalPaketM";
+import GlobalPaketL from "./global/GlobalPaketL";
+
 function App() {
 
     const [informative, setInformative] = useState(false);
@@ -53,6 +57,10 @@ function App() {
     const [futureMobility,setFutureMobility] = useState(false);
     const [sustainability,setSustainability] = useState(false);
     const [afterSales,setAfterSales] = useState(false);
+
+    const [paketS, setPaketS] = useState(false);
+    const [paketM,setPaketM] = useState(false);
+    const [paketL,setPaketL] = useState (false);
 
 
 
@@ -78,6 +86,10 @@ function App() {
             <GlobalFutureSales.Provider value={[futureSales,setFutureSales]}>
             <GlobalDigitalShift.Provider value={[digitalShift,setDigitalShift]}>
             <GlobalAfterSales.Provider value={[afterSales,setAfterSales]}>
+
+            <GlobalPaketS.Provider value={[paketS, setPaketS]}>
+            <GlobalPaketM.Provider value={[paketM, setPaketM]}>
+            <GlobalPaketL.Provider value={[paketL, setPaketL]}>
 
 
                 <Switch>
@@ -126,6 +138,10 @@ function App() {
                     </Route>
 
                 </Switch>
+
+            </GlobalPaketL.Provider>
+            </GlobalPaketM.Provider>
+            </GlobalPaketS.Provider>
 
             </GlobalAfterSales.Provider>
             </GlobalDigitalShift.Provider>

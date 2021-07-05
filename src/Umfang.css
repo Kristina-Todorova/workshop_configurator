@@ -1,6 +1,6 @@
 .sqr01{
-      height: 250px;
-      width: 800px;
+      height: 420px;
+      width: 250px;
       background-color: lightgray;
 
       font-family: PT Serif;
@@ -11,14 +11,17 @@
       text-align: center;
       vertical-align: middle;
     margin-left: 300px;
-    margin-top: -500px;
+    margin-top: -545px;
 
 }
 
 .sqr02{
-    height: 250px;
-      width: 800px;
+    height: 420px;
+      width: 250px;
       background-color: lightgray;
+    border-style: solid;
+    border-color: #00ADEF;
+    border-width: thick;
 
       font-family: PT Serif;
       font-style: normal;
@@ -27,13 +30,13 @@
       color: #000000;
       text-align: center;
       vertical-align: middle;
-    margin-left: 600px;
-    margin-top: -274px;
+    margin-left: 585px;
+    margin-top: -428px;
 }
 
 .sqr03{
-    height: 250px;
-      width: 800px;
+    height: 420px;
+      width: 250px;
       background-color: lightgray;
 
       font-family: PT Serif;
@@ -43,8 +46,8 @@
       color: #000000;
       text-align: center;
       vertical-align: middle;
-    margin-left: 900px;
-    margin-top: -270px;
+    margin-left: 870px;
+    margin-top: -440px;
 
 }
 

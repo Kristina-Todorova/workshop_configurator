@@ -30,8 +30,6 @@ function Ziel() {
     let [catering,setCatering] = useContext(GlobalCatering)
     let [technik,setTechnik] = useContext(GlobalTechnik)
 
-    console.log(informative)
-
     function handleClick() {
         setInformative(prevState => !prevState)
         setAuftrag(false)

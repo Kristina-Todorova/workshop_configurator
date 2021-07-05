@@ -6,8 +6,6 @@ import {Link} from "react-router-dom";
 import Einkaufswagen from "./Einkaufswagen";
 import React from "react";
 
-
-
 function Kategorien(props) {
 
     const informative = props.informative
@@ -30,6 +28,9 @@ function Kategorien(props) {
     const sustainability = props.sustainability
     const aftersales = props.afterSales
 
+    const paketS = props.paketS
+    const paketM = props.paketM
+    const paketL = props.paketL
 
 
     function MouseOver(event) {
@@ -159,7 +160,15 @@ function Kategorien(props) {
             grundbausteine="Grundbausteine"
             methodik="Methodik"
             allgemein="Allgemeine Infos"
-            umfang="Umfang"
+
+            umfang= {paketS===true
+                    ? <p className="cartitem">{"Paket S"}</p>
+                    : paketM===true
+                        ? <p className="cartitem">{"Paket M"}</p>
+                        : paketL===true
+                            ? <p className="cartitem">{"Paket L"}</p>
+                            : ""
+                    }
 
             catering={catering===true && <p className="cartitem">{"Catering"}</p>}
             technik={technik===true && <p className="cartitem">{"Technik"}</p>}
