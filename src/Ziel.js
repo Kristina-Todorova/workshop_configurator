@@ -11,6 +11,14 @@ import GlobalInformative from "./global/GlobalInformative";
 import GlobalAuftrag from "./global/GlobalAuftrag";
 import GlobalErgebnis from "./global/GlobalErgebnis";
 import GlobalFort from "./global/GlobalFort";
+import GlobalDeepDive from "./global/GlobalDeepDive";
+import GlobalGruppenarbeit from "./global/GlobalGruppenarbeit"
+import GlobalBrainstorming from "./global/GlobalBrainstorming";
+import GlobalDesignThinking from "./global/GlobalDesignThinking";
+import GlobalDesignSprint from "./global/GlobalDesignSprint";
+import GlobalLeanCanvas from "./global/GlobalFutureRetail";
+import GlobalBusinessModel from "./global/GlobalFutureMobility";
+import GlobalTechTalk from "./global/GlobalSustainability";
 
 function Ziel() {
 
@@ -24,11 +32,19 @@ function Ziel() {
     const auftragcolor = ergebnis===true ? "#00ADEF" : "lightgray"
     const fortcolor = fort===true ? "#00ADEF" : "lightgray"
 
-
+    let [deepdive, setDeepdive] = useContext(GlobalDeepDive)
+    let [gruppenarbeit, setGruppenarbeit] = useContext(GlobalGruppenarbeit)
+    let [brainstorming, setBrainstorming] = useContext(GlobalBrainstorming)
 
     let [movie,setMovie] = useContext(GlobalState)
     let [catering,setCatering] = useContext(GlobalCatering)
     let [technik,setTechnik] = useContext(GlobalTechnik)
+
+    let [designThinking,setDesignThinking] = useContext(GlobalDesignThinking)
+    let [designSprint,setDesignSprint] = useContext(GlobalDesignSprint)
+    let [leanCanvas,setLeanCanvas] = useContext(GlobalLeanCanvas)
+    let [businessModel,setBusinessModel] = useContext(GlobalBusinessModel)
+    let [techTalk,setTechTalk] = useContext(GlobalTechTalk)
 
     console.log(informative)
 
@@ -72,6 +88,14 @@ function Ziel() {
             movie={movie}
             catering={catering}
             technik={technik}
+            deepdive={deepdive}
+            gruppenarbeit={gruppenarbeit}
+            brainstorming={brainstorming}
+            desingThinking={designThinking}
+            designSprint={designSprint}
+            leanCanvas={leanCanvas}
+            businessModel={businessModel}
+            techTalk={techTalk}
         />
 
         <Link to="/Fokus" style={{ textDecoration: 'none', color:'black' }}>

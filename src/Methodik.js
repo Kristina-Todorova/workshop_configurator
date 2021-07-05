@@ -9,6 +9,16 @@ import GlobalDesignSprint from "./global/GlobalDesignSprint";
 import GlobalLeanCanvas from "./global/GlobalFutureRetail";
 import GlobalBusinessModel from "./global/GlobalFutureMobility";
 import GlobalTechTalk from "./global/GlobalSustainability";
+import GlobalState from "./global/GlobalState";
+import GlobalCatering from "./global/GlobalCatering"
+import GlobalTechnik from "./global/GlobalTechnik";
+import GlobalInformative from "./global/GlobalInformative";
+import GlobalAuftrag from "./global/GlobalAuftrag";
+import GlobalErgebnis from "./global/GlobalErgebnis";
+import GlobalFort from "./global/GlobalFort";
+import GlobalDeepDive from "./global/GlobalDeepDive";
+import GlobalGruppenarbeit from "./global/GlobalGruppenarbeit"
+import GlobalBrainstorming from "./global/GlobalBrainstorming";
 
 
 
@@ -19,6 +29,24 @@ function Methodik() {
     let [businessModel,setBusinessModel] = useContext(GlobalBusinessModel)
     let [techTalk,setTechTalk] = useContext(GlobalTechTalk)
 
+    let [informative,setInformative] = useContext(GlobalInformative)
+    let [auftrag,setAuftrag] = useContext(GlobalAuftrag)
+    let [ergebnis,setErgebnis] = useContext(GlobalErgebnis)
+    let [fort,setFort] = useContext(GlobalFort)
+
+    let [deepdive, setDeepdive] = useContext(GlobalDeepDive)
+    let [gruppenarbeit, setGruppenarbeit] = useContext(GlobalGruppenarbeit)
+    let [brainstorming, setBrainstorming] = useContext(GlobalBrainstorming)
+
+    let [movie,setMovie] = useContext(GlobalState)
+    let [catering,setCatering] = useContext(GlobalCatering)
+    let [technik,setTechnik] = useContext(GlobalTechnik)
+
+    const dtcolor = designThinking==true ? "#00ADEF" : "lightgray"
+    const dscolor = designSprint==true ? "#00ADEF" : "lightgray"
+    const lccolor = leanCanvas==true ? "#00ADEF" : "lightgray"
+    const bmcolor = businessModel==true ? "#00ADEF" : "lightgray"
+    const ttcolor = techTalk==true ? "#00ADEF" : "lightgray"
 
     function chooseDesignThinking() {
         setDesignThinking(prevState => !prevState)
@@ -44,38 +72,49 @@ function Methodik() {
   return (
         <div>
             <Kategorien
-
             designThinking={designThinking}
             designSprint={designSprint}
             leanCanvas={leanCanvas}
             businessModel={businessModel}
-            techTalk={techTalk}/>
+            techTalk={techTalk}
+            informative={informative}
+            auftrag={auftrag}
+            ergebnis={ergebnis}
+            fort={fort}
+            movie={movie}
+            catering={catering}
+            technik={technik}
+            deepdive={deepdive}
+            gruppenarbeit={gruppenarbeit}
+            brainstorming={brainstorming}
+            />
+
 
 
             <Link to="/Allgemein" style={{ textDecoration: 'none', color:'black' }}>
             <Weiter/>
             </Link>
-            <div className="square001" onClick={chooseDesignThinking} >
+            <div className="square001" onClick={chooseDesignThinking} style={{backgroundColor:dtcolor}}>
                 <p className="title">Design Thinking</p>
                 <p className="textsquare"> Diese Technik hilft beim Lösen von Problemen und der Entwicklung neuer Ideen. Lernen Sie wie man Probleme nutzerentriert lösen kann.</p>
             </div>
 
-            <div className="square002" onClick={chooseDesignSprint} >
+            <div className="square002" onClick={chooseDesignSprint} style={{backgroundColor:dscolor}}>
                 <p className="title">Design Sprint</p>
                 <p className="textsquare">Führen Sie unter unserer fachkundigen Anleitung einen Design Sprint durch, der außergewöhnlihce Ergebnisse zu Tage fördern wird.</p>
             </div>
 
-            <div className="square003" onClick={chooseLeanCanvas} >
+            <div className="square003" onClick={chooseLeanCanvas} style={{backgroundColor:lccolor}}>
                 <p className="title">Lean Canvas</p>
                 <p className="textsquare"> Mithilfe des Lean Canvas kann Ihr Geschäftsmodell auf das Wesentliche reduziert werden, um neue Ideen zu generieren.</p>
             </div>
 
-            <div className="square004" onClick={chooseBusinessModel} >
+            <div className="square004" onClick={chooseBusinessModel} style={{backgroundColor:bmcolor}}>
                 <p className="title">Business Model</p>
                 <p className="textsquare"> Wir leiten Ihr Team durch die Erstellung oder Optimierung Ihres Business Modells.</p>
             </div>
 
-            <div className="square005" onClick={chooseTechTalk} >
+            <div className="square005" onClick={chooseTechTalk} style={{backgroundColor:ttcolor}}>
                 <p className="title">Tech Talk</p>
                 <p className="textsquare"> Einer unserer Experten bringt Sie im ausgewählten Fachbereich, in kürzester Zeit, auf den neuesten Stand und inspiriert das ganze Team</p>
             </div>

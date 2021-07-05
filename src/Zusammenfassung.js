@@ -56,10 +56,11 @@ function Zusammenfassung(props) {
                   <div className="zielworkshop">
                     <p>Ziel des Workshops:</p>
                      {ziel
-                        ? <p>{props.ziel}</p>
-                        : <p className="leer">Kein Ziel ausgewaehlt</p>
-                        }
-                </div>
+                         ? <p>{props.ziel}</p>
+                         : <p className="leer">Kein Ziel ausgewaehlt</p>
+                         }
+
+                   </div>
 
 
 
