@@ -19,6 +19,12 @@ import GlobalDesignSprint from "./global/GlobalDesignSprint";
 import GlobalLeanCanvas from "./global/GlobalFutureRetail";
 import GlobalBusinessModel from "./global/GlobalFutureMobility";
 import GlobalTechTalk from "./global/GlobalSustainability";
+import GlobalDigitalShift from "./global/GlobalDigitalShift";
+import GlobalFutureSales from "./global/GlobalFutureSales";
+import GlobalFutureRetail from "./global/GlobalFutureRetail";
+import GlobalFutureMobility from "./global/GlobalFutureMobility";
+import GlobalSustainability from "./global/GlobalSustainability";
+import GlobalAfterSales from "./global/GlobalAfterSales";
 
 function Ziel() {
 
@@ -45,6 +51,13 @@ function Ziel() {
     let [leanCanvas,setLeanCanvas] = useContext(GlobalLeanCanvas)
     let [businessModel,setBusinessModel] = useContext(GlobalBusinessModel)
     let [techTalk,setTechTalk] = useContext(GlobalTechTalk)
+
+    let [digitalShift,setDigitalShift] = useContext(GlobalDigitalShift)
+    let [futureSales,setFutureSales] = useContext(GlobalFutureSales)
+    let [futureRetail,setFutureRetail] = useContext(GlobalFutureRetail)
+    let [futureMobility,setFutureMobility] = useContext(GlobalFutureMobility)
+    let [sustainability,setSustainability] = useContext(GlobalSustainability)
+    let [afterSales,setAfterSales] = useContext(GlobalAfterSales)
 
     console.log(informative)
 
@@ -96,6 +109,12 @@ function Ziel() {
             leanCanvas={leanCanvas}
             businessModel={businessModel}
             techTalk={techTalk}
+            digitalShift={digitalShift}
+            futureSales={futureSales}
+            futureRetail={futureRetail}
+            futureMobility={futureMobility}
+            sustainability={sustainability}
+            afterSales={afterSales}
         />
 
         <Link to="/Fokus" style={{ textDecoration: 'none', color:'black' }}>
