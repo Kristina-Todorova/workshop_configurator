@@ -106,7 +106,7 @@ function Fokus() {
                     top: "239px",
                     background: "rgba(0, 173, 239, 0.25)",
                     marginLeft: "300px",
-                    marginTop:"-615px"
+                    marginTop:"-501px"
                     }} >
             <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
            <p>Bitte wählen Sie den gewünschten Themenbereich für Ihren Workshop aus. </p>

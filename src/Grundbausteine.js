@@ -42,19 +42,19 @@ function Grundbausteine() {
              <Link to="/Konfiguration" style={{ textDecoration: 'none', color:'black' }}>
              <Weiter/>
              </Link>
-             <div className="square0001" onClick={chooseKeynote} >
+             <div className="squaree0001" onClick={chooseKeynote} >
                  <p className="title">Keynote</p>
              </div>
 
-             <div className="square0002" onClick={chooseEinfuehrung} >
+             <div className="squaree0002" onClick={chooseEinfuehrung} >
                 <p className="title">Einführung</p>
              </div>
 
-             <div className="square0003" onClick={chooseErarbeitung} >
+             <div className="squaree0003" onClick={chooseErarbeitung} >
                  <p className="title">Erarbeitung</p>
              </div>
 
-             <div className="square0004" onClick={chooseVortragZurUmsetzung} >
+             <div className="squaree0004" onClick={chooseVortragZurUmsetzung} >
                  <p className="title">Vortrag zur Umsetzung</p>
              </div>
 
@@ -74,7 +74,7 @@ function Grundbausteine() {
                     top: "239px",
                     background: "rgba(0, 173, 239, 0.25)",
                     marginLeft: "300px",
-                    marginTop:"-615px"
+                    marginTop:"-358px"
                     }} >
                     <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
                     <p>Entsprechend Ihrer Auswahl wurden Ihnen folgende Grundbausteine zusammengestellt. Im nächsten Schritt können Sie Ihren Workshop personalisieren.</p>

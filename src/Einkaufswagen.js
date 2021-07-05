@@ -50,10 +50,6 @@ function Einkaufswagen(props) {
                 && <p className="cartitem">{props.grundbausteine}</p>
                 }
 
-           {konfiguration
-                && <p className="cartitem">Zusätzlich: {props.konfiguration}</p>
-                }
-
            {catering
                 && <p className="cartitem">{props.catering}</p>
                 }

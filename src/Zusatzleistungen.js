@@ -19,7 +19,6 @@ function Zusatzleistungen() {
     let [technik,setTechnik] = useContext(GlobalTechnik)
     let [movie,setMovie] = useContext(GlobalState)
 
-
     let [informative,setInformative] = useContext(GlobalInformative)
     let [auftrag,setAuftrag] = useContext(GlobalAuftrag)
     let [ergebnis,setErgebnis] = useContext(GlobalErgebnis)

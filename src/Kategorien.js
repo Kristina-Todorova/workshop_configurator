@@ -139,7 +139,6 @@ function Kategorien(props) {
             methodik="Methodik"
             allgemein="Allgemeine Infos"
             umfang="Umfang"
-            konfiguration="Konfiguration"
 
             catering={catering===true && <p className="cartitem">{"Catering"}</p>}
             technik={technik===true && <p className="cartitem">{"Technik"}</p>}
