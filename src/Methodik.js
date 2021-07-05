@@ -55,7 +55,7 @@ function Methodik() {
     let [sustainability,setSustainability] = useContext(GlobalSustainability)
     let [afterSales,setAfterSales] = useContext(GlobalAfterSales)
 
-    const dtcolor = designThinking==true ? "#00ADEF" : "lightgray"
+    const designthinkingcolor = designThinking==true ? "#00ADEF" : "lightgray"
     const dscolor = designSprint==true ? "#00ADEF" : "lightgray"
     const lccolor = leanCanvas==true ? "#00ADEF" : "lightgray"
     const bmcolor = businessModel==true ? "#00ADEF" : "lightgray"
@@ -63,22 +63,43 @@ function Methodik() {
 
     function chooseDesignThinking() {
         setDesignThinking(prevState => !prevState)
+        setDesignSprint(false)
+        setLeanCanvas(false)
+        setBusinessModel(false)
+        setTechTalk(false)
+
     }
 
     function chooseDesignSprint() {
         setDesignSprint(prevState => !prevState)
+        setDesignThinking(false)
+        setLeanCanvas(false)
+        setBusinessModel(false)
+        setTechTalk(false)
     }
 
       function chooseLeanCanvas() {
         setLeanCanvas(prevState => !prevState)
+        setDesignSprint(false)
+        setDesignThinking(false)
+        setBusinessModel(false)
+        setTechTalk(false)
     }
 
       function chooseBusinessModel() {
         setBusinessModel(prevState => !prevState)
+        setDesignSprint(false)
+        setLeanCanvas(false)
+        setDesignThinking(false)
+        setTechTalk(false)
     }
 
       function chooseTechTalk() {
         setTechTalk(prevState => !prevState)
+        setDesignSprint(false)
+        setLeanCanvas(false)
+        setBusinessModel(false)
+        setDesignThinking(false)
     }
 
 
@@ -114,9 +135,9 @@ function Methodik() {
             <Link to="/Allgemein" style={{ textDecoration: 'none', color:'black' }}>
             <Weiter/>
             </Link>
-            <div className="square001" onClick={chooseDesignThinking} style={{backgroundColor:dtcolor}}>
+            <div className="square001" onClick={chooseDesignThinking} style={{backgroundColor:designthinkingcolor}}>
                 <p className="title">Design Thinking</p>
-                <p className="textsquare"> Diese Technik hilft beim Lösen von Problemen und der Entwicklung neuer Ideen. Lernen Sie wie man Probleme nutzerentriert lösen kann.</p>
+                <p className="textsquare">Diese Technik hilft beim Lösen von Problemen und der Entwicklung neuer Ideen. Lernen Sie wie man Probleme nutzerentriert lösen kann.</p>
             </div>
 
             <div className="square002" onClick={chooseDesignSprint} style={{backgroundColor:dscolor}}>
@@ -126,17 +147,17 @@ function Methodik() {
 
             <div className="square003" onClick={chooseLeanCanvas} style={{backgroundColor:lccolor}}>
                 <p className="title">Lean Canvas</p>
-                <p className="textsquare"> Mithilfe des Lean Canvas kann Ihr Geschäftsmodell auf das Wesentliche reduziert werden, um neue Ideen zu generieren.</p>
+                <p className="textsquare">Mithilfe des Lean Canvas kann Ihr Geschäftsmodell auf das Wesentliche reduziert werden, um neue Ideen zu generieren.</p>
             </div>
 
             <div className="square004" onClick={chooseBusinessModel} style={{backgroundColor:bmcolor}}>
                 <p className="title">Business Model</p>
-                <p className="textsquare"> Wir leiten Ihr Team durch die Erstellung oder Optimierung Ihres Business Modells.</p>
+                <p className="textsquare">Wir leiten Ihr Team durch die Erstellung oder Optimierung Ihres Business Modells.</p>
             </div>
 
             <div className="square005" onClick={chooseTechTalk} style={{backgroundColor:ttcolor}}>
                 <p className="title">Tech Talk</p>
-                <p className="textsquare"> Einer unserer Experten bringt Sie im ausgewählten Fachbereich, in kürzester Zeit, auf den neuesten Stand und inspiriert das ganze Team</p>
+                <p className="textsquare">Einer unserer Experten bringt Sie im ausgewählten Fachbereich, in kürzester Zeit, auf den neuesten Stand und inspiriert das ganze Team</p>
             </div>
 
 
