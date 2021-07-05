@@ -10,7 +10,6 @@ function Einkaufswagen(props) {
     const allgemein = props.allgemein;
     const umfang = props.umfang;
     const grundbausteine = props.grundbausteine;
-    const konfiguration = props.konfiguration;
 
     const catering = props.catering;
     const technik = props.technik;

@@ -23,6 +23,13 @@ function Kategorien(props) {
     const brainstorming = props.brainstorming
     const deepdive = props.deepdive
 
+    const digitalShift = props.digitalShift
+    const futureSales = props.futureSales
+    const futureRetail = props.futureRetail
+    const futureMobility = props.futureMobility
+    const sustainability = props.sustainability
+    const aftersales = props.afterSales
+
 
 
     function MouseOver(event) {
@@ -134,7 +141,21 @@ function Kategorien(props) {
                                 : <p className="leer">Ihr Warenkorb ist leer.</p>
                     }
 
-            fokus="Fokus"
+            fokus= {digitalShift===true
+                ? <p className="cartitem">{"Digital Shift"}</p>
+                : futureSales===true
+                    ? <p className="cartitem">{"Future Sales"}</p>
+                    : futureRetail===true
+                        ? <p className="cartitem">{"Future Retail"}</p>
+                        : futureMobility===true
+                            ? <p className="cartitem">{"Future Mobility"}</p>
+                            : sustainability===true
+                                ? <p className="cartitem">{"Sustainability"}</p>
+                                : aftersales ===true
+                                    ? <p className="cartitem">{"After Sales"}</p>
+                                    : ""
+                    }
+
             grundbausteine="Grundbausteine"
             methodik="Methodik"
             allgemein="Allgemeine Infos"

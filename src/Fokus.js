@@ -20,28 +20,65 @@ function Fokus() {
     let [sustainability,setSustainability] = useContext(GlobalSustainability)
     let [afterSales,setAfterSales] = useContext(GlobalAfterSales)
 
+    const shiftcolor = digitalShift===true ? "#00ADEF" : "lightgray"
+    const salescolor = futureSales===true ? "#00ADEF" : "lightgray"
+    const retailcolor = futureRetail===true ? "#00ADEF" : "lightgray"
+    const mobilitycolor = futureMobility===true ? "#00ADEF" : "lightgray"
+    const sustainabilitycolor = sustainability===true ? "#00ADEF" : "lightgray"
+    const aftersalescolor = afterSales===true ? "#00ADEF" : "lightgray"
+
     function chooseDigitalShift() {
         setDigitalShift(prevState => !prevState)
+        setFutureSales(false)
+        setFutureRetail(false)
+        setFutureMobility(false)
+        setSustainability(false)
+        setAfterSales(false)
     }
 
     function chooseFutureSales() {
         setFutureSales(prevState => !prevState)
+        setDigitalShift(false)
+        setFutureRetail(false)
+        setFutureMobility(false)
+        setSustainability(false)
+        setAfterSales(false)
     }
 
       function chooseFutureRetail() {
         setFutureRetail(prevState => !prevState)
+          setFutureSales(false)
+        setDigitalShift(false)
+        setFutureMobility(false)
+        setSustainability(false)
+        setAfterSales(false)
     }
 
       function chooseFutureMobility() {
         setFutureMobility(prevState => !prevState)
+          setFutureSales(false)
+        setFutureRetail(false)
+        setDigitalShift(false)
+        setSustainability(false)
+        setAfterSales(false)
     }
 
       function chooseSustainability() {
         setSustainability(prevState => !prevState)
+          setFutureSales(false)
+        setFutureRetail(false)
+        setFutureMobility(false)
+        setDigitalShift(false)
+        setAfterSales(false)
     }
 
       function chooseAfterSales() {
         setAfterSales(prevState => !prevState)
+          setFutureSales(false)
+        setFutureRetail(false)
+        setFutureMobility(false)
+        setSustainability(false)
+        setDigitalShift(false)
     }
 
   return (
@@ -58,32 +95,32 @@ function Fokus() {
             <Link to="/Methodik" style={{ textDecoration: 'none', color:'black' }}>
             <Weiter/>
             </Link>
-            <div className="square01" onClick={chooseDigitalShift} >
+            <div className="square01" onClick={chooseDigitalShift} style={{backgroundColor:shiftcolor}}>
                 <p className="title">Digital Shift</p>
                 <p className="textsquare"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
             </div>
 
-            <div className="square02" onClick={chooseFutureSales} >
+            <div className="square02" onClick={chooseFutureSales} style={{backgroundColor:salescolor}}>
                 <p className="title">Future Sales</p>
                 <p className="textsquare"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
             </div>
 
-            <div className="square03" onClick={chooseFutureRetail} >
+            <div className="square03" onClick={chooseFutureRetail} style={{backgroundColor:retailcolor}}>
                 <p className="title">Future Retail</p>
                 <p className="textsquare"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
             </div>
 
-            <div className="square04" onClick={chooseFutureMobility} >
+            <div className="square04" onClick={chooseFutureMobility} style={{backgroundColor:mobilitycolor}}>
                 <p className="title">Future Mobility</p>
                 <p className="textsquare"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
             </div>
 
-            <div className="square05" onClick={chooseSustainability} >
+            <div className="square05" onClick={chooseSustainability} style={{backgroundColor:sustainabilitycolor}}>
                 <p className="title">Sustainability</p>
                 <p className="textsquare"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
             </div>
 
-            <div className="square06" onClick={chooseAfterSales} >
+            <div className="square06" onClick={chooseAfterSales} style={{backgroundColor:aftersalescolor}}>
                 <p className="title">After Sales</p>
                 <p className="textsquare"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
             </div>

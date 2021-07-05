@@ -25,6 +25,13 @@ import GlobalDeepDive from "./global/GlobalDeepDive";
 import GlobalGruppenarbeit from "./global/GlobalGruppenarbeit"
 import GlobalBrainstorming from "./global/GlobalBrainstorming";
 
+import GlobalAfterSales from "./global/GlobalAfterSales";
+import GlobalDigitalShift from "./global/GlobalDigitalShift";
+import GlobalFutureSales from "./global/GlobalFutureSales";
+import GlobalFutureRetail from "./global/GlobalFutureRetail";
+import GlobalFutureMobility from "./global/GlobalFutureMobility";
+import GlobalSustainability from "./global/GlobalSustainability";
+
 function App() {
 
     const [informative, setInformative] = useState(false);
@@ -39,6 +46,14 @@ function App() {
     const [brainstorming, setBrainstorming] = useState(false);
     const [deepdive,setDeepdive] = useState(false);
     const [gruppenarbeit, setGruppenarbeit] = useState (false);
+
+    const [digitalShift, setDigitalShift] = useState(false);
+    const [futureSales,setFutureSales] = useState(false);
+    const [futureRetail,setFutureRetail] = useState(false);
+    const [futureMobility,setFutureMobility] = useState(false);
+    const [sustainability,setSustainability] = useState(false);
+    const [afterSales,setAfterSales] = useState(false);
+
 
 
   return (
@@ -56,6 +71,13 @@ function App() {
             <GlobalBrainstorming.Provider value={[brainstorming, setBrainstorming]}>
             <GlobalDeepDive.Provider value={[deepdive, setDeepdive]}>
             <GlobalGruppenarbeit.Provider value={[gruppenarbeit, setGruppenarbeit]}>
+
+            <GlobalSustainability.Provider value={[sustainability,setSustainability]}>
+            <GlobalFutureMobility.Provider value={[futureMobility,setFutureMobility]}>
+            <GlobalFutureRetail.Provider value={[futureRetail,setFutureRetail]}>
+            <GlobalFutureSales.Provider value={[futureSales,setFutureSales]}>
+            <GlobalDigitalShift.Provider value={[digitalShift,setDigitalShift]}>
+            <GlobalAfterSales.Provider value={[afterSales,setAfterSales]}>
 
 
                 <Switch>
@@ -104,6 +126,13 @@ function App() {
                     </Route>
 
                 </Switch>
+
+            </GlobalAfterSales.Provider>
+            </GlobalDigitalShift.Provider>
+            </GlobalFutureSales.Provider>
+            </GlobalFutureRetail.Provider>
+            </GlobalFutureMobility.Provider>
+            </GlobalSustainability.Provider>
 
             </GlobalGruppenarbeit.Provider>
             </GlobalDeepDive.Provider>
