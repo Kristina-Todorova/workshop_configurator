@@ -1,9 +1,30 @@
-import React from "react";
+import React, {useState, useContext, useEffect} from "react";
 import Kategorien from "./Kategorien";
 import Weiter from "./Weiter";
 import {Link} from "react-router-dom";
 import info_Icon from "./info_Icon.png";
 import "./Zusammenfassung.css";
+import GlobalDesignThinking from "./global/GlobalDesignThinking";
+import GlobalDesignSprint from "./global/GlobalDesignSprint";
+import GlobalLeanCanvas from "./global/GlobalFutureRetail";
+import GlobalBusinessModel from "./global/GlobalFutureMobility";
+import GlobalTechTalk from "./global/GlobalSustainability";
+import GlobalState from "./global/GlobalState";
+import GlobalCatering from "./global/GlobalCatering"
+import GlobalTechnik from "./global/GlobalTechnik";
+import GlobalInformative from "./global/GlobalInformative";
+import GlobalAuftrag from "./global/GlobalAuftrag";
+import GlobalErgebnis from "./global/GlobalErgebnis";
+import GlobalFort from "./global/GlobalFort";
+import GlobalDeepDive from "./global/GlobalDeepDive";
+import GlobalGruppenarbeit from "./global/GlobalGruppenarbeit"
+import GlobalBrainstorming from "./global/GlobalBrainstorming";
+import GlobalDigitalShift from "./global/GlobalDigitalShift";
+import GlobalFutureSales from "./global/GlobalFutureSales";
+import GlobalFutureRetail from "./global/GlobalFutureRetail";
+import GlobalFutureMobility from "./global/GlobalFutureMobility";
+import GlobalSustainability from "./global/GlobalSustainability";
+import GlobalAfterSales from "./global/GlobalAfterSales";
 
 function Zusammenfassung(props) {
 
@@ -19,13 +40,21 @@ function Zusammenfassung(props) {
     const technik = props.technik;
     const movie = props.movie;
 
-    const deepdive = props.deepdive;
-    const brainstorming = props.brainstorming;
-    const gruppenarbeit = props.gruppenarbeit;
+    const deepdive = props.deepdive1;
+    const brainstorming = props.brainstorming1;
+    const gruppenarbeit = props.gruppenarbeit1;
+
+
+
+
+
 
   return (
             <div>
-                <Kategorien/>
+                <Kategorien
+
+
+                />
 
                 <Link to="/Kontaktformular" style={{ textDecoration: 'none', color:'black' }}>
                 <Weiter/>
@@ -56,10 +85,11 @@ function Zusammenfassung(props) {
                   <div className="zielworkshop">
                     <p>Ziel des Workshops:</p>
                      {ziel
-                        ? <p>{props.ziel}</p>
-                        : <p className="leer">Kein Ziel ausgewaehlt</p>
-                        }
-                </div>
+                         ? <p>{props.ziel}</p>
+                         : <p className="leer">Kein Ziel ausgewaehlt</p>
+                         }
+
+                   </div>
 
 
 

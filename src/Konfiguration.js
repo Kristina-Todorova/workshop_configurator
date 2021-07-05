@@ -13,25 +13,32 @@ import GlobalInformative from "./global/GlobalInformative";
 import GlobalAuftrag from "./global/GlobalAuftrag";
 import GlobalErgebnis from "./global/GlobalErgebnis";
 import GlobalFort from "./global/GlobalFort";
+import GlobalDesignThinking from "./global/GlobalDesignThinking";
+import GlobalDesignSprint from "./global/GlobalDesignSprint";
+import GlobalLeanCanvas from "./global/GlobalFutureRetail";
+import GlobalBusinessModel from "./global/GlobalFutureMobility";
+import GlobalTechTalk from "./global/GlobalSustainability";
 import "./Konfiguration.css";
 
 function Konfiguration() {
-
-    let [deepdive, setDeepdive] = useContext(GlobalDeepDive)
-    let [gruppenarbeit, setGruppenarbeit] = useContext(GlobalGruppenarbeit)
-    let [brainstorming, setBrainstorming] = useContext(GlobalBrainstorming)
-
-    let [catering,setCatering] = useContext(GlobalCatering)
-    let [technik,setTechnik] = useContext(GlobalTechnik)
-    let [movie,setMovie] = useContext(GlobalState)
-
 
     let [informative,setInformative] = useContext(GlobalInformative)
     let [auftrag,setAuftrag] = useContext(GlobalAuftrag)
     let [ergebnis,setErgebnis] = useContext(GlobalErgebnis)
     let [fort,setFort] = useContext(GlobalFort)
 
-    console.log(informative)
+    let [deepdive, setDeepdive] = useContext(GlobalDeepDive)
+    let [gruppenarbeit, setGruppenarbeit] = useContext(GlobalGruppenarbeit)
+    let [brainstorming, setBrainstorming] = useContext(GlobalBrainstorming)
+
+    const ddcolor = deepdive==true ? "#00ADEF" : "lightgray"
+    const gacolor = gruppenarbeit==true ? "#00ADEF" : "lightgray"
+    const bscolor = brainstorming==true ? "#00ADEF" : "lightgray"
+
+    let [catering,setCatering] = useContext(GlobalCatering)
+    let [technik,setTechnik] = useContext(GlobalTechnik)
+    let [movie,setMovie] = useContext(GlobalState)
+
 
     function chooseGruppenarbeit() {
         setGruppenarbeit(prevState => !prevState)
@@ -63,17 +70,17 @@ function Konfiguration() {
              <Weiter/>
              </Link>
 
-             <div className="square1" onClick={chooseGruppenarbeit} >
+             <div className="square1" onClick={chooseGruppenarbeit} style={{backgroundColor:gacolor}}>
                 <p className="title">Gruppenarbeit</p>
                <p className="textsquare">Ergänzen Sie Ihren Workshop um eine zusätzliche Gruppenaktivität passend zu Ihrem Thema. </p>
              </div>
 
-             <div className="square2" onClick={chooseBrainstorming} >
+             <div className="square2" onClick={chooseBrainstorming} style={{backgroundColor:bscolor}} >
                 <p className="title">Brainstorming</p>
                <p className="textsquare">Ergänzen Sie den Workshop um ein Brainstorming in großer Runde </p>
              </div>
 
-             <div className="square3" onClick={chooseDeepdive} >
+             <div className="square3" onClick={chooseDeepdive} style={{backgroundColor:ddcolor}} >
                 <p className="title">Deep Dive</p>
                <p className="textsquare">Ergänzen Sie Ihren Workshop um einen Deep Dive zu einem relevanten oder gewünschten Thema. </p>
               </div>
