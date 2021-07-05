@@ -11,6 +11,20 @@ import GlobalInformative from "./global/GlobalInformative";
 import GlobalAuftrag from "./global/GlobalAuftrag";
 import GlobalErgebnis from "./global/GlobalErgebnis";
 import GlobalFort from "./global/GlobalFort";
+import GlobalDesignThinking from "./global/GlobalDesignThinking";
+import GlobalDesignSprint from "./global/GlobalDesignSprint";
+import GlobalLeanCanvas from "./global/GlobalFutureRetail";
+import GlobalBusinessModel from "./global/GlobalFutureMobility";
+import GlobalTechTalk from "./global/GlobalSustainability";
+import GlobalDeepDive from "./global/GlobalDeepDive";
+import GlobalGruppenarbeit from "./global/GlobalGruppenarbeit"
+import GlobalBrainstorming from "./global/GlobalBrainstorming";
+import GlobalDigitalShift from "./global/GlobalDigitalShift";
+import GlobalFutureSales from "./global/GlobalFutureSales";
+import GlobalFutureRetail from "./global/GlobalFutureRetail";
+import GlobalFutureMobility from "./global/GlobalFutureMobility";
+import GlobalSustainability from "./global/GlobalSustainability";
+import GlobalAfterSales from "./global/GlobalAfterSales";
 
 
 function Zusatzleistungen() {
@@ -28,6 +42,24 @@ function Zusatzleistungen() {
     let [auftrag,setAuftrag] = useContext(GlobalAuftrag)
     let [ergebnis,setErgebnis] = useContext(GlobalErgebnis)
     let [fort,setFort] = useContext(GlobalFort)
+
+    let [deepdive, setDeepdive] = useContext(GlobalDeepDive)
+    let [gruppenarbeit, setGruppenarbeit] = useContext(GlobalGruppenarbeit)
+    let [brainstorming, setBrainstorming] = useContext(GlobalBrainstorming)
+
+    let [digitalShift,setDigitalShift] = useContext(GlobalDigitalShift)
+    let [futureSales,setFutureSales] = useContext(GlobalFutureSales)
+    let [futureRetail,setFutureRetail] = useContext(GlobalFutureRetail)
+    let [futureMobility,setFutureMobility] = useContext(GlobalFutureMobility)
+    let [sustainability,setSustainability] = useContext(GlobalSustainability)
+    let [afterSales,setAfterSales] = useContext(GlobalAfterSales)
+
+    let [designThinking,setDesignThinking] = useContext(GlobalDesignThinking)
+    let [designSprint,setDesignSprint] = useContext(GlobalDesignSprint)
+    let [leanCanvas,setLeanCanvas] = useContext(GlobalLeanCanvas)
+    let [businessModel,setBusinessModel] = useContext(GlobalBusinessModel)
+    let [techTalk,setTechTalk] = useContext(GlobalTechTalk)
+
 
     console.log(informative)
 
@@ -52,7 +84,22 @@ function Zusatzleistungen() {
             fort={fort}
             movie={movie}
             catering={catering}
-            technik={technik}/>
+            technik={technik}
+            deepdive={deepdive}
+            gruppenarbeit={gruppenarbeit}
+            brainstorming={brainstorming}
+            digitalShift={digitalShift}
+            futureSales={futureSales}
+            futureRetail={futureRetail}
+            futureMobility={futureMobility}
+            sustainability={sustainability}
+            afterSales={afterSales}
+            designThinking={designThinking}
+            designSprint={designSprint}
+            leanCanvas={leanCanvas}
+            businessModel={businessModel}
+            techTalk={techTalk}
+            />
 
              <Link to="/Zusammenfassung" style={{ textDecoration: 'none', color:'black' }}>
             <Weiter/>
