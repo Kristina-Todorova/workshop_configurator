@@ -19,6 +19,12 @@ function Ziel() {
     let [ergebnis,setErgebnis] = useContext(GlobalErgebnis)
     let [fort,setFort] = useContext(GlobalFort)
 
+    const infocolor = informative===true ? "#00ADEF" : "lightgray"
+    const ergebniscolor = auftrag===true ? "#00ADEF" : "lightgray"
+    const auftragcolor = ergebnis===true ? "#00ADEF" : "lightgray"
+    const fortcolor = fort===true ? "#00ADEF" : "lightgray"
+
+
 
     let [movie,setMovie] = useContext(GlobalState)
     let [catering,setCatering] = useContext(GlobalCatering)
@@ -31,6 +37,7 @@ function Ziel() {
         setAuftrag(false)
         setErgebnis(false)
         setFort(false)
+
     }
 
     function handleClickOne() {
@@ -70,22 +77,22 @@ function Ziel() {
         <Link to="/Fokus" style={{ textDecoration: 'none', color:'black' }}>
         <Weiter/>
         </Link>
-        <div className="kvadrat1" onClick={handleClick} >
+        <div className="kvadrat1" onClick={handleClick} style={{backgroundColor:infocolor}}>
             <p className="title">Informative Session</p>
             <p className="textsquare"> Die disruptive Kraft der Digitalen Transformation verändert unser Leben, unsere Arbeit und erfordert kontinuierliches Lernen. Mit einer „Informative Session“ bringen Sie Expertenwissen zu aktuellen Technologie-Trends direkt zu Ihren Mitarbeitern.  </p>
         </div>
 
-        <div className="kvadrat2" onClick={handleClickOne} >
+        <div className="kvadrat2" onClick={handleClickOne} style={{backgroundColor:ergebniscolor}}>
             <p className="title">Ergebnisorientierte Sessions</p>
             <p className="textsquare">Welchen Einfluss hat die Digitalisierung auf mein Geschäftsmodell? Wie muss sich dieses ändern um nachhaltig erfolgreich zu sein? In diesen Sessions erarbeiten wir gemeinsam die Antworten zu diesen und vielen weiteren Fragen. </p>
         </div>
 
-        <div className="kvadrat3" onClick={handleClickTwo} >
+        <div className="kvadrat3" onClick={handleClickTwo} style={{backgroundColor:auftragcolor}}>
             <p className="title">Auftragsklärung</p>
             <p className="textsquare">In diesem Gespräch identifizieren wir gemeinsam maßgebliche Hindernisse und Chancen für Ihr zukünftiges Geschäftsmodell und definieren einen Weg wie diese mit uns erfolgreich angegangen werden können.  </p>
         </div>
 
-        <div className="kvadrat4" onClick={handleClickThree} >
+        <div className="kvadrat4" onClick={handleClickThree} style={{backgroundColor:fortcolor}}>
             <p className="title">Coaching/Training</p>
             <p className="textsquare">Zielgerichtete Kompetenzentwicklung bildet den Grundstein für nachhaltigen Geschäftserfolg. Unser Seminarangebot bietet Ihnen praxisnahe, topaktuelle Qualifizierungen von erfahrenen Trainern, Consultants und Coaches.</p>
         </div>

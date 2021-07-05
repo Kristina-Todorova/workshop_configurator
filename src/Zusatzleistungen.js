@@ -19,6 +19,11 @@ function Zusatzleistungen() {
     let [technik,setTechnik] = useContext(GlobalTechnik)
     let [movie,setMovie] = useContext(GlobalState)
 
+    const cateringcolor = catering===true ? "#00ADEF" : "lightgray"
+    const technikcolor = technik===true ? "#00ADEF" : "lightgray"
+    const moviecolor = movie===true ? "#00ADEF" : "lightgray"
+
+
     let [informative,setInformative] = useContext(GlobalInformative)
     let [auftrag,setAuftrag] = useContext(GlobalAuftrag)
     let [ergebnis,setErgebnis] = useContext(GlobalErgebnis)
@@ -53,17 +58,17 @@ function Zusatzleistungen() {
             <Weiter/>
              </Link>
 
-            <div className="sqr1" onClick={chooseCatering}>
+            <div className="sqr1" onClick={chooseCatering} style={{backgroundColor:cateringcolor}}>
                  <p className="title">Catering</p>
                 <p className="textsquare">Für das leibliche Wohl der Teilnehmer empfehlen wir das Hinzubuchen eines Catering-Services.</p>
             </div>
 
-            <div className="sqr2" onClick={chooseTechnik}>
+            <div className="sqr2" onClick={chooseTechnik} style={{backgroundColor:technikcolor}}>
                  <p className="title">Bereitstellung von Technik</p>
                 <p className="textsquare">Sollte Ihr Unternehmen nicht über notwendige Ausstattung verfügen, können Sie unsere Ausstattung buchen.</p>
             </div>
 
-            <div className="sqr3" onClick={chooseMovie}>
+            <div className="sqr3" onClick={chooseMovie} style={{backgroundColor:moviecolor}}>
                  <p className="title">After-Movie</p>
                 <p className="textsquare">Nach dem Workshop erhalten Sie einen kurzen Zusammenschnitt mit den wichtigsten Erkenntnissen.</p>
             </div>
