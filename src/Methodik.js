@@ -19,6 +19,12 @@ import GlobalFort from "./global/GlobalFort";
 import GlobalDeepDive from "./global/GlobalDeepDive";
 import GlobalGruppenarbeit from "./global/GlobalGruppenarbeit"
 import GlobalBrainstorming from "./global/GlobalBrainstorming";
+import GlobalDigitalShift from "./global/GlobalDigitalShift";
+import GlobalFutureSales from "./global/GlobalFutureSales";
+import GlobalFutureRetail from "./global/GlobalFutureRetail";
+import GlobalFutureMobility from "./global/GlobalFutureMobility";
+import GlobalSustainability from "./global/GlobalSustainability";
+import GlobalAfterSales from "./global/GlobalAfterSales";
 
 
 
@@ -41,6 +47,13 @@ function Methodik() {
     let [movie,setMovie] = useContext(GlobalState)
     let [catering,setCatering] = useContext(GlobalCatering)
     let [technik,setTechnik] = useContext(GlobalTechnik)
+
+    let [digitalShift,setDigitalShift] = useContext(GlobalDigitalShift)
+    let [futureSales,setFutureSales] = useContext(GlobalFutureSales)
+    let [futureRetail,setFutureRetail] = useContext(GlobalFutureRetail)
+    let [futureMobility,setFutureMobility] = useContext(GlobalFutureMobility)
+    let [sustainability,setSustainability] = useContext(GlobalSustainability)
+    let [afterSales,setAfterSales] = useContext(GlobalAfterSales)
 
     const dtcolor = designThinking==true ? "#00ADEF" : "lightgray"
     const dscolor = designSprint==true ? "#00ADEF" : "lightgray"
@@ -72,6 +85,13 @@ function Methodik() {
   return (
         <div>
             <Kategorien
+
+            digitalShift={digitalShift}
+            futureSales={futureSales}
+            futureRetail={futureRetail}
+            futureMobility={futureMobility}
+            sustainability={sustainability}
+            afterSales={afterSales}
             designThinking={designThinking}
             designSprint={designSprint}
             leanCanvas={leanCanvas}
