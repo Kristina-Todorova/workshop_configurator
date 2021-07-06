@@ -16,9 +16,9 @@ import GlobalGruppenarbeit from "./global/GlobalGruppenarbeit"
 import GlobalBrainstorming from "./global/GlobalBrainstorming";
 import GlobalDesignThinking from "./global/GlobalDesignThinking";
 import GlobalDesignSprint from "./global/GlobalDesignSprint";
-import GlobalLeanCanvas from "./global/GlobalFutureRetail";
-import GlobalBusinessModel from "./global/GlobalFutureMobility";
-import GlobalTechTalk from "./global/GlobalSustainability";
+import GlobalLeanCanvas from "./global/GlobalLeanCanvas";
+import GlobalBusinessModel from "./global/GlobalBusinessModel";
+import GlobalTechTalk from "./global/GlobalTechTalk";
 import GlobalDigitalShift from "./global/GlobalDigitalShift";
 import GlobalFutureSales from "./global/GlobalFutureSales";
 import GlobalFutureRetail from "./global/GlobalFutureRetail";
@@ -46,18 +46,18 @@ function Ziel() {
     let [catering,setCatering] = useContext(GlobalCatering)
     let [technik,setTechnik] = useContext(GlobalTechnik)
 
-    let [designThinking,setDesignThinking] = useContext(GlobalDesignThinking)
-    let [designSprint,setDesignSprint] = useContext(GlobalDesignSprint)
-    let [leanCanvas,setLeanCanvas] = useContext(GlobalLeanCanvas)
-    let [businessModel,setBusinessModel] = useContext(GlobalBusinessModel)
-    let [techTalk,setTechTalk] = useContext(GlobalTechTalk)
-
     let [digitalShift,setDigitalShift] = useContext(GlobalDigitalShift)
     let [futureSales,setFutureSales] = useContext(GlobalFutureSales)
     let [futureRetail,setFutureRetail] = useContext(GlobalFutureRetail)
     let [futureMobility,setFutureMobility] = useContext(GlobalFutureMobility)
     let [sustainability,setSustainability] = useContext(GlobalSustainability)
     let [afterSales,setAfterSales] = useContext(GlobalAfterSales)
+
+    let [designThinking,setDesignThinking] = useContext(GlobalDesignThinking)
+    let [designSprint,setDesignSprint] = useContext(GlobalDesignSprint)
+    let [leanCanvas,setLeanCanvas] = useContext(GlobalLeanCanvas)
+    let [businessModel,setBusinessModel] = useContext(GlobalBusinessModel)
+    let [techTalk,setTechTalk] = useContext(GlobalTechTalk)
 
     console.log(informative)
 

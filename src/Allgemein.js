@@ -60,50 +60,24 @@ function Allgemein() {
             <Weiter/>
             </Link>
 
-            <div className="square00001" onClick={chooseSprache} >
-                <p className="title">Sprache</p>
-                <ButtonGroup color="primary" aria-label="outlined primary button group">
-                    <Button>Deutsch</Button>
-                    <Button>Englisch</Button>
-                    <Button>Andere</Button>
-                </ButtonGroup>
-            </div>
+             <div className="square00001" onClick={chooseSprache} >
+                 <p className="title">Sprache</p>
+                 <p className="auswahlmoeglichkeit">Englisch </p>
+                 </div>
 
-            <div className="square00002" onClick={chooseOrt} >
-                <p className="title">Ort</p>
-                <ButtonGroup color="primary" aria-label="outlined primary button group">
-                    <Button>Online</Button>
-                    <Button>Präsenz</Button>
-                    <Button>Andere</Button>
-                </ButtonGroup>
-            </div>
 
-            <div className="square00003" onClick={chooseTeilnehmer} >
-                <p className="title">Teilnehmer</p>
-                <p className="textsquare"> </p>
-            </div>
+             <div className="square00002" onClick={chooseOrt}>
+                <p className='title'>Ort</p>
+                </div>
 
-            <div className="square00004" onClick={chooseZeitraum} >
-                <p className="title">Zeitraum</p>
-                <TextField
-                    id="date"
-                    label="von"
-                    type="date"
-                    defaultValue="2017-05-24"
-                    InputLabelProps={{
-                      shrink: true,
-                    }}
-                  />
-                 <TextField
-                    id="date"
-                    label="bis"
-                    type="date"
-                    defaultValue="2017-05-24"
-                    InputLabelProps={{
-                      shrink: true,
-                    }}
-                  />
-            </div>
+             <div className="square00003" onClick={chooseZeitraum}>
+                <p className='title'>Zeitraum</p>
+                </div>
+             <div className="square00004" onClick={chooseTeilnehmer}>
+                <p className='title'>Teilnehmer</p>
+                </div>
+
+
 
             <div className="infolabel"
                  style={{

@@ -6,9 +6,9 @@ import info_Icon from "./info_Icon.png";
 import "./Zusammenfassung.css";
 import GlobalDesignThinking from "./global/GlobalDesignThinking";
 import GlobalDesignSprint from "./global/GlobalDesignSprint";
-import GlobalLeanCanvas from "./global/GlobalFutureRetail";
-import GlobalBusinessModel from "./global/GlobalFutureMobility";
-import GlobalTechTalk from "./global/GlobalSustainability";
+import GlobalLeanCanvas from "./global/GlobalLeanCanvas";
+import GlobalBusinessModel from "./global/GlobalBusinessModel";
+import GlobalTechTalk from "./global/GlobalTechTalk";
 import GlobalState from "./global/GlobalState";
 import GlobalCatering from "./global/GlobalCatering"
 import GlobalTechnik from "./global/GlobalTechnik";

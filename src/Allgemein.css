@@ -1,3 +1,16 @@
+
+.auswahlmoeglichkeit {
+    width: 80px;
+    height: 25px;
+    font-family: PT Serif;
+    font-style:normal;
+    font-weight:normal;
+    font-size: 18px;
+    align-items:center;
+    background: darkgrey;
+    margin-top: 0px;
+    }
+
 .square00001{
     height: 50px;
     width: 810px;
@@ -6,7 +19,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
     margin-left: 300px;
     margin-top: -530px;
@@ -22,10 +35,10 @@
     font-weight: normal;
     font-size: 10px;
     color: #000000;
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
     margin-left: 300px;
-    margin-top: -470px;
+
 }
 
 .square00003{
@@ -38,10 +51,9 @@
     font-weight: normal;
     font-size: 10px;
     color: #000000;
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
     margin-left: 300px;
-    margin-top: -410px;
 }
 
 .square00004{
@@ -54,10 +66,9 @@
     font-weight: normal;
     font-size: 10px;
     color: #000000;
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
     margin-left: 300px;
-    margin-top: -350px;
 
 }
 
@@ -68,7 +79,7 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 18px;
-    text-align: center;
+    text-align: left;
     letter-spacing: -0.02em;
     padding-top: 20px;
 }
@@ -79,6 +90,7 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 140%;
-    align-items: center;
+    align-items: left;
     padding: 10px;
 }
+

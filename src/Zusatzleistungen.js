@@ -4,27 +4,33 @@ import "./Zusatzleistungen.css"
 import Weiter from "./Weiter";
 import {Link} from "react-router-dom";
 import info_Icon from "./info_Icon.png";
+
 import GlobalState from "./global/GlobalState";
 import GlobalCatering from "./global/GlobalCatering";
 import GlobalTechnik from "./global/GlobalTechnik";
+
 import GlobalInformative from "./global/GlobalInformative";
 import GlobalAuftrag from "./global/GlobalAuftrag";
 import GlobalErgebnis from "./global/GlobalErgebnis";
 import GlobalFort from "./global/GlobalFort";
+
 import GlobalDesignThinking from "./global/GlobalDesignThinking";
 import GlobalDesignSprint from "./global/GlobalDesignSprint";
-import GlobalLeanCanvas from "./global/GlobalFutureRetail";
-import GlobalBusinessModel from "./global/GlobalFutureMobility";
-import GlobalTechTalk from "./global/GlobalSustainability";
+import GlobalLeanCanvas from "./global/GlobalLeanCanvas";
+import GlobalBusinessModel from "./global/GlobalBusinessModel";
+import GlobalTechTalk from "./global/GlobalTechTalk";
+
 import GlobalDeepDive from "./global/GlobalDeepDive";
 import GlobalGruppenarbeit from "./global/GlobalGruppenarbeit"
 import GlobalBrainstorming from "./global/GlobalBrainstorming";
+
 import GlobalDigitalShift from "./global/GlobalDigitalShift";
 import GlobalFutureSales from "./global/GlobalFutureSales";
 import GlobalFutureRetail from "./global/GlobalFutureRetail";
 import GlobalFutureMobility from "./global/GlobalFutureMobility";
 import GlobalSustainability from "./global/GlobalSustainability";
 import GlobalAfterSales from "./global/GlobalAfterSales";
+
 import coins from "./coins.png";
 import zeit from "./zeit.png";
 import GlobalPrice from "./global/GlobalPrice";
