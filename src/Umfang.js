@@ -7,6 +7,7 @@ import info_Icon from "./info_Icon.png";
 import GlobalPaketS from "./global/GlobalPaketS";
 import GlobalPaketM  from "./global/GlobalPaketM";
 import GlobalPaketL from "./global/GlobalPaketL";
+import coins from "./coins.png";
 
 function Umfang() {
     let [paketS,setPaketS] = useContext(GlobalPaketS)
@@ -48,9 +49,17 @@ function Umfang() {
              <div className="sqr01" onClick={choosePaketS} style={{backgroundColor:scolor}}>
                  <p className="title">Paket S </p>
                 <p className="textsquare">Mit diesem Paket haben Sie die Möglichkeit einen ersten kostenlosen Überblick zu Ihrem gewünschten Thema zu erhalten.
+                    <br></br>
                     {"\n"} - Kostenlose Einführung
+                     <br></br>
                     {"\n"} - Elemente: Keynote, Fragerunde
+                     <br></br>
                     {"\n"} - Dauer: 1 Stunde</p>
+                 <div className="minirect" style={{backgroundColor:scolor}}>
+                     <img src={coins} alt="icon" width="30px" height="30px" style={{marginRight:"50%", marginTop:"2%"}}
+                     />
+                     <p>ab 0 EUR</p>
+                 </div>
              </div>
 
             <div className="sqr02" onClick={choosePaketM} style={{backgroundColor:mcolor}}>
@@ -59,6 +68,10 @@ function Umfang() {
                     {"\n"} - Vier themenbezogene Grundbausteine
                     {"\n"} - Hinzubuchen von Zusatzbausteinen und -leistungen möglich
                     {"\n"} - Dauer: 5 Stunde</p>
+                <div className="minirect1">
+                     <img src={coins} alt="icon" width="30px" height="30px" style={{marginRight:"50%", marginTop:"2%"}}/>
+                     <p>ab 0 EUR </p>
+                 </div>
             </div>
 
             <div className="sqr03" onClick={choosePaketL} style={{backgroundColor:lpaketcolor}}>
@@ -67,6 +80,10 @@ function Umfang() {
                     {"\n"} - Sechs themenbezogene Grundbausteine
                     {"\n"} - Hinzubuchen von Zusatzbausteinen und -leistungen möglich
                     {"\n"} - Dauer: 14 Stunde (2 Werktage)</p>
+                <div className="minirect2">
+                     <img src={coins} alt="icon" width="30px" height="30px" style={{marginRight:"50%", marginTop:"2%"}}/>
+                    <p>ab 1000 EUR </p>
+                 </div>
             </div>
 
 
@@ -86,7 +103,7 @@ function Umfang() {
                     top: "239px",
                     background: "rgba(0, 173, 239, 0.25)",
                     marginLeft: "300px",
-                    marginTop:"-510px"
+                    marginTop:"-520px"
                     }} >
                 <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
                 <p>Bitte wählen Sie die gewünschte Paketgröße aus. Das ausgewählte Paket kann im Folgenden noch personalisiert werden.</p>
