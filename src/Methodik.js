@@ -55,11 +55,11 @@ function Methodik() {
     let [sustainability,setSustainability] = useContext(GlobalSustainability)
     let [afterSales,setAfterSales] = useContext(GlobalAfterSales)
 
-    const designthinkingcolor = designThinking==true ? "#00ADEF" : "lightgray"
-    const dscolor = designSprint==true ? "#00ADEF" : "lightgray"
-    const lccolor = leanCanvas==true ? "#00ADEF" : "lightgray"
-    const bmcolor = businessModel==true ? "#00ADEF" : "lightgray"
-    const ttcolor = techTalk==true ? "#00ADEF" : "lightgray"
+    const designthinkingcolor = designThinking===true ? "#00ADEF" : "lightgray"
+    const dscolor = designSprint===true ? "#00ADEF" : "lightgray"
+    const lccolor = leanCanvas===true ? "#00ADEF" : "lightgray"
+    const bmcolor = businessModel===true ? "#00ADEF" : "lightgray"
+    const ttcolor = techTalk===true ? "#00ADEF" : "lightgray"
 
     function chooseDesignThinking() {
         setDesignThinking(prevState => !prevState)
@@ -113,24 +113,26 @@ function Methodik() {
             futureMobility={futureMobility}
             sustainability={sustainability}
             afterSales={afterSales}
+
             designThinking={designThinking}
             designSprint={designSprint}
             leanCanvas={leanCanvas}
             businessModel={businessModel}
             techTalk={techTalk}
+
             informative={informative}
             auftrag={auftrag}
             ergebnis={ergebnis}
             fort={fort}
+
             movie={movie}
             catering={catering}
             technik={technik}
+
             deepdive={deepdive}
             gruppenarbeit={gruppenarbeit}
             brainstorming={brainstorming}
             />
-
-
 
             <Link to="/Allgemein" style={{ textDecoration: 'none', color:'black' }}>
             <Weiter/>

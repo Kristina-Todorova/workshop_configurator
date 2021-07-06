@@ -1,6 +1,8 @@
 import React from "react";
 import icon_shopping_bag from "./icon_shopping_bag.png";
-import "./Einkaufswagen.css"
+import "./Einkaufswagen.css";
+import zeit from "./zeit.png";
+import coins from "./coins.png";
 
 function Einkaufswagen(props) {
 
@@ -23,8 +25,11 @@ function Einkaufswagen(props) {
 
   return (
         <div className="einkaufswagen">
-            <img src={icon_shopping_bag} alt="icon" width="45px" height="45px" style={{paddingLeft: "100px"}}/>
-
+            <img src={icon_shopping_bag} alt="icon" width="45px" height="45px" style={{paddingLeft: "100px", position:"absolute"}}/>
+            <img src={zeit} alt="icon" width="30px" height="30px" style={{marginLeft: "15px", paddingTop:"60px", position:"absolute"}}/>
+            <p className="cartitem" style={{marginLeft: "65px", paddingTop:"65px"}}>0 Stunden</p>
+            <img src={coins} alt="icon" width="30px" height="30px" style={{marginLeft: "15px", paddingTop:"15px", position:"absolute"}}/>
+            <p className="cartitem" style={{marginLeft: "65px", marginTop:"35px"}}>0 Euro</p>
 
             {ziel
                 ? <p className="cartitem">{props.ziel}</p>
