@@ -50,40 +50,57 @@ function Umfang() {
                  <p className="title">Paket S </p>
                 <p className="textsquare">Mit diesem Paket haben Sie die Möglichkeit einen ersten kostenlosen Überblick zu Ihrem gewünschten Thema zu erhalten.
                     <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+
                     {"\n"} - Kostenlose Einführung
                      <br></br>
                     {"\n"} - Elemente: Keynote, Fragerunde
                      <br></br>
                     {"\n"} - Dauer: 1 Stunde</p>
-                 <div className="minirect" style={{backgroundColor:scolor}}>
-                     <img src={coins} alt="icon" width="30px" height="30px" style={{marginRight:"50%", marginTop:"2%"}}
-                     />
-                     <p>ab 0 EUR</p>
-                 </div>
+                   <img src={coins} alt="icon" width="30px" height="30px" style={{marginLeft:"10%", marginTop:"19%"}}/>
+                     <p className="minirect">ab 0 EUR</p>
              </div>
 
             <div className="sqr02" onClick={choosePaketM} style={{backgroundColor:mcolor}}>
                  <p className="title">Paket M</p>
                 <p className="textsquare">Mit diesem Paket erhalten Sie einen grundlegenden Workshop zu Ihrem gewünschten Thema. Unsere Experten unterstützen Sie dabei druch die individuelle Vermittlung von Wissen.
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
                     {"\n"} - Vier themenbezogene Grundbausteine
+                    <br></br>
                     {"\n"} - Hinzubuchen von Zusatzbausteinen und -leistungen möglich
-                    {"\n"} - Dauer: 5 Stunde</p>
+                    <br></br>
+                    {"\n"} - Dauer: 5 Stunden</p>
                 <div className="minirect1">
-                     <img src={coins} alt="icon" width="30px" height="30px" style={{marginRight:"50%", marginTop:"2%"}}/>
-                     <p>ab 0 EUR </p>
+                     <img src={coins} alt="icon" width="30px" height="30px" style={{ marginLeft:"5%",marginTop:"2%"}}/>
+                     <p className="textt">ab 1000 EUR </p>
+                 </div>
+                <div className="minirect3">
+                     <p className="texttt"> Empfohlen </p>
                  </div>
             </div>
 
             <div className="sqr03" onClick={choosePaketL} style={{backgroundColor:lpaketcolor}}>
                  <p className="title">Paket L</p>
                 <p className="textsquare">Dieses Paket enthält einen umfangreichen Workshop zu Ihrem gewp´ünschten Thema. Unsere Experten unterstützen Sie durch die Vermittlung von Wissen bei der Erarbeitung Ihrer Inhalte und geben Ihnen Handlungsempfehlungen.
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
                     {"\n"} - Sechs themenbezogene Grundbausteine
+                    <br></br>
                     {"\n"} - Hinzubuchen von Zusatzbausteinen und -leistungen möglich
+                    <br></br>
                     {"\n"} - Dauer: 14 Stunde (2 Werktage)</p>
-                <div className="minirect2">
-                     <img src={coins} alt="icon" width="30px" height="30px" style={{marginRight:"50%", marginTop:"2%"}}/>
-                    <p>ab 1000 EUR </p>
-                 </div>
+                     <img src={coins} alt="icon" width="30px" height="30px" style={{marginRight:"50%", marginTop:"-4%", marginLeft:"10%"}}/>
+                    <p className="minirect2">ab 3000 EUR </p>
             </div>
 
 

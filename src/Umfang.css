@@ -8,7 +8,7 @@
       font-weight: normal;
       font-size: 10px;
       color: #000000;
-      text-align: center;
+      text-align: left;
       vertical-align: middle;
     margin-left: 300px;
     margin-top: -545px;
@@ -28,7 +28,7 @@
       font-weight: normal;
       font-size: 10px;
       color: #000000;
-      text-align: center;
+      text-align: left;
       vertical-align: middle;
     margin-left: 585px;
     margin-top: -428px;
@@ -44,7 +44,7 @@
       font-weight: normal;
       font-size: 10px;
       color: #000000;
-      text-align: center;
+      text-align: left;
       vertical-align: middle;
     margin-left: 870px;
     margin-top: -440px;
@@ -74,10 +74,9 @@
 }
 
 .minirect{
-    width: 250px;
-    height: 40px;
-    background-color: darkgrey;
-    margin-top: 176px;
+    margin-top: -30px;
+    font-size: 17px;
+    margin-left: 25%;
 
 }
 
@@ -85,14 +84,35 @@
     width: 250px;
     height: 40px;
     background-color: #00ADEF;
-    margin-top: 116px;
+    margin-top: -10px;
 
 }
 
 .minirect2{
-    width: 250px;
-    height: 40px;
-    background-color: darkgrey;
-    margin-top: 80px;
+    margin-top: -30px;
+    font-size: 17px;
+    margin-left: 25%;
 
+}
+
+.minirect3{
+    width: 100px;
+    height: 25px;
+    background-color: #00ADEF;
+    margin-top: -425px;
+    margin-left: 150px;
+    text-align: left;
+
+}
+
+.texttt{
+   margin-top: -29px;
+    font-size: 17px;
+    margin-left: 10%;
+}
+
+.textt{
+   margin-top: -29px;
+    font-size: 17px;
+    margin-left: 20%;
 }

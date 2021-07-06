@@ -25,6 +25,7 @@ import GlobalFutureRetail from "./global/GlobalFutureRetail";
 import GlobalFutureMobility from "./global/GlobalFutureMobility";
 import GlobalSustainability from "./global/GlobalSustainability";
 import GlobalAfterSales from "./global/GlobalAfterSales";
+import coins from "./coins.png";
 
 
 function Zusatzleistungen() {
@@ -108,16 +109,22 @@ function Zusatzleistungen() {
             <div className="sqr1" onClick={chooseCatering} style={{backgroundColor:cateringcolor}}>
                  <p className="title">Catering</p>
                 <p className="textsquare">Für das leibliche Wohl der Teilnehmer empfehlen wir das Hinzubuchen eines Catering-Services.</p>
+                <img src={coins} alt="icon" width="30px" height="30px" style={{marginRight:"40%", marginTop:"19%"}}/>
+                <p className="pricetag">250 EUR</p>
             </div>
 
             <div className="sqr2" onClick={chooseTechnik} style={{backgroundColor:technikcolor}}>
                  <p className="title">Bereitstellung von Technik</p>
                 <p className="textsquare">Sollte Ihr Unternehmen nicht über notwendige Ausstattung verfügen, können Sie unsere Ausstattung buchen.</p>
+                <img src={coins} alt="icon" width="30px" height="30px" style={{marginRight:"40%", marginTop:"19%"}}/>
+                <p className="pricetag">150 EUR</p>
             </div>
 
             <div className="sqr3" onClick={chooseMovie} style={{backgroundColor:moviecolor}}>
                  <p className="title">After-Movie</p>
                 <p className="textsquare">Nach dem Workshop erhalten Sie einen kurzen Zusammenschnitt mit den wichtigsten Erkenntnissen.</p>
+                <img src={coins} alt="icon" width="30px" height="30px" style={{marginRight:"40%", marginTop:"26%"}}/>
+                <p className="pricetag">350 EUR</p>
             </div>
 
             <div className="infolabel"
