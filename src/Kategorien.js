@@ -41,6 +41,13 @@ function Kategorien(props) {
     const businessmodel = props.businessmodel;
     const techtalk = props.techtalk;
 
+    const deutsch = props.deutsch;
+    const englisch = props.englisch;
+    const anderesprache = props.anderesprache;
+
+    const online = props.online;
+    const praesenz = props.praesenz;
+    const andereort = props.andereort;
 
 
     function MouseOver(event) {
@@ -183,7 +190,23 @@ function Kategorien(props) {
                                 : ""
                     }
 
-            allgemein="Allgemeine Infos"
+            sprache={deutsch===true
+                    ? <p className="cartitem">{"Deutsch"}</p>
+                    : englisch===true
+                        ? <p className="cartitem">{"Englisch"}</p>
+                        : anderesprache===true
+                            ? <p className="cartitem">{"Andere Sprache"}</p>
+                            : ""
+                    }
+
+            ort={online===true
+                    ? <p className="cartitem">{"Online"}</p>
+                    : praesenz===true
+                        ? <p className="cartitem">{"Präsenz"}</p>
+                        : andereort===true
+                            ? <p className="cartitem">{"Anderer Ort"}</p>
+                            : ""
+                    }
 
             umfang= {paketS===true
                     ? <p className="cartitem">{"Paket S"}</p>

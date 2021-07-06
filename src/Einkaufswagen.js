@@ -9,7 +9,8 @@ function Einkaufswagen(props) {
     const ziel = props.ziel;
     const fokus = props.fokus;
     const methodik = props.methodik;
-    const allgemein = props.allgemein;
+    const sprache = props.sprache;
+    const ort = props.ort;
     const umfang = props.umfang;
     const grundbausteine = props.grundbausteine;
 
@@ -60,8 +61,12 @@ function Einkaufswagen(props) {
                 && <p className="cartitem">{props.methodik}</p>
                 }
 
-            {allgemein
-                && <p className="cartitem">{props.allgemein}</p>
+            {sprache
+                && <p className="cartitem">{props.sprache}</p>
+                }
+
+            {ort
+                && <p className="cartitem">{props.ort}</p>
                 }
 
            {umfang

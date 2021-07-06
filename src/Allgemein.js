@@ -4,85 +4,129 @@ import Weiter from "./Weiter";
 import {Link} from "react-router-dom";
 import info_Icon from "./info_Icon.png";
 import React, {useState, useContext} from "react";
-import GlobalSprache from "./global/GlobalSprache";
-import GlobalOrt from "./global/GlobalOrt";
 import GlobalTeilnehmer from "./global/GlobalTeilnehmer";
 import GlobalZeitraum from "./global/GlobalZeitraum";
 import {TextField} from "@material-ui/core";
 
+import GlobalDeutsch from "./global/GlobalDeutsch";
+import GlobalEnglisch from "./global/GlobalEnglisch";
+import GlobalAndereSprache from "./global/GlobalAndereSprache";
+
+import GlobalPraesenz from "./global/GlobalPraesenz";
+import GlobalOnline from "./global/GlobalOnline";
+import GlobalAndereOrt from "./global/GlobalAndereOrt";
+
 
 function Allgemein() {
 
-    let [sprache, setSprache ] = useContext(GlobalSprache)
-    let [ort,setOrt] = useContext(GlobalOrt)
-    let [teilnehmer,setTeilnehmer] = useContext(GlobalTeilnehmer)
-    let [zeitraum,setZeitraum] = useContext(GlobalZeitraum)
 
-    function chooseSprache() {
-        setSprache(prevState => !prevState)
+    let [deutsch,setDeutsch] = useContext(GlobalDeutsch);
+    let [englisch,setEnglisch] = useContext(GlobalEnglisch);
+    let [anderesprache,setAndereSprache] = useContext(GlobalAndereSprache);
+
+    let [praesenz,setPraesenz] = useContext(GlobalPraesenz);
+    let [online,setOnline] = useContext(GlobalOnline);
+    let [andereort,setAndereOrt] = useContext(GlobalAndereOrt);
+
+    const deutschcolor = deutsch===true ? "#00ADEF" : "darkgrey"
+    const englischcolor = englisch===true ? "#00ADEF" : "darkgrey"
+    const andspcolor = anderesprache===true ? "#00ADEF" : "darkgrey"
+
+    const onlinecolor = online===true ? "#00ADEF" : "darkgrey"
+    const prascolor = praesenz===true ? "#00ADEF" : "darkgrey"
+    const andortcolor = andereort===true ? "#00ADEF" : "darkgrey"
+
+
+    function chooseDeutsch() {
+        setDeutsch(prevState => !prevState)
+        setEnglisch(false)
+        setAndereSprache(false)
     }
 
-    function chooseOrt() {
-        setOrt(prevState => !prevState)
+    function chooseEnglisch() {
+        setEnglisch(prevState => !prevState)
+        setDeutsch(false)
+        setAndereSprache(false)
     }
 
-    function chooseTeilnehmer() {
-        setTeilnehmer(GlobalState => !GlobalState)
+    function chooseAndereSprache() {
+        setAndereSprache(prevState => !prevState)
+        setEnglisch(false)
+        setDeutsch(false)
     }
-    function chooseZeitraum() {
-        setZeitraum(GlobalState => !GlobalState)
+
+    function choosePraesenz() {
+        setPraesenz(prevState => !prevState)
+        setOnline(false)
+        setAndereOrt(false)
     }
+
+    function chooseOnline() {
+        setOnline(prevState => !prevState)
+        setPraesenz(false)
+        setAndereOrt(false)
+    }
+
+    function chooseAndereOrt() {
+        setAndereOrt(prevState => !prevState)
+        setOnline(false)
+        setPraesenz(false)
+    }
+
 
   return (
         <div>
 
             <Kategorien
+            deutsch={deutsch}
+            englisch={englisch}
+            anderesprache={anderesprache}
 
-            sprache={sprache}
-            ort={ort}
-            teilnehmer={teilnehmer}
-            zeitraum={zeitraum}/>
+            praesenz={praesenz}
+            online={online}
+            andereort={andereort}
+            />
 
             <Link to="/Umfang" style={{ textDecoration: 'none', color:'black' }}>
             <Weiter/>
             </Link>
 
-             <div className="squaresprache" onClick={chooseSprache} >
+             <div className="squaresprache">
                  <p className="allgemeintitle">Sprache</p>
 
-                 <div className="sprachen">
+                 <div className="sprachen" onClick={chooseDeutsch} style={{backgroundColor:deutschcolor}}>
                  <p>Deutsch</p>
                  </div>
 
-                 <div className="sprachen1">
+                 <div className="sprachen1" onClick={chooseEnglisch} style={{backgroundColor:englischcolor}}>
                  <p>Englisch</p>
                  </div>
 
-                 <div className="sprachen2">
+                 <div className="sprachen2" onClick={chooseAndereSprache} style={{backgroundColor:andspcolor}}>
                  <p>Andere</p>
                  </div>
 
                  </div>
 
 
-             <div className="squareort" onClick={chooseOrt}>
+             <div className="squareort">
                 <p className='allgemeintitle'>Ort</p>
 
-                 <div className="sprachen">
+                 <div className="sprachen" onClick={chooseOnline} style={{backgroundColor:onlinecolor}}>
                  <p>Online</p>
                  </div>
 
-                 <div className="sprachen1">
+                 <div className="sprachen1" onClick={choosePraesenz} style={{backgroundColor:prascolor}}>
                  <p>Präsenz</p>
                  </div>
 
-                 <div className="sprachen2">
+                 <div className="sprachen2" onClick={chooseAndereOrt} style={{backgroundColor:andortcolor}}>
                  <p>Andere</p>
                  </div>
 
                 </div>
 
-             <div className="squarezeitraum" onClick={chooseZeitraum}>
+             <div className="squarezeitraum">
                 <p className='allgemeintitle'>Zeitraum</p>
 
                  <form>
@@ -124,7 +168,7 @@ function Allgemein() {
 
                 </div>
 
-             <div className="squareteilnehmer" onClick={chooseTeilnehmer}>
+             <div className="squareteilnehmer">
                 <p className='allgemeintitle'>Teilnehmer</p>
                  <form>
                  <TextField id="outlined-basic" label="Anzahl" variant="outlined" required="true" size="small"
@@ -132,8 +176,6 @@ function Allgemein() {
                 </form>
 
                 </div>
-
-
 
             <div className="infolabel"
                  style={{

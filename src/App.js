@@ -45,6 +45,14 @@ import GlobalLeanCanvas from "./global/GlobalLeanCanvas";
 import GlobalBusinessModel from "./global/GlobalBusinessModel";
 import GlobalTechTalk from "./global/GlobalTechTalk";
 
+import GlobalDeutsch from "./global/GlobalDeutsch";
+import GlobalEnglisch from "./global/GlobalEnglisch";
+import GlobalAndereSprache from "./global/GlobalAndereSprache";
+
+import GlobalPraesenz from "./global/GlobalPraesenz";
+import GlobalOnline from "./global/GlobalOnline";
+import GlobalAndereOrt from "./global/GlobalAndereOrt";
+
 function App() {
 
     const [informative, setInformative] = useState(false);
@@ -79,6 +87,14 @@ function App() {
     const [leanCanvas, setLeanCanvas] = useState(false);
     const [businessModel, setBusinessModel] = useState(false);
     const [techTalk, setTechTalk] = useState(false);
+
+    const [deutsch, setDeutsch] = useState(false);
+    const [englisch,setEnglisch] = useState(false);
+    const [anderesprache,setAndereSprache] = useState(false);
+
+    const [praesenz,setPraesenz] = useState(false);
+    const [online,setOnline] = useState(false);
+    const [andereort,setAndereOrt] = useState(false);
 
   return (
         <main>
@@ -115,6 +131,13 @@ function App() {
                 <GlobalLeanCanvas.Provider value={[leanCanvas, setLeanCanvas]}>
                 <GlobalBusinessModel.Provider value={[businessModel, setBusinessModel]}>
                 <GlobalTechTalk.Provider value={[techTalk, setTechTalk]}>
+
+                    <GlobalDeutsch.Provider value={[deutsch, setDeutsch]}>
+                    <GlobalEnglisch.Provider value={[englisch,setEnglisch]}>
+                    <GlobalAndereSprache.Provider value={[anderesprache,setAndereSprache]}>
+                    <GlobalPraesenz.Provider value={[praesenz,setPraesenz]}>
+                    <GlobalOnline.Provider value={[online,setOnline]}>
+                    <GlobalAndereOrt.Provider value={[andereort,setAndereOrt]}>
 
                 <Switch>
                     <Route exact path="/">
@@ -163,6 +186,13 @@ function App() {
 
                 </Switch>
 
+            </GlobalAndereOrt.Provider>
+            </GlobalOnline.Provider>
+            </GlobalPraesenz.Provider>
+            </GlobalAndereSprache.Provider>
+            </GlobalEnglisch.Provider>
+            </GlobalDeutsch.Provider>
+
             </GlobalTechTalk.Provider>
             </GlobalBusinessModel.Provider>
             </GlobalLeanCanvas.Provider>
@@ -194,9 +224,6 @@ function App() {
             </GlobalState.Provider>
             </GlobalCatering.Provider>
             </GlobalTechnik.Provider>
-
-
-
 
         </main>
 
