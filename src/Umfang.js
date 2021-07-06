@@ -8,6 +8,8 @@ import GlobalPaketS from "./global/GlobalPaketS";
 import GlobalPaketM  from "./global/GlobalPaketM";
 import GlobalPaketL from "./global/GlobalPaketL";
 import coins from "./coins.png";
+import GlobalPrice from "./global/GlobalPrice";
+import GlobalTime from "./global/GlobalTime";
 
 function Umfang() {
     let [paketS,setPaketS] = useContext(GlobalPaketS)
@@ -18,22 +20,36 @@ function Umfang() {
     const mcolor = paketM===true ? "#00ADEF" : "lightgray"
     const lpaketcolor = paketL===true ? "#00ADEF" : "lightgray"
 
+    let [pricecounter, setPriceCounter] = useContext(GlobalPrice)
+    let [timecounter, setTimeCounter] = useContext(GlobalTime)
+
     function choosePaketS() {
         setPaketS(prevState => !prevState)
         setPaketM(false)
         setPaketL(false)
+        setPriceCounter(pricecounter=0)
+        setTimeCounter(timecounter=0)
+        setTimeCounter(paketS===false ? timecounter+1 : 0)
     }
 
     function choosePaketM() {
         setPaketM(prevState => !prevState)
         setPaketS(false)
         setPaketL(false)
+        setPriceCounter(pricecounter=0)
+        setPriceCounter(paketM===false ? pricecounter+1000 : 0)
+        setTimeCounter(timecounter=0)
+        setTimeCounter(paketM===false ? timecounter+5 : 0)
     }
 
     function choosePaketL() {
         setPaketL(prevState => !prevState)
         setPaketS(false)
         setPaketM(false)
+        setPriceCounter(pricecounter=0)
+        setPriceCounter(paketL===false ? pricecounter+3000 : 0)
+        setTimeCounter(timecounter=0)
+        setTimeCounter(paketL===false ? timecounter+14 : 0)
     }
 
   return (
@@ -41,7 +57,10 @@ function Umfang() {
             <Kategorien
             paketS={paketS}
             paketM={paketM}
-            paketL={paketL}/>
+            paketL={paketL}
+            pricecounter={pricecounter}
+            timecounter={timecounter}
+            />
 
              <Link to="/Grundbausteine" style={{ textDecoration: 'none', color:'black' }}>
              <Weiter/>

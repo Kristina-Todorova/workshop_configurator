@@ -21,13 +21,31 @@ function Einkaufswagen(props) {
     const brainstorming = props.brainstorming;
     const gruppenarbeit = props.gruppenarbeit;
 
+    const timecounter = props.timecounter;
+    const pricecounter = props.pricecounter;
+
   return (
         <div className="einkaufswagen">
             <img src={icon_shopping_bag} alt="icon" width="45px" height="45px" style={{paddingLeft: "100px", position:"absolute"}}/>
             <img src={zeit} alt="icon" width="30px" height="30px" style={{marginLeft: "15px", paddingTop:"60px", position:"absolute"}}/>
-            <p className="cartitem" style={{marginLeft: "65px", paddingTop:"65px"}}>0 Stunden</p>
+            <p className="cartitem" style={{marginLeft: "65px", paddingTop:"55px"}}>
+
+                {timecounter
+                ? <p>{props.timecounter} Stunden</p>
+                : <p>0 Stunden</p>
+                }
+
+
+            </p>
             <img src={coins} alt="icon" width="30px" height="30px" style={{marginLeft: "15px", paddingTop:"15px", position:"absolute"}}/>
-            <p className="cartitem" style={{marginLeft: "65px", marginTop:"35px"}}>0 Euro</p>
+            <p className="cartitem" style={{marginLeft: "65px", marginTop:"34px"}}>
+
+                {pricecounter
+                ? <p>{props.pricecounter} Euro</p>
+                : <p>0 Euro</p>
+                }
+
+            </p>
 
             {ziel
                 ? <p className="cartitem">{props.ziel}</p>

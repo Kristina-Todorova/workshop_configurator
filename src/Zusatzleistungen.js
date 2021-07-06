@@ -27,6 +27,8 @@ import GlobalSustainability from "./global/GlobalSustainability";
 import GlobalAfterSales from "./global/GlobalAfterSales";
 import coins from "./coins.png";
 import zeit from "./zeit.png";
+import GlobalPrice from "./global/GlobalPrice";
+import GlobalTime from "./global/GlobalTime";
 
 
 function Zusatzleistungen() {
@@ -39,6 +41,8 @@ function Zusatzleistungen() {
     const technikcolor = technik===true ? "#00ADEF" : "lightgray"
     const moviecolor = movie===true ? "#00ADEF" : "lightgray"
 
+    let [pricecounter, setPriceCounter] = useContext(GlobalPrice)
+    let [timecounter, setTimeCounter] = useContext(GlobalTime)
 
     let [informative,setInformative] = useContext(GlobalInformative)
     let [auftrag,setAuftrag] = useContext(GlobalAuftrag)
@@ -67,14 +71,20 @@ function Zusatzleistungen() {
 
     function chooseCatering() {
         setCatering(prevState => !prevState)
+        setPriceCounter(catering===false ? pricecounter+350 : 0)
+        setTimeCounter(catering===false ? timecounter+0.5 : 0)
     }
 
     function chooseTechnik() {
         setTechnik(prevState => !prevState)
+        setPriceCounter(technik===false ? pricecounter+350 : 0)
+        setTimeCounter(technik===false ? timecounter+0.5 : 0)
     }
 
     function chooseMovie() {
         setMovie(GlobalState => !GlobalState)
+        setPriceCounter(movie===false ? pricecounter+350 : 0)
+        setTimeCounter(movie===false ? timecounter+0.5 : 0)
     }
 
   return (
@@ -101,6 +111,8 @@ function Zusatzleistungen() {
             leanCanvas={leanCanvas}
             businessModel={businessModel}
             techTalk={techTalk}
+            pricecounter={pricecounter}
+            timecounter={timecounter}
             />
 
              <Link to="/Zusammenfassung" style={{ textDecoration: 'none', color:'black' }}>

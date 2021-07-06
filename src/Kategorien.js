@@ -32,6 +32,9 @@ function Kategorien(props) {
     const paketM = props.paketM
     const paketL = props.paketL
 
+    const pricecounter = props.pricecounter
+    const timecounter = props.timecounter
+
 
     function MouseOver(event) {
         event.target.style.background = '#00ADEF';
@@ -178,6 +181,8 @@ function Kategorien(props) {
             brainstorming={brainstorming===true && <p className="cartitem">{"Brainstorming"}</p>}
             gruppenarbeit={gruppenarbeit===true && <p className="cartitem">{"Gruppenarbeit"}</p>}
 
+            timecounter = {timecounter}
+            pricecounter = {pricecounter}
 
             />
 

@@ -36,6 +36,9 @@ import GlobalPaketS from "./global/GlobalPaketS";
 import GlobalPaketM  from "./global/GlobalPaketM";
 import GlobalPaketL from "./global/GlobalPaketL";
 
+import GlobalPrice from "./global/GlobalPrice";
+import GlobalTime from "./global/GlobalTime";
+
 function App() {
 
     const [informative, setInformative] = useState(false);
@@ -62,6 +65,8 @@ function App() {
     const [paketM,setPaketM] = useState(false);
     const [paketL,setPaketL] = useState (false);
 
+    const [pricecounter, setPriceCounter] = useState(0)
+    const [timecounter, setTimeCounter] = useState(0)
 
 
   return (
@@ -91,6 +96,8 @@ function App() {
             <GlobalPaketM.Provider value={[paketM, setPaketM]}>
             <GlobalPaketL.Provider value={[paketL, setPaketL]}>
 
+            <GlobalPrice.Provider value={[pricecounter, setPriceCounter]}>
+            <GlobalTime.Provider value={[timecounter,setTimeCounter]}>
 
                 <Switch>
                     <Route exact path="/">
@@ -139,6 +146,8 @@ function App() {
 
                 </Switch>
 
+            </GlobalTime.Provider>
+            </GlobalPrice.Provider>
             </GlobalPaketL.Provider>
             </GlobalPaketM.Provider>
             </GlobalPaketS.Provider>
