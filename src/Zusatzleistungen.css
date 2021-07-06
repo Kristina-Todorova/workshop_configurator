@@ -48,8 +48,22 @@
 
 }
 
-.pricetag{
-    margin-top: -30px;
-    font-size: 17px;
-    margin-left: 10%;
+.pricetag1{
+    margin-top: -25px;
+    font-size: 14px;
+    margin-left: -10%;
+}
+
+.zeit{
+    margin-top: -25px;
+    font-size: 14px;
+    margin-left: 55%;
+}
+
+.pricediv{
+    display: block;
+    height: 40px;
+    width: 125px;
+    margin-top: -7%;
+    margin-left: 5%;
 }

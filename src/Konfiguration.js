@@ -20,6 +20,7 @@ import GlobalBusinessModel from "./global/GlobalFutureMobility";
 import GlobalTechTalk from "./global/GlobalSustainability";
 import "./Konfiguration.css";
 import coins from "./coins.png";
+import zeit from "./zeit.png";
 
 function Konfiguration() {
 
@@ -74,22 +75,57 @@ function Konfiguration() {
              <div className="square1" onClick={chooseGruppenarbeit} style={{backgroundColor:gacolor}}>
                 <p className="title">Gruppenarbeit</p>
                <p className="textsquare">Ergänzen Sie Ihren Workshop um eine zusätzliche Gruppenaktivität passend zu Ihrem Thema. </p>
-                 <img src={coins} alt="icon" width="30px" height="30px" style={{marginRight:"40%", marginTop:"19%"}}/>
-                <p className="pricetag">250 EUR</p>
+
+                 <div className="timediv">
+
+                    <img src={zeit} alt="icon" width="25px" height="25px" style={{marginLeft:"12%",marginTop:"27%"}}/>
+                    <p className="zeit">0,5 Stunden</p>
+
+                </div>
+
+                <div className="pricediv">
+                    <img src={coins} alt="icon" width="25px" height="25px" style={{marginRight:"70%", marginTop:"-27%"}}/>
+                    <p className="pricetag1">350 EUR</p>
+                </div>
+
              </div>
 
              <div className="square2" onClick={chooseBrainstorming} style={{backgroundColor:bscolor}} >
                 <p className="title">Brainstorming</p>
                <p className="textsquare">Ergänzen Sie den Workshop um ein Brainstorming in großer Runde </p>
-                 <img src={coins} alt="icon" width="30px" height="30px" style={{marginRight:"40%", marginTop:"19%"}}/>
-                <p className="pricetag">150 EUR</p>
+
+                 <div className="timediv">
+
+                    <img src={zeit} alt="icon" width="25px" height="25px" style={{marginLeft:"12%",marginTop:"35%"}}/>
+                    <p className="zeit">0,5 Stunden</p>
+
+                </div>
+
+                <div className="pricediv">
+                    <img src={coins} alt="icon" width="25px" height="25px" style={{marginRight:"70%", marginTop:"-35%"}}/>
+                    <p className="pricetag1">350 EUR</p>
+                </div>
+
+
              </div>
+
 
              <div className="square3" onClick={chooseDeepdive} style={{backgroundColor:ddcolor}} >
                 <p className="title">Deep Dive</p>
                <p className="textsquare">Ergänzen Sie Ihren Workshop um einen Deep Dive zu einem relevanten oder gewünschten Thema. </p>
-                 <img src={coins} alt="icon" width="30px" height="30px" style={{marginRight:"40%", marginTop:"27%"}}/>
-                <p className="pricetag">350 EUR</p>
+
+                 <div className="timediv">
+
+                    <img src={zeit} alt="icon" width="25px" height="25px" style={{marginLeft:"12%",marginTop:"19%"}}/>
+                    <p className="zeit">0,5 Stunden</p>
+
+                </div>
+
+                <div className="pricediv">
+                    <img src={coins} alt="icon" width="25px" height="25px" style={{marginRight:"70%", marginTop:"-19%"}}/>
+                    <p className="pricetag1">350 EUR</p>
+                </div>
+
               </div>
 
 
