@@ -13,7 +13,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 function Kontaktformular() {
   const [state, setState] = React.useState({
     checkedA: true,
-    checkedB: true,
+    checkedB: false,
     checkedF: true,
     checkedG: true,
   });
@@ -63,9 +63,10 @@ const handleChange = (event) => {
                             onChange={handleChange}
                             name="checkedB"
                             color="red"
+                            required="true"
                           />
                         }
-                        label="Ich habe die Datenschutzerklärung gelesen und akzeptiert."
+                        label="Ich habe die Datenschutzerklärung gelesen und akzeptiere die Verarbeitung meiner Daten."
                       />
                       </div>
             </form>
@@ -81,7 +82,7 @@ const handleChange = (event) => {
                     backgroundColor:"lightgray",
                     fontWeight: "bold",
                     marginLeft: "1255px",
-                    marginTop: "7px"
+                    marginTop: "-65px"
                 }}>
             Absenden
         </Button>
@@ -102,7 +103,7 @@ const handleChange = (event) => {
                     top: "239px",
                     background: "rgba(0, 173, 239, 0.25)",
                     marginLeft: "300px",
-                    marginTop:"-485px"
+                    marginTop:"-510px"
                     }}>
                     <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
                    <p>Bitte geben Sie nachfolgend Ihre Kontaktdaten an. </p>
