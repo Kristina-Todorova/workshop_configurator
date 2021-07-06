@@ -183,13 +183,6 @@ function Kategorien(props) {
                                 : ""
                     }
 
-
-
-
-
-
-
-
             allgemein="Allgemeine Infos"
 
             umfang= {paketS===true
