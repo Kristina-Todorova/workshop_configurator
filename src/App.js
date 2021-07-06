@@ -39,6 +39,12 @@ import GlobalPaketL from "./global/GlobalPaketL";
 import GlobalPrice from "./global/GlobalPrice";
 import GlobalTime from "./global/GlobalTime";
 
+import GlobalDesignThinking from "./global/GlobalDesignThinking";
+import GlobalDesignSprint from "./global/GlobalDesignSprint";
+import GlobalLeanCanvas from "./global/GlobalLeanCanvas";
+import GlobalBusinessModel from "./global/GlobalBusinessModel";
+import GlobalTechTalk from "./global/GlobalTechTalk";
+
 function App() {
 
     const [informative, setInformative] = useState(false);
@@ -65,9 +71,14 @@ function App() {
     const [paketM,setPaketM] = useState(false);
     const [paketL,setPaketL] = useState (false);
 
-    const [pricecounter, setPriceCounter] = useState(0)
-    const [timecounter, setTimeCounter] = useState(0)
+    const [pricecounter, setPriceCounter] = useState(0);
+    const [timecounter, setTimeCounter] = useState(0);
 
+    const [designThinking, setDesignThinking] = useState(false);
+    const [designSprint, setDesignSprint] = useState(false);
+    const [leanCanvas, setLeanCanvas] = useState(false);
+    const [businessModel, setBusinessModel] = useState(false);
+    const [techTalk, setTechTalk] = useState(false);
 
   return (
         <main>
@@ -98,6 +109,12 @@ function App() {
 
             <GlobalPrice.Provider value={[pricecounter, setPriceCounter]}>
             <GlobalTime.Provider value={[timecounter,setTimeCounter]}>
+
+                <GlobalDesignThinking.Provider value={[designThinking, setDesignThinking]}>
+                <GlobalDesignSprint.Provider value={[designSprint, setDesignSprint]}>
+                <GlobalLeanCanvas.Provider value={[leanCanvas, setLeanCanvas]}>
+                <GlobalBusinessModel.Provider value={[businessModel, setBusinessModel]}>
+                <GlobalTechTalk.Provider value={[techTalk, setTechTalk]}>
 
                 <Switch>
                     <Route exact path="/">
@@ -145,6 +162,12 @@ function App() {
                     </Route>
 
                 </Switch>
+
+            </GlobalTechTalk.Provider>
+            </GlobalBusinessModel.Provider>
+            </GlobalLeanCanvas.Provider>
+            </GlobalDesignSprint.Provider>
+            </GlobalDesignThinking.Provider>
 
             </GlobalTime.Provider>
             </GlobalPrice.Provider>

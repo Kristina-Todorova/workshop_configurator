@@ -10,18 +10,16 @@ import GlobalFutureRetail from "./global/GlobalFutureRetail";
 import GlobalFutureMobility from "./global/GlobalFutureMobility";
 import GlobalSustainability from "./global/GlobalSustainability";
 import GlobalAfterSales from "./global/GlobalAfterSales";
-import GlobalDesignThinking from "./global/GlobalDesignThinking";
-import GlobalDesignSprint from "./global/GlobalDesignSprint";
-import GlobalLeanCanvas from "./global/GlobalFutureRetail";
-import GlobalBusinessModel from "./global/GlobalFutureMobility";
-import GlobalTechTalk from "./global/GlobalSustainability";
+
 import GlobalState from "./global/GlobalState";
 import GlobalCatering from "./global/GlobalCatering"
 import GlobalTechnik from "./global/GlobalTechnik";
+
 import GlobalInformative from "./global/GlobalInformative";
 import GlobalAuftrag from "./global/GlobalAuftrag";
 import GlobalErgebnis from "./global/GlobalErgebnis";
 import GlobalFort from "./global/GlobalFort";
+
 import GlobalDeepDive from "./global/GlobalDeepDive";
 import GlobalGruppenarbeit from "./global/GlobalGruppenarbeit"
 import GlobalBrainstorming from "./global/GlobalBrainstorming";
@@ -34,12 +32,6 @@ function Fokus() {
     let [futureMobility,setFutureMobility] = useContext(GlobalFutureMobility)
     let [sustainability,setSustainability] = useContext(GlobalSustainability)
     let [afterSales,setAfterSales] = useContext(GlobalAfterSales)
-
-    let [designThinking,setDesignThinking] = useContext(GlobalDesignThinking)
-    let [designSprint,setDesignSprint] = useContext(GlobalDesignSprint)
-    let [leanCanvas,setLeanCanvas] = useContext(GlobalLeanCanvas)
-    let [businessModel,setBusinessModel] = useContext(GlobalBusinessModel)
-    let [techTalk,setTechTalk] = useContext(GlobalTechTalk)
 
     let [informative,setInformative] = useContext(GlobalInformative)
     let [auftrag,setAuftrag] = useContext(GlobalAuftrag)
@@ -125,11 +117,7 @@ function Fokus() {
             futureMobility={futureMobility}
             sustainability={sustainability}
             afterSales={afterSales}
-            designthinking={designThinking}
-            designSprint={designSprint}
-            leanCanvas={leanCanvas}
-            businessModel={businessModel}
-            techTalk={techTalk}
+
             informative={informative}
             auftrag={auftrag}
             ergebnis={ergebnis}

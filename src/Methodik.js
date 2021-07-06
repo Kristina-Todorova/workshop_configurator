@@ -4,21 +4,26 @@ import "./Methodik.css"
 import {Link} from "react-router-dom";
 import info_Icon from "./info_Icon.png";
 import React, {useState, useContext, useEffect} from "react";
+
 import GlobalDesignThinking from "./global/GlobalDesignThinking";
 import GlobalDesignSprint from "./global/GlobalDesignSprint";
-import GlobalLeanCanvas from "./global/GlobalFutureRetail";
-import GlobalBusinessModel from "./global/GlobalFutureMobility";
-import GlobalTechTalk from "./global/GlobalSustainability";
+import GlobalLeanCanvas from "./global/GlobalLeanCanvas";
+import GlobalBusinessModel from "./global/GlobalBusinessModel";
+import GlobalTechTalk from "./global/GlobalTechTalk";
+
 import GlobalState from "./global/GlobalState";
 import GlobalCatering from "./global/GlobalCatering"
+
 import GlobalTechnik from "./global/GlobalTechnik";
 import GlobalInformative from "./global/GlobalInformative";
 import GlobalAuftrag from "./global/GlobalAuftrag";
 import GlobalErgebnis from "./global/GlobalErgebnis";
 import GlobalFort from "./global/GlobalFort";
+
 import GlobalDeepDive from "./global/GlobalDeepDive";
 import GlobalGruppenarbeit from "./global/GlobalGruppenarbeit"
 import GlobalBrainstorming from "./global/GlobalBrainstorming";
+
 import GlobalDigitalShift from "./global/GlobalDigitalShift";
 import GlobalFutureSales from "./global/GlobalFutureSales";
 import GlobalFutureRetail from "./global/GlobalFutureRetail";
@@ -26,14 +31,14 @@ import GlobalFutureMobility from "./global/GlobalFutureMobility";
 import GlobalSustainability from "./global/GlobalSustainability";
 import GlobalAfterSales from "./global/GlobalAfterSales";
 
-
-
 function Methodik() {
-    let [designThinking,setDesignThinking] = useContext(GlobalDesignThinking)
-    let [designSprint,setDesignSprint] = useContext(GlobalDesignSprint)
-    let [leanCanvas,setLeanCanvas] = useContext(GlobalLeanCanvas)
-    let [businessModel,setBusinessModel] = useContext(GlobalBusinessModel)
-    let [techTalk,setTechTalk] = useContext(GlobalTechTalk)
+
+    let [designthinking,setDesignThinking] = useContext(GlobalDesignThinking)
+    let [designsprint,setDesignSprint] = useContext(GlobalDesignSprint)
+    let [leancanvas,setLeanCanvas] = useContext(GlobalLeanCanvas)
+    let [businessmodel,setBusinessModel] = useContext(GlobalBusinessModel)
+    let [techtalk,setTechTalk] = useContext(GlobalTechTalk)
+
 
     let [informative,setInformative] = useContext(GlobalInformative)
     let [auftrag,setAuftrag] = useContext(GlobalAuftrag)
@@ -55,11 +60,11 @@ function Methodik() {
     let [sustainability,setSustainability] = useContext(GlobalSustainability)
     let [afterSales,setAfterSales] = useContext(GlobalAfterSales)
 
-    const designthinkingcolor = designThinking===true ? "#00ADEF" : "lightgray"
-    const dscolor = designSprint===true ? "#00ADEF" : "lightgray"
-    const lccolor = leanCanvas===true ? "#00ADEF" : "lightgray"
-    const bmcolor = businessModel===true ? "#00ADEF" : "lightgray"
-    const ttcolor = techTalk===true ? "#00ADEF" : "lightgray"
+    const designthinkingcolor = designthinking===true ? "#00ADEF" : "lightgray"
+    const dscolor = designsprint===true ? "#00ADEF" : "lightgray"
+    const lccolor = leancanvas===true ? "#00ADEF" : "lightgray"
+    const bmcolor = businessmodel===true ? "#00ADEF" : "lightgray"
+    const ttcolor = techtalk===true ? "#00ADEF" : "lightgray"
 
     function chooseDesignThinking() {
         setDesignThinking(prevState => !prevState)
@@ -114,11 +119,11 @@ function Methodik() {
             sustainability={sustainability}
             afterSales={afterSales}
 
-            designThinking={designThinking}
-            designSprint={designSprint}
-            leanCanvas={leanCanvas}
-            businessModel={businessModel}
-            techTalk={techTalk}
+            designthinking={designthinking}
+            designsprint={designsprint}
+            leancanvas={leancanvas}
+            businessmodel={businessmodel}
+            techtalk={techtalk}
 
             informative={informative}
             auftrag={auftrag}

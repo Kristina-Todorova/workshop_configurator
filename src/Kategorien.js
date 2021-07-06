@@ -35,6 +35,13 @@ function Kategorien(props) {
     const pricecounter = props.pricecounter
     const timecounter = props.timecounter
 
+    const designthinking = props.designthinking;
+    const designsprint = props.designsprint;
+    const leancanvas = props.leancanvas;
+    const businessmodel = props.businessmodel;
+    const techtalk = props.techtalk;
+
+
 
     function MouseOver(event) {
         event.target.style.background = '#00ADEF';
@@ -161,7 +168,28 @@ function Kategorien(props) {
                     }
 
             grundbausteine="Grundbausteine"
-            methodik="Methodik"
+
+
+            methodik= {designthinking===true
+                ? <p className="cartitem">{"Design Thinking"}</p>
+                : designsprint===true
+                    ? <p className="cartitem">{"Design Sprint"}</p>
+                    : leancanvas===true
+                        ? <p className="cartitem">{"Lean Canvas"}</p>
+                        : businessmodel===true
+                            ? <p className="cartitem">{"Business Model"}</p>
+                            : techtalk===true
+                                ? <p className="cartitem">{"Tech Talk"}</p>
+                                : ""
+                    }
+
+
+
+
+
+
+
+
             allgemein="Allgemeine Infos"
 
             umfang= {paketS===true
