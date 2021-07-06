@@ -3,29 +3,16 @@ import Kategorien from "./Kategorien";
 import Weiter from "./Weiter";
 import {Link} from "react-router-dom";
 import info_Icon from "./info_Icon.png";
-import React, {useState, useContext, useEffect} from "react";
-import Button from '@material-ui/core/Button';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
-import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/styles';
+import React, {useState, useContext} from "react";
 import GlobalSprache from "./global/GlobalSprache";
 import GlobalOrt from "./global/GlobalOrt";
 import GlobalTeilnehmer from "./global/GlobalTeilnehmer";
 import GlobalZeitraum from "./global/GlobalZeitraum";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    '& > *': {
-      margin: theme.spacing(1),
-    },
-  },
-}));
+import {TextField} from "@material-ui/core";
 
 
 function Allgemein() {
+
     let [sprache, setSprache ] = useContext(GlobalSprache)
     let [ort,setOrt] = useContext(GlobalOrt)
     let [teilnehmer,setTeilnehmer] = useContext(GlobalTeilnehmer)
@@ -60,21 +47,90 @@ function Allgemein() {
             <Weiter/>
             </Link>
 
-             <div className="square00001" onClick={chooseSprache} >
-                 <p className="title">Sprache</p>
-                 <p className="auswahlmoeglichkeit">Englisch </p>
+             <div className="squaresprache" onClick={chooseSprache} >
+                 <p className="allgemeintitle">Sprache</p>
+
+                 <div className="sprachen">
+                 <p>Deutsch</p>
+                 </div>
+
+                 <div className="sprachen1">
+                 <p>Englisch</p>
+                 </div>
+
+                 <div className="sprachen2">
+                 <p>Andere</p>
+                 </div>
+
                  </div>
 
 
-             <div className="square00002" onClick={chooseOrt}>
-                <p className='title'>Ort</p>
+             <div className="squareort" onClick={chooseOrt}>
+                <p className='allgemeintitle'>Ort</p>
+
+                 <div className="sprachen">
+                 <p>Online</p>
+                 </div>
+
+                 <div className="sprachen1">
+                 <p>Präsenz</p>
+                 </div>
+
+                 <div className="sprachen2">
+                 <p>Andere</p>
+                 </div>
+
                 </div>
 
-             <div className="square00003" onClick={chooseZeitraum}>
-                <p className='title'>Zeitraum</p>
+             <div className="squarezeitraum" onClick={chooseZeitraum}>
+                <p className='allgemeintitle'>Zeitraum</p>
+
+                 <form>
+                  <TextField
+                    id="date"
+                    label="von"
+                    type="date"
+                    defaultValue="2021-07-08"
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+
+                     style={{
+                        backgroundColor:"DDDDDD",
+                        marginLeft:"170px",
+                        marginTop:"-55px",
+
+                    }}
+                  />
+                </form>
+
+                 <form>
+                  <TextField
+                    id="date"
+                    label="bis"
+                    type="date"
+                    defaultValue="2021-07-08"
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                    style={{
+                        backgroundColor:"DDDDDD",
+                        marginLeft:"505px",
+                        marginTop:"-68px"
+
+                    }}
+                  />
+                </form>
+
                 </div>
-             <div className="square00004" onClick={chooseTeilnehmer}>
-                <p className='title'>Teilnehmer</p>
+
+             <div className="squareteilnehmer" onClick={chooseTeilnehmer}>
+                <p className='allgemeintitle'>Teilnehmer</p>
+                 <form>
+                 <TextField id="outlined-basic" label="Anzahl" variant="outlined" required="true" size="small"
+                            style={{marginLeft:"170px",  marginTop:"-50px", backgroundColor:"white", width:"20%" }}/>
+                </form>
+
                 </div>
 
 
@@ -95,7 +151,7 @@ function Allgemein() {
                     top: "239px",
                     background: "rgba(0, 173, 239, 0.25)",
                     marginLeft: "300px",
-                    marginTop:"-615px"
+                    marginTop:"-365px"
                     }} >
             <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
            <p>Bitte geben Sie uns allgemeine Informationen zu Ihrem Workshop.</p>
