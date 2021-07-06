@@ -147,32 +147,33 @@ function Fokus() {
             </Link>
             <div className="square01" onClick={chooseDigitalShift} style={{backgroundColor:shiftcolor}}>
                 <p className="title">Digital Shift</p>
-                <p className="textsquare"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+                <p className="textsquare"> Gemeinsam mit Ihnen gehen wir die Digitalisierung an und probieren aus, was möglich ist. Die neuen Technologien bieten viele Chancen.
+</p>
             </div>
 
             <div className="square02" onClick={chooseFutureSales} style={{backgroundColor:salescolor}}>
                 <p className="title">Future Sales</p>
-                <p className="textsquare"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+                <p className="textsquare"> Ob Online Sales, neue Vertriebsnetzstrategien oder Serviceformate – wir adaptieren das Übermorgen und entwickeln gemeinsam den Weg dorthin.</p>
             </div>
 
             <div className="square03" onClick={chooseFutureRetail} style={{backgroundColor:retailcolor}}>
                 <p className="title">Future Retail</p>
-                <p className="textsquare"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+                <p className="textsquare">Die Herausforderung im Future Retail besteht darin, auf alle Kunden-Bedürfnisse eine gute Antwort zu haben – ohne heute zu wissen, was morgen kommt.</p>
             </div>
 
             <div className="square04" onClick={chooseFutureMobility} style={{backgroundColor:mobilitycolor}}>
                 <p className="title">Future Mobility</p>
-                <p className="textsquare"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+                <p className="textsquare"> Die Digitalisierung ermöglicht ein vernetztes, durchgehend zugängliches Mobilitätsangebot entlang der Kundenbedürfnisse zu etablieren. </p>
             </div>
 
             <div className="square05" onClick={chooseSustainability} style={{backgroundColor:sustainabilitycolor}}>
                 <p className="title">Sustainability</p>
-                <p className="textsquare"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+                <p className="textsquare">Mit einem verantwortungsvollen Blick fürs Ganze gehen wir gemeinsam die Chancen neuer Entwicklungen an und überführen diese frühzeitig in nachhaltige Geschäftsmodelle.</p>
             </div>
 
             <div className="square06" onClick={chooseAfterSales} style={{backgroundColor:aftersalescolor}}>
                 <p className="title">After Sales</p>
-                <p className="textsquare"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+                <p className="textsquare"> Wir stellen die Weichen für eine dauerhafte Bindung. Ob bei der Transformation der Werkstatt, bei innovativen Services oder digitalisierten Prozessen zur Kundenbindung.</p>
             </div>
 
 

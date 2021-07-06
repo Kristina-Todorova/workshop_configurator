@@ -21,8 +21,6 @@ function Einkaufswagen(props) {
     const brainstorming = props.brainstorming;
     const gruppenarbeit = props.gruppenarbeit;
 
-
-
   return (
         <div className="einkaufswagen">
             <img src={icon_shopping_bag} alt="icon" width="45px" height="45px" style={{paddingLeft: "100px", position:"absolute"}}/>
