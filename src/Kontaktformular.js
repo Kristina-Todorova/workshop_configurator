@@ -4,8 +4,23 @@ import "./Kontaktformular.css"
 import {TextField} from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import info_Icon from "./info_Icon.png";
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+
+
+
 
 function Kontaktformular() {
+  const [state, setState] = React.useState({
+    checkedA: true,
+    checkedB: true,
+    checkedF: true,
+    checkedG: true,
+  });
+
+const handleChange = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+  };
 
   return (
         <div>
@@ -40,7 +55,21 @@ function Kontaktformular() {
                 <TextField id="outlined-basic" label="Telefonnummer" variant="filled" required="true"/>
                 </div>
 
+                <div className="datenschutz">
+                <FormControlLabel
+                        control={
+                          <Checkbox
+                            checked={state.checkedB}
+                            onChange={handleChange}
+                            name="checkedB"
+                            color="red"
+                          />
+                        }
+                        label="Ich habe die Datenschutzerklärung gelesen und akzeptiert."
+                      />
+                      </div>
             </form>
+
 
             <Button variant="contained"
 
@@ -56,6 +85,7 @@ function Kontaktformular() {
                 }}>
             Absenden
         </Button>
+
             <div className="infolabel"
                  style={{
                     fontFamily: "Arial",
@@ -76,6 +106,8 @@ function Kontaktformular() {
                     }}>
                     <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
                    <p>Bitte geben Sie nachfolgend Ihre Kontaktdaten an. </p>
+
+
             </div>
         </div>
   );
