@@ -11,7 +11,6 @@ function Startseite() {
 
     <div className="App">
         <Header/>
-        <Cookies/>
         <div className="rectangle">
 
             <p className="stripe">
@@ -43,6 +42,8 @@ function Startseite() {
                 Starten
             </Button>
         </Link>
+
+        <Cookies/>
 
         <div className="info">
 
