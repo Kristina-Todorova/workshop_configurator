@@ -212,7 +212,7 @@ function Ziel() {
             top: "239px",
             background: "rgba(0, 173, 239, 0.25)",
             marginLeft: "300px",
-            marginTop:"-502px"
+            marginTop:"-522px"
             }} >
 
             <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>

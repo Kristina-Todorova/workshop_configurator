@@ -200,7 +200,7 @@ function Grundbausteine() {
                     top: "239px",
                     background: "rgba(0, 173, 239, 0.25)",
                     marginLeft: "300px",
-                    marginTop:"-358px"
+                    marginTop:"-377px"
                     }} >
                     <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
                     <p>Entsprechend Ihrer Auswahl wurden Ihnen folgende Grundbausteine zusammengestellt. Im nächsten Schritt können Sie Ihren Workshop personalisieren.</p>

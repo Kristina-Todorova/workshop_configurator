@@ -31,9 +31,9 @@ function Einkaufswagen(props) {
 
   return (
         <div className="einkaufswagen">
-            <img src={icon_shopping_bag} alt="icon" width="45px" height="45px" style={{paddingLeft: "100px", position:"absolute"}}/>
-            <img src={zeit} alt="icon" width="30px" height="30px" style={{marginLeft: "15px", paddingTop:"60px", position:"absolute"}}/>
-            <p className="cartitem" style={{marginLeft: "65px", paddingTop:"55px"}}>
+            <img src={icon_shopping_bag} alt="icon" width="30px" height="30px" style={{paddingLeft: "110px", position:"absolute"}}/>
+            <img src={zeit} alt="icon" width="25px" height="25px" style={{marginLeft: "15px", paddingTop:"40px", position:"absolute"}}/>
+            <p className="cartitem" style={{marginLeft: "65px", paddingTop:"34px"}}>
 
                 {timecounter
                 ? <p>{props.timecounter} Stunden</p>
@@ -42,8 +42,8 @@ function Einkaufswagen(props) {
 
 
             </p>
-            <img src={coins} alt="icon" width="30px" height="30px" style={{marginLeft: "15px", paddingTop:"15px", position:"absolute"}}/>
-            <p className="cartitem" style={{marginLeft: "65px", marginTop:"34px"}}>
+            <img src={coins} alt="icon" width="25px" height="25px" style={{marginLeft: "15px", paddingTop:"1px", position:"absolute"}}/>
+            <p className="cartitem" style={{marginLeft: "65px", marginTop:"18px"}}>
 
                 {pricecounter
                 ? <p>{props.pricecounter} Euro</p>
@@ -86,7 +86,8 @@ function Einkaufswagen(props) {
                 }
 
            {catering
-                && <p className="cartitem">{props.catering}</p>
+                && <p className="cartitem">{props.catering}
+           </p>
                 }
 
            {technik

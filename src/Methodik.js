@@ -232,7 +232,7 @@ function Methodik() {
                     top: "239px",
                     background: "rgba(0, 173, 239, 0.25)",
                     marginLeft: "300px",
-                    marginTop:"-294px"
+                    marginTop:"-313px"
                     }} >
             <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
                 <p>Bitte wählen Sie die gewünschte Methodik für Ihren Workshop aus. </p>

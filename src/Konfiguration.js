@@ -231,7 +231,7 @@ function Konfiguration() {
                     top: "239px",
                     background: "rgba(0, 173, 239, 0.25)",
                     marginLeft: "300px",
-                    marginTop:"-392px"
+                    marginTop:"-401px"
                     }} >
                     <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
                     <p>Nachfolgend können Sie weitere Bausteine zur Personalisierung Ihres Workshops auswählen.</p>

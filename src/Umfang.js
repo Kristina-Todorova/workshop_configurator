@@ -250,7 +250,7 @@ function Umfang() {
                     top: "239px",
                     background: "rgba(0, 173, 239, 0.25)",
                     marginLeft: "300px",
-                    marginTop:"-520px"
+                    marginTop:"-528px"
                     }} >
                 <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
                 <p>Bitte wählen Sie die gewünschte Paketgröße aus. Das ausgewählte Paket kann im Folgenden noch personalisiert werden.</p>

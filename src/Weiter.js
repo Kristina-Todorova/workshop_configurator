@@ -7,14 +7,14 @@ function Weiter() {
         <Button variant="contained"
 
                 style={{
-                    width: "140px",
-                    height: "50px",
+                    width: "120px",
+                    height: "40px",
                     fontFamily: "PT Serif",
                     fontStyle: "normal",
                     backgroundColor:"#00ADEF",
                     fontWeight: "bold",
                     marginLeft: "1255px",
-                    marginTop: "-300px"
+                    marginTop: "-250px"
                 }}>
             Weiter
         </Button>

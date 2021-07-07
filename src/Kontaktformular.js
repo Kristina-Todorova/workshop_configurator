@@ -199,14 +199,14 @@ const handleChange = (event) => {
             <Button variant="contained"
 
                 style={{
-                    width: "140px",
-                    height: "50px",
+                    width: "120px",
+                    height: "40px",
                     fontFamily: "PT Serif",
                     fontStyle: "normal",
                     backgroundColor:"lightgray",
                     fontWeight: "bold",
                     marginLeft: "1255px",
-                    marginTop: "-65px"
+                    marginTop: "-15px"
                 }}>
             Absenden
         </Button>
@@ -227,7 +227,7 @@ const handleChange = (event) => {
                     top: "239px",
                     background: "rgba(0, 173, 239, 0.25)",
                     marginLeft: "300px",
-                    marginTop:"-510px"
+                    marginTop:"-525px"
                     }}>
                     <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
                    <p>Bitte geben Sie nachfolgend Ihre Kontaktdaten an. </p>
