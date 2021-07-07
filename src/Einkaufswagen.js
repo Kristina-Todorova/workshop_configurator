@@ -66,11 +66,11 @@ function Einkaufswagen(props) {
                 }
 
             {sprache
-                && <p className="cartitem">Sprache: {props.sprache}</p>
+                && <p className="cartitem">{props.sprache}</p>
                 }
 
             {ort
-                && <p className="cartitem">Ort: {props.ort}</p>
+                && <p className="cartitem">{props.ort}</p>
                 }
 
              {von

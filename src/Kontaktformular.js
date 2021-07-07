@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import Kategorien from "./Kategorien";
 import "./Kontaktformular.css"
 import {TextField} from "@material-ui/core";
@@ -6,25 +6,149 @@ import Button from "@material-ui/core/Button";
 import info_Icon from "./info_Icon.png";
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-
-
+import GlobalInformative from "./global/GlobalInformative";
+import GlobalAuftrag from "./global/GlobalAuftrag";
+import GlobalErgebnis from "./global/GlobalErgebnis";
+import GlobalFort from "./global/GlobalFort";
+import GlobalDeepDive from "./global/GlobalDeepDive";
+import GlobalGruppenarbeit from "./global/GlobalGruppenarbeit";
+import GlobalBrainstorming from "./global/GlobalBrainstorming";
+import GlobalState from "./global/GlobalState";
+import GlobalCatering from "./global/GlobalCatering";
+import GlobalTechnik from "./global/GlobalTechnik";
+import GlobalDigitalShift from "./global/GlobalDigitalShift";
+import GlobalFutureSales from "./global/GlobalFutureSales";
+import GlobalFutureRetail from "./global/GlobalFutureRetail";
+import GlobalFutureMobility from "./global/GlobalFutureMobility";
+import GlobalSustainability from "./global/GlobalSustainability";
+import GlobalAfterSales from "./global/GlobalAfterSales";
+import GlobalDesignThinking from "./global/GlobalDesignThinking";
+import GlobalDesignSprint from "./global/GlobalDesignSprint";
+import GlobalLeanCanvas from "./global/GlobalLeanCanvas";
+import GlobalBusinessModel from "./global/GlobalBusinessModel";
+import GlobalTechTalk from "./global/GlobalTechTalk";
+import GlobalDeutsch from "./global/GlobalDeutsch";
+import GlobalEnglisch from "./global/GlobalEnglisch";
+import GlobalAndereSprache from "./global/GlobalAndereSprache";
+import GlobalPraesenz from "./global/GlobalPraesenz";
+import GlobalOnline from "./global/GlobalOnline";
+import GlobalAndereOrt from "./global/GlobalAndereOrt";
+import GlobalTeilnehmer from "./global/GlobalTeilnehmer";
+import GlobalVon from "./global/GlobalVon";
+import GlobalBis from "./global/GlobalBis";
+import GlobalPaketS from "./global/GlobalPaketS";
+import GlobalPaketM from "./global/GlobalPaketM";
+import GlobalPaketL from "./global/GlobalPaketL";
+import GlobalPrice from "./global/GlobalPrice";
+import GlobalTime from "./global/GlobalTime";
 
 
 function Kontaktformular() {
   const [state, setState] = React.useState({
-    checkedA: true,
-    checkedB: false,
-    checkedF: true,
-    checkedG: true,
+    checkedB: false
   });
 
 const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
   };
 
+        let [informative,setInformative] = useContext(GlobalInformative)
+    let [auftrag,setAuftrag] = useContext(GlobalAuftrag)
+    let [ergebnis,setErgebnis] = useContext(GlobalErgebnis)
+    let [fort,setFort] = useContext(GlobalFort)
+
+    const infocolor = informative===true ? "#00ADEF" : "lightgray"
+    const ergebniscolor = auftrag===true ? "#00ADEF" : "lightgray"
+    const auftragcolor = ergebnis===true ? "#00ADEF" : "lightgray"
+    const fortcolor = fort===true ? "#00ADEF" : "lightgray"
+
+    let [deepdive, setDeepdive] = useContext(GlobalDeepDive)
+    let [gruppenarbeit, setGruppenarbeit] = useContext(GlobalGruppenarbeit)
+    let [brainstorming, setBrainstorming] = useContext(GlobalBrainstorming)
+
+    let [movie,setMovie] = useContext(GlobalState)
+    let [catering,setCatering] = useContext(GlobalCatering)
+    let [technik,setTechnik] = useContext(GlobalTechnik)
+
+    let [digitalShift,setDigitalShift] = useContext(GlobalDigitalShift)
+    let [futureSales,setFutureSales] = useContext(GlobalFutureSales)
+    let [futureRetail,setFutureRetail] = useContext(GlobalFutureRetail)
+    let [futureMobility,setFutureMobility] = useContext(GlobalFutureMobility)
+    let [sustainability,setSustainability] = useContext(GlobalSustainability)
+    let [afterSales,setAfterSales] = useContext(GlobalAfterSales)
+
+    let [designthinking,setDesignThinking] = useContext(GlobalDesignThinking)
+    let [designsprint,setDesignSprint] = useContext(GlobalDesignSprint)
+    let [leancanvas,setLeanCanvas] = useContext(GlobalLeanCanvas)
+    let [businessmodel,setBusinessModel] = useContext(GlobalBusinessModel)
+    let [techtalk,setTechTalk] = useContext(GlobalTechTalk)
+
+    let [deutsch,setDeutsch] = useContext(GlobalDeutsch);
+    let [englisch,setEnglisch] = useContext(GlobalEnglisch);
+    let [anderesprache,setAndereSprache] = useContext(GlobalAndereSprache);
+
+    let [praesenz,setPraesenz] = useContext(GlobalPraesenz);
+    let [online,setOnline] = useContext(GlobalOnline);
+    let [andereort,setAndereOrt] = useContext(GlobalAndereOrt);
+
+    let [teilnehmer,setTeilnehmer] = useContext(GlobalTeilnehmer);
+    let [von,setVon] = useContext(GlobalVon);
+    let [bis,setBis] = useContext(GlobalBis);
+
+    let [paketS,setPaketS] = useContext(GlobalPaketS)
+    let [paketM,setPaketM] = useContext(GlobalPaketM)
+    let [paketL,setPaketL] = useContext(GlobalPaketL)
+    let [pricecounter, setPriceCounter] = useContext(GlobalPrice)
+    let [timecounter, setTimeCounter] = useContext(GlobalTime)
+
+
+
+
   return (
         <div>
-            <Kategorien/>
+            <Kategorien
+            informative={informative}
+            auftrag={auftrag}
+            ergebnis={ergebnis}
+            fort={fort}
+
+            movie={movie}
+            catering={catering}
+            technik={technik}
+
+            deepdive={deepdive}
+            gruppenarbeit={gruppenarbeit}
+            brainstorming={brainstorming}
+
+            designthinking={designthinking}
+            designsprint={designsprint}
+            leancanvas={leancanvas}
+            businessmodel={businessmodel}
+            techtalk={techtalk}
+
+            digitalShift={digitalShift}
+            futureSales={futureSales}
+            futureRetail={futureRetail}
+            futureMobility={futureMobility}
+            sustainability={sustainability}
+            afterSales={afterSales}
+
+            deutsch={deutsch}
+            englisch={englisch}
+            anderesprache={anderesprache}
+            praesenz={praesenz}
+            online={online}
+            andereort={andereort}
+            teilnehmer={teilnehmer}
+            von={von}
+            bis={bis}
+
+            paketS={paketS}
+            paketM={paketM}
+            paketL={paketL}
+            pricecounter={pricecounter}
+            timecounter={timecounter}
+            />
             <form className="form">
 
                 <div className="anrede">

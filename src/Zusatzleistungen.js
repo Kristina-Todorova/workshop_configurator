@@ -35,6 +35,18 @@ import coins from "./coins.png";
 import zeit from "./zeit.png";
 import GlobalPrice from "./global/GlobalPrice";
 import GlobalTime from "./global/GlobalTime";
+import GlobalDeutsch from "./global/GlobalDeutsch";
+import GlobalEnglisch from "./global/GlobalEnglisch";
+import GlobalAndereSprache from "./global/GlobalAndereSprache";
+import GlobalPraesenz from "./global/GlobalPraesenz";
+import GlobalOnline from "./global/GlobalOnline";
+import GlobalAndereOrt from "./global/GlobalAndereOrt";
+import GlobalTeilnehmer from "./global/GlobalTeilnehmer";
+import GlobalVon from "./global/GlobalVon";
+import GlobalBis from "./global/GlobalBis";
+import GlobalPaketS from "./global/GlobalPaketS";
+import GlobalPaketM from "./global/GlobalPaketM";
+import GlobalPaketL from "./global/GlobalPaketL";
 
 
 function Zusatzleistungen() {
@@ -66,12 +78,27 @@ function Zusatzleistungen() {
     let [sustainability,setSustainability] = useContext(GlobalSustainability)
     let [afterSales,setAfterSales] = useContext(GlobalAfterSales)
 
-    let [designThinking,setDesignThinking] = useContext(GlobalDesignThinking)
-    let [designSprint,setDesignSprint] = useContext(GlobalDesignSprint)
-    let [leanCanvas,setLeanCanvas] = useContext(GlobalLeanCanvas)
-    let [businessModel,setBusinessModel] = useContext(GlobalBusinessModel)
-    let [techTalk,setTechTalk] = useContext(GlobalTechTalk)
+    let [designthinking,setDesignThinking] = useContext(GlobalDesignThinking)
+    let [designsprint,setDesignSprint] = useContext(GlobalDesignSprint)
+    let [leancanvas,setLeanCanvas] = useContext(GlobalLeanCanvas)
+    let [businessmodel,setBusinessModel] = useContext(GlobalBusinessModel)
+    let [techtalk,setTechTalk] = useContext(GlobalTechTalk)
 
+    let [deutsch,setDeutsch] = useContext(GlobalDeutsch);
+    let [englisch,setEnglisch] = useContext(GlobalEnglisch);
+    let [anderesprache,setAndereSprache] = useContext(GlobalAndereSprache);
+
+    let [praesenz,setPraesenz] = useContext(GlobalPraesenz);
+    let [online,setOnline] = useContext(GlobalOnline);
+    let [andereort,setAndereOrt] = useContext(GlobalAndereOrt);
+
+    let [teilnehmer,setTeilnehmer] = useContext(GlobalTeilnehmer);
+    let [von,setVon] = useContext(GlobalVon);
+    let [bis,setBis] = useContext(GlobalBis);
+
+    let [paketS,setPaketS] = useContext(GlobalPaketS)
+    let [paketM,setPaketM] = useContext(GlobalPaketM)
+    let [paketL,setPaketL] = useContext(GlobalPaketL)
 
     console.log(informative)
 
@@ -100,25 +127,44 @@ function Zusatzleistungen() {
             auftrag={auftrag}
             ergebnis={ergebnis}
             fort={fort}
+
             movie={movie}
             catering={catering}
             technik={technik}
+
             deepdive={deepdive}
             gruppenarbeit={gruppenarbeit}
             brainstorming={brainstorming}
+
             digitalShift={digitalShift}
             futureSales={futureSales}
             futureRetail={futureRetail}
             futureMobility={futureMobility}
             sustainability={sustainability}
             afterSales={afterSales}
-            designThinking={designThinking}
-            designSprint={designSprint}
-            leanCanvas={leanCanvas}
-            businessModel={businessModel}
-            techTalk={techTalk}
+
+            designthinking={designthinking}
+            designsprint={designsprint}
+            leancanvas={leancanvas}
+            businessmodel={businessmodel}
+            techtalk={techtalk}
+
+            paketS={paketS}
+            paketM={paketM}
+            paketL={paketL}
+
             pricecounter={pricecounter}
             timecounter={timecounter}
+
+            deutsch={deutsch}
+            englisch={englisch}
+            anderesprache={anderesprache}
+            praesenz={praesenz}
+            online={online}
+            andereort={andereort}
+            teilnehmer={teilnehmer}
+            von={von}
+            bis={bis}
             />
 
              <Link to="/Zusammenfassung" style={{ textDecoration: 'none', color:'black' }}>

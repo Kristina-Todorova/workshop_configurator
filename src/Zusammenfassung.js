@@ -8,17 +8,21 @@ import GlobalDesignThinking from "./global/GlobalDesignThinking";
 import GlobalDesignSprint from "./global/GlobalDesignSprint";
 import GlobalLeanCanvas from "./global/GlobalLeanCanvas";
 import GlobalBusinessModel from "./global/GlobalBusinessModel";
+
 import GlobalTechTalk from "./global/GlobalTechTalk";
 import GlobalState from "./global/GlobalState";
 import GlobalCatering from "./global/GlobalCatering"
 import GlobalTechnik from "./global/GlobalTechnik";
+
 import GlobalInformative from "./global/GlobalInformative";
 import GlobalAuftrag from "./global/GlobalAuftrag";
 import GlobalErgebnis from "./global/GlobalErgebnis";
 import GlobalFort from "./global/GlobalFort";
+
 import GlobalDeepDive from "./global/GlobalDeepDive";
 import GlobalGruppenarbeit from "./global/GlobalGruppenarbeit"
 import GlobalBrainstorming from "./global/GlobalBrainstorming";
+
 import GlobalDigitalShift from "./global/GlobalDigitalShift";
 import GlobalFutureSales from "./global/GlobalFutureSales";
 import GlobalFutureRetail from "./global/GlobalFutureRetail";

@@ -13,14 +13,37 @@ import GlobalInformative from "./global/GlobalInformative";
 import GlobalAuftrag from "./global/GlobalAuftrag";
 import GlobalErgebnis from "./global/GlobalErgebnis";
 import GlobalFort from "./global/GlobalFort";
+
 import GlobalDesignThinking from "./global/GlobalDesignThinking";
 import GlobalDesignSprint from "./global/GlobalDesignSprint";
 import GlobalLeanCanvas from "./global/GlobalLeanCanvas";
 import GlobalBusinessModel from "./global/GlobalBusinessModel";
 import GlobalTechTalk from "./global/GlobalTechTalk";
+
 import "./Konfiguration.css";
 import coins from "./coins.png";
 import zeit from "./zeit.png";
+
+import GlobalDigitalShift from "./global/GlobalDigitalShift";
+import GlobalFutureSales from "./global/GlobalFutureSales";
+import GlobalFutureRetail from "./global/GlobalFutureRetail";
+import GlobalFutureMobility from "./global/GlobalFutureMobility";
+import GlobalSustainability from "./global/GlobalSustainability";
+import GlobalAfterSales from "./global/GlobalAfterSales";
+import GlobalDeutsch from "./global/GlobalDeutsch";
+import GlobalEnglisch from "./global/GlobalEnglisch";
+import GlobalAndereSprache from "./global/GlobalAndereSprache";
+import GlobalPraesenz from "./global/GlobalPraesenz";
+import GlobalOnline from "./global/GlobalOnline";
+import GlobalAndereOrt from "./global/GlobalAndereOrt";
+import GlobalTeilnehmer from "./global/GlobalTeilnehmer";
+import GlobalVon from "./global/GlobalVon";
+import GlobalBis from "./global/GlobalBis";
+import GlobalPaketS from "./global/GlobalPaketS";
+import GlobalPaketM from "./global/GlobalPaketM";
+import GlobalPaketL from "./global/GlobalPaketL";
+import GlobalPrice from "./global/GlobalPrice";
+import GlobalTime from "./global/GlobalTime";
 
 function Konfiguration() {
 
@@ -40,6 +63,37 @@ function Konfiguration() {
     let [catering,setCatering] = useContext(GlobalCatering)
     let [technik,setTechnik] = useContext(GlobalTechnik)
     let [movie,setMovie] = useContext(GlobalState)
+
+    let [digitalShift,setDigitalShift] = useContext(GlobalDigitalShift)
+    let [futureSales,setFutureSales] = useContext(GlobalFutureSales)
+    let [futureRetail,setFutureRetail] = useContext(GlobalFutureRetail)
+    let [futureMobility,setFutureMobility] = useContext(GlobalFutureMobility)
+    let [sustainability,setSustainability] = useContext(GlobalSustainability)
+    let [afterSales,setAfterSales] = useContext(GlobalAfterSales)
+
+    let [designthinking,setDesignThinking] = useContext(GlobalDesignThinking)
+    let [designsprint,setDesignSprint] = useContext(GlobalDesignSprint)
+    let [leancanvas,setLeanCanvas] = useContext(GlobalLeanCanvas)
+    let [businessmodel,setBusinessModel] = useContext(GlobalBusinessModel)
+    let [techtalk,setTechTalk] = useContext(GlobalTechTalk)
+
+    let [deutsch,setDeutsch] = useContext(GlobalDeutsch);
+    let [englisch,setEnglisch] = useContext(GlobalEnglisch);
+    let [anderesprache,setAndereSprache] = useContext(GlobalAndereSprache);
+
+    let [praesenz,setPraesenz] = useContext(GlobalPraesenz);
+    let [online,setOnline] = useContext(GlobalOnline);
+    let [andereort,setAndereOrt] = useContext(GlobalAndereOrt);
+
+    let [teilnehmer,setTeilnehmer] = useContext(GlobalTeilnehmer);
+    let [von,setVon] = useContext(GlobalVon);
+    let [bis,setBis] = useContext(GlobalBis);
+
+    let [paketS,setPaketS] = useContext(GlobalPaketS)
+    let [paketM,setPaketM] = useContext(GlobalPaketM)
+    let [paketL,setPaketL] = useContext(GlobalPaketL)
+    let [pricecounter, setPriceCounter] = useContext(GlobalPrice)
+    let [timecounter, setTimeCounter] = useContext(GlobalTime)
 
 
     function chooseGruppenarbeit() {
@@ -61,12 +115,44 @@ function Konfiguration() {
             auftrag={auftrag}
             ergebnis={ergebnis}
             fort={fort}
+
             movie={movie}
             catering={catering}
             technik={technik}
+
             deepdive={deepdive}
             gruppenarbeit={gruppenarbeit}
-            brainstorming={brainstorming}/>
+            brainstorming={brainstorming}
+
+            digitalShift={digitalShift}
+            futureSales={futureSales}
+            futureRetail={futureRetail}
+            futureMobility={futureMobility}
+            sustainability={sustainability}
+            afterSales={afterSales}
+
+            designthinking={designthinking}
+            designsprint={designsprint}
+            leancanvas={leancanvas}
+            businessmodel={businessmodel}
+            techtalk={techtalk}
+
+            deutsch={deutsch}
+            englisch={englisch}
+            anderesprache={anderesprache}
+            praesenz={praesenz}
+            online={online}
+            andereort={andereort}
+            teilnehmer={teilnehmer}
+            von={von}
+            bis={bis}
+
+            paketS={paketS}
+            paketM={paketM}
+            paketL={paketL}
+            pricecounter={pricecounter}
+            timecounter={timecounter}
+            />
 
              <Link to="/Zusatzleistungen" style={{ textDecoration: 'none', color:'black' }}>
              <Weiter/>
