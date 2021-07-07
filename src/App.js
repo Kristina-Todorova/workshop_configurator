@@ -52,6 +52,7 @@ import GlobalAndereSprache from "./global/GlobalAndereSprache";
 import GlobalPraesenz from "./global/GlobalPraesenz";
 import GlobalOnline from "./global/GlobalOnline";
 import GlobalAndereOrt from "./global/GlobalAndereOrt";
+import GlobalTeilnehmer from "./global/GlobalTeilnehmer";
 
 function App() {
 
@@ -96,6 +97,8 @@ function App() {
     const [online,setOnline] = useState(false);
     const [andereort,setAndereOrt] = useState(false);
 
+    const [teilnehmer,setTeilnehmer]=useState("")
+
   return (
         <main>
 
@@ -138,6 +141,8 @@ function App() {
                     <GlobalPraesenz.Provider value={[praesenz,setPraesenz]}>
                     <GlobalOnline.Provider value={[online,setOnline]}>
                     <GlobalAndereOrt.Provider value={[andereort,setAndereOrt]}>
+
+                 <GlobalTeilnehmer.Provider value={[teilnehmer,setTeilnehmer]} >
 
                 <Switch>
                     <Route exact path="/">
@@ -186,6 +191,8 @@ function App() {
 
                 </Switch>
 
+
+            </GlobalTeilnehmer.Provider>
             </GlobalAndereOrt.Provider>
             </GlobalOnline.Provider>
             </GlobalPraesenz.Provider>

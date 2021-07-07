@@ -24,6 +24,7 @@ function Einkaufswagen(props) {
 
     const timecounter = props.timecounter;
     const pricecounter = props.pricecounter;
+    const teilnehmer = props.teilnehmer;
 
   return (
         <div className="einkaufswagen">
@@ -67,6 +68,10 @@ function Einkaufswagen(props) {
 
             {ort
                 && <p className="cartitem">{props.ort}</p>
+                }
+
+            {teilnehmer
+                && <p className="cartitem">{props.teilnehmer}</p>
                 }
 
            {umfang

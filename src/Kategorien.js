@@ -48,6 +48,7 @@ function Kategorien(props) {
     const online = props.online;
     const praesenz = props.praesenz;
     const andereort = props.andereort;
+    const teilnehmer = props.teilnehmer
 
 
     function MouseOver(event) {
@@ -207,6 +208,8 @@ function Kategorien(props) {
                             ? <p className="cartitem">{"Anderer Ort"}</p>
                             : ""
                     }
+
+            teilnehmer={props.teilnehmer}
 
             umfang= {paketS===true
                     ? <p className="cartitem">{"Paket S"}</p>

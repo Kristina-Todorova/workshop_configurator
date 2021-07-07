@@ -28,6 +28,8 @@ function Allgemein() {
     let [online,setOnline] = useContext(GlobalOnline);
     let [andereort,setAndereOrt] = useContext(GlobalAndereOrt);
 
+    let [teilnehmer,setTeilnehmer] = useContext(GlobalTeilnehmer);
+
     const deutschcolor = deutsch===true ? "#00ADEF" : "darkgrey"
     const englischcolor = englisch===true ? "#00ADEF" : "darkgrey"
     const andspcolor = anderesprache===true ? "#00ADEF" : "darkgrey"
@@ -85,6 +87,7 @@ function Allgemein() {
             praesenz={praesenz}
             online={online}
             andereort={andereort}
+            teilnehmer={teilnehmer}
             />
 
             <Link to="/Umfang" style={{ textDecoration: 'none', color:'black' }}>
@@ -143,7 +146,6 @@ function Allgemein() {
                         backgroundColor:"DDDDDD",
                         marginLeft:"170px",
                         marginTop:"-55px",
-
                     }}
                   />
                 </form>
@@ -161,7 +163,6 @@ function Allgemein() {
                         backgroundColor:"DDDDDD",
                         marginLeft:"505px",
                         marginTop:"-68px"
-
                     }}
                   />
                 </form>
@@ -172,7 +173,9 @@ function Allgemein() {
                 <p className='allgemeintitle'>Teilnehmer</p>
                  <form>
                  <TextField id="outlined-basic" label="Anzahl" variant="outlined" required="true" size="small"
-                            style={{marginLeft:"170px",  marginTop:"-50px", backgroundColor:"white", width:"20%" }}/>
+                            style={{marginLeft:"170px",  marginTop:"-50px", backgroundColor:"white", width:"20%" }}
+                            onChange={(event) => {setTeilnehmer(event.target.value)}}
+                 />
                 </form>
 
                 </div>
