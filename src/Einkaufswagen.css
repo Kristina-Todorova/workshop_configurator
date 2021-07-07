@@ -9,10 +9,16 @@
 
 .leer{
   text-align: center;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 .cartitem{
   margin-left: 15px;
   font-size: 12px;
+}
+
+.cartitem1{
+  margin-left: 15px;
+  font-size: 12px;
+  margin-top: 10%;
 }
