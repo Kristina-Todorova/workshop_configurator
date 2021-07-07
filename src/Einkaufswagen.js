@@ -37,7 +37,7 @@ function Einkaufswagen(props) {
 
                 {timecounter
                 ? <p>{props.timecounter} Stunden</p>
-                : <p>0 Stunden</p>
+                : <p>0 Std.</p>
                 }
 
 
@@ -47,7 +47,7 @@ function Einkaufswagen(props) {
 
                 {pricecounter
                 ? <p>{props.pricecounter} Euro</p>
-                : <p>0 Euro</p>
+                : <p>0 &euro;</p>
                 }
 
             </p>

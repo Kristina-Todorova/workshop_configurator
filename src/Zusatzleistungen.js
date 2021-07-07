@@ -104,20 +104,18 @@ function Zusatzleistungen() {
 
     function chooseCatering() {
         setCatering(prevState => !prevState)
-        setPriceCounter(catering===false ? pricecounter+350 : 0)
-        setTimeCounter(catering===false ? timecounter+0.5 : 0)
+        setPriceCounter(catering===false ? pricecounter+250 : pricecounter-250)
+        setTimeCounter(catering===false ? timecounter+0.5 : timecounter-0.5)
     }
 
     function chooseTechnik() {
         setTechnik(prevState => !prevState)
-        setPriceCounter(technik===false ? pricecounter+350 : 0)
-        setTimeCounter(technik===false ? timecounter+0.5 : 0)
+        setPriceCounter(technik===false ? pricecounter+150 : pricecounter-150)
     }
 
     function chooseMovie() {
         setMovie(GlobalState => !GlobalState)
-        setPriceCounter(movie===false ? pricecounter+350 : 0)
-        setTimeCounter(movie===false ? timecounter+0.5 : 0)
+        setPriceCounter(movie===false ? pricecounter+350 : pricecounter-350)
     }
 
   return (
@@ -184,7 +182,7 @@ function Zusatzleistungen() {
 
                 <div className="pricediv">
                     <img src={coins} alt="icon" width="25px" height="25px" style={{marginRight:"70%", marginTop:"-19%"}}/>
-                    <p className="pricetag1">350 EUR</p>
+                    <p className="pricetag1">250 EUR</p>
                 </div>
 
             </div>
@@ -195,13 +193,13 @@ function Zusatzleistungen() {
                 <div className="timediv">
 
                     <img src={zeit} alt="icon" width="25px" height="25px" style={{marginLeft:"12%",marginTop:"19%"}}/>
-                    <p className="zeit">0,5 Stunden</p>
+                    <p className="zeit">0 Stunden</p>
 
                 </div>
 
                 <div className="pricediv">
                     <img src={coins} alt="icon" width="25px" height="25px" style={{marginRight:"70%", marginTop:"-19%"}}/>
-                    <p className="pricetag1">350 EUR</p>
+                    <p className="pricetag1">150 EUR</p>
                 </div>
 
             </div>
@@ -213,7 +211,7 @@ function Zusatzleistungen() {
                 <div className="timediv">
 
                     <img src={zeit} alt="icon" width="25px" height="25px" style={{marginLeft:"12%",marginTop:"25%"}}/>
-                    <p className="zeit">0,5 Stunden</p>
+                    <p className="zeit">0 Stunden</p>
 
                 </div>
 

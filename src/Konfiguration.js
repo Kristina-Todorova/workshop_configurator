@@ -98,14 +98,20 @@ function Konfiguration() {
 
     function chooseGruppenarbeit() {
         setGruppenarbeit(prevState => !prevState)
+        setPriceCounter(gruppenarbeit===false ? pricecounter+250 : pricecounter-250)
+        setTimeCounter(gruppenarbeit===false ? timecounter+1 : timecounter-1)
     }
 
     function chooseDeepdive() {
         setDeepdive(prevState => !prevState)
+        setPriceCounter(deepdive===false ? pricecounter+150 : pricecounter-150)
+        setTimeCounter(deepdive===false ? timecounter+0.5 : timecounter-0.5)
     }
 
     function chooseBrainstorming() {
         setBrainstorming(prevState => !prevState)
+        setPriceCounter(brainstorming===false ? pricecounter+250 : pricecounter-250)
+        setTimeCounter(brainstorming===false ? timecounter+0.5 : timecounter-0.5)
     }
 
   return (
@@ -165,13 +171,13 @@ function Konfiguration() {
                  <div className="timediv">
 
                     <img src={zeit} alt="icon" width="25px" height="25px" style={{marginLeft:"12%",marginTop:"27%"}}/>
-                    <p className="zeit">0,5 Stunden</p>
+                    <p className="zeit">1 Stunde</p>
 
                 </div>
 
                 <div className="pricediv">
                     <img src={coins} alt="icon" width="25px" height="25px" style={{marginRight:"70%", marginTop:"-27%"}}/>
-                    <p className="pricetag1">350 EUR</p>
+                    <p className="pricetag1">250 EUR</p>
                 </div>
 
              </div>
@@ -189,7 +195,7 @@ function Konfiguration() {
 
                 <div className="pricediv">
                     <img src={coins} alt="icon" width="25px" height="25px" style={{marginRight:"70%", marginTop:"-35%"}}/>
-                    <p className="pricetag1">350 EUR</p>
+                    <p className="pricetag1">150 EUR</p>
                 </div>
 
 
@@ -209,7 +215,7 @@ function Konfiguration() {
 
                 <div className="pricediv">
                     <img src={coins} alt="icon" width="25px" height="25px" style={{marginRight:"70%", marginTop:"-19%"}}/>
-                    <p className="pricetag1">350 EUR</p>
+                    <p className="pricetag1">250 EUR</p>
                 </div>
 
               </div>
