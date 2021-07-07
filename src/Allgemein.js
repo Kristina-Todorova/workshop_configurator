@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 import info_Icon from "./info_Icon.png";
 import React, {useState, useContext} from "react";
 import GlobalTeilnehmer from "./global/GlobalTeilnehmer";
-import GlobalZeitraum from "./global/GlobalZeitraum";
 import {TextField} from "@material-ui/core";
 
 import GlobalDeutsch from "./global/GlobalDeutsch";
@@ -15,6 +14,8 @@ import GlobalAndereSprache from "./global/GlobalAndereSprache";
 import GlobalPraesenz from "./global/GlobalPraesenz";
 import GlobalOnline from "./global/GlobalOnline";
 import GlobalAndereOrt from "./global/GlobalAndereOrt";
+import GlobalVon from "./global/GlobalVon";
+import GlobalBis from "./global/GlobalBis";
 
 
 function Allgemein() {
@@ -29,6 +30,8 @@ function Allgemein() {
     let [andereort,setAndereOrt] = useContext(GlobalAndereOrt);
 
     let [teilnehmer,setTeilnehmer] = useContext(GlobalTeilnehmer);
+    let [von,setVon] = useContext(GlobalVon);
+    let [bis,setBis] = useContext(GlobalBis);
 
     const deutschcolor = deutsch===true ? "#00ADEF" : "darkgrey"
     const englischcolor = englisch===true ? "#00ADEF" : "darkgrey"
@@ -88,6 +91,9 @@ function Allgemein() {
             online={online}
             andereort={andereort}
             teilnehmer={teilnehmer}
+
+            von={von}
+            bis={bis}
             />
 
             <Link to="/Umfang" style={{ textDecoration: 'none', color:'black' }}>
@@ -137,7 +143,6 @@ function Allgemein() {
                     id="date"
                     label="von"
                     type="date"
-                    defaultValue="2021-07-08"
                     InputLabelProps={{
                       shrink: true,
                     }}
@@ -147,6 +152,7 @@ function Allgemein() {
                         marginLeft:"170px",
                         marginTop:"-55px",
                     }}
+                    onChange={(event) => {setVon(event.target.value)}}
                   />
                 </form>
 
@@ -155,7 +161,6 @@ function Allgemein() {
                     id="date"
                     label="bis"
                     type="date"
-                    defaultValue="2021-07-08"
                     InputLabelProps={{
                       shrink: true,
                     }}
@@ -164,6 +169,7 @@ function Allgemein() {
                         marginLeft:"505px",
                         marginTop:"-68px"
                     }}
+                    onChange={(event) => {setBis(event.target.value)}}
                   />
                 </form>
 

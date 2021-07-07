@@ -26,6 +26,9 @@ function Einkaufswagen(props) {
     const pricecounter = props.pricecounter;
     const teilnehmer = props.teilnehmer;
 
+    const von = props.von;
+    const bis = props.bis;
+
   return (
         <div className="einkaufswagen">
             <img src={icon_shopping_bag} alt="icon" width="45px" height="45px" style={{paddingLeft: "100px", position:"absolute"}}/>
@@ -63,23 +66,23 @@ function Einkaufswagen(props) {
                 }
 
             {sprache
-                && <p className="cartitem">{props.sprache}</p>
+                && <p className="cartitem">Sprache: {props.sprache}</p>
                 }
 
             {ort
-                && <p className="cartitem">{props.ort}</p>
+                && <p className="cartitem">Ort: {props.ort}</p>
+                }
+
+             {von
+                && <p className="cartitem">Von: {props.von} &nbsp;&nbsp;&nbsp; Bis: {props.bis}</p>
                 }
 
             {teilnehmer
-                && <p className="cartitem">{props.teilnehmer}</p>
+                && <p className="cartitem">{props.teilnehmer} Teilnehmer</p>
                 }
 
            {umfang
                 && <p className="cartitem">{props.umfang}</p>
-                }
-
-           {grundbausteine
-                && <p className="cartitem">{props.grundbausteine}</p>
                 }
 
            {catering

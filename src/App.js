@@ -52,7 +52,10 @@ import GlobalAndereSprache from "./global/GlobalAndereSprache";
 import GlobalPraesenz from "./global/GlobalPraesenz";
 import GlobalOnline from "./global/GlobalOnline";
 import GlobalAndereOrt from "./global/GlobalAndereOrt";
+
 import GlobalTeilnehmer from "./global/GlobalTeilnehmer";
+import GlobalVon from "./global/GlobalVon";
+import GlobalBis from "./global/GlobalBis";
 
 function App() {
 
@@ -97,7 +100,9 @@ function App() {
     const [online,setOnline] = useState(false);
     const [andereort,setAndereOrt] = useState(false);
 
-    const [teilnehmer,setTeilnehmer]=useState("")
+    const [teilnehmer,setTeilnehmer]=useState("");
+    const [von, setVon] = useState("");
+    const [bis,setBis] = useState("");
 
   return (
         <main>
@@ -143,6 +148,8 @@ function App() {
                     <GlobalAndereOrt.Provider value={[andereort,setAndereOrt]}>
 
                  <GlobalTeilnehmer.Provider value={[teilnehmer,setTeilnehmer]} >
+                 <GlobalVon.Provider value={[von,setVon]}>
+                 <GlobalBis.Provider value={[bis,setBis]}>
 
                 <Switch>
                     <Route exact path="/">
@@ -188,10 +195,10 @@ function App() {
                     <Route exact path="/Kontaktformular">
                         <Kontaktformular/>
                     </Route>
-
                 </Switch>
 
-
+            </GlobalBis.Provider>
+            </GlobalVon.Provider>
             </GlobalTeilnehmer.Provider>
             </GlobalAndereOrt.Provider>
             </GlobalOnline.Provider>

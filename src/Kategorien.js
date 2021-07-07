@@ -48,8 +48,10 @@ function Kategorien(props) {
     const online = props.online;
     const praesenz = props.praesenz;
     const andereort = props.andereort;
-    const teilnehmer = props.teilnehmer
+    const teilnehmer = props.teilnehmer;
 
+    const von = props.von;
+    const bis = props.bis;
 
     function MouseOver(event) {
         event.target.style.background = '#00ADEF';
@@ -175,8 +177,6 @@ function Kategorien(props) {
                                     : ""
                     }
 
-            grundbausteine="Grundbausteine"
-
 
             methodik= {designthinking===true
                 ? <p className="cartitem">{"Design Thinking"}</p>
@@ -209,7 +209,9 @@ function Kategorien(props) {
                             : ""
                     }
 
-            teilnehmer={props.teilnehmer}
+            von={von}
+            bis={bis}
+            teilnehmer={teilnehmer}
 
             umfang= {paketS===true
                     ? <p className="cartitem">{"Paket S"}</p>
