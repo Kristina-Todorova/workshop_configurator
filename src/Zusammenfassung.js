@@ -68,7 +68,7 @@ function Zusammenfassung(props) {
     let [futureRetail,setFutureRetail] = useContext(GlobalFutureRetail)
     let [futureMobility,setFutureMobility] = useContext(GlobalFutureMobility)
     let [sustainability,setSustainability] = useContext(GlobalSustainability)
-    let [afterSales,setAfterSales] = useContext(GlobalAfterSales)
+    let [aftersales,setAfterSales] = useContext(GlobalAfterSales)
 
     let [designthinking,setDesignThinking] = useContext(GlobalDesignThinking)
     let [designsprint,setDesignSprint] = useContext(GlobalDesignSprint)
@@ -89,25 +89,6 @@ function Zusammenfassung(props) {
     let [catering,setCatering] = useContext(GlobalCatering)
     let [technik,setTechnik] = useContext(GlobalTechnik)
     let [movie,setMovie] = useContext(GlobalState)
-
-
-    const ziel1 = props.ziel1;
-    const fokus1 = props.fokus1;
-    const methodik1 = props.methodik1;
-    const allgemein1 = props.allgemein1;
-    const umfang1 = props.umfang1;
-    const grundbausteine1 = props.grundbausteine1;
-    const konfiguration1 = props.konfiguration1;
-
-    const catering1 = props.catering1;
-    const technik1 = props.technik1;
-    const movie1 = props.movie1;
-
-    const deepdive1 = props.deepdive1;
-    const brainstorming1 = props.brainstorming1;
-    const gruppenarbeit1 = props.gruppenarbeit1;
-
-
 
   return (
             <div>
@@ -144,69 +125,122 @@ function Zusammenfassung(props) {
 
                   <div className="zielworkshop">
                     <p>Ziel des Workshops:</p>
-                     {ziel1
-                         ? <p>{props.ziel1}</p>
-                         : <p className="leer">Kein Ziel ausgewählt</p>
-                         }
-
+                     {informative===true
+                        ? <p className="cartitem1">{"Informative Session"}</p>
+                        : auftrag===true
+                            ? <p className="cartitem1">{"Ergebnisorientierte Session"}</p>
+                            : ergebnis===true
+                                ? <p className="cartitem1">{"Auftragsklärung"}</p>
+                                : fort===true
+                                    ?<p className="cartitem1">{"Coaching/Training Session"}</p>
+                                        : <p className="leer">Ihr Warenkorb ist leer.</p>
+                            }
                    </div>
-
-
-
 
                   <div className="fokusthema">
                     <p>Fokusthema:</p>
-                    {fokus1
-                          && <p className="cartitem">{props.fokus1}</p>
-                          }
+                    {digitalShift===true
+                ? <p className="cartitem">{"Digital Shift"}</p>
+                : futureSales===true
+                    ? <p className="cartitem">{"Future Sales"}</p>
+                    : futureRetail===true
+                        ? <p className="cartitem">{"Future Retail"}</p>
+                        : futureMobility===true
+                            ? <p className="cartitem">{"Future Mobility"}</p>
+                            : sustainability===true
+                                ? <p className="cartitem">{"Sustainability"}</p>
+                                : aftersales ===true
+                                    ? <p className="cartitem">{"After Sales"}</p>
+                                    : ""
+                    }
+
                     </div>
                   <div className="methodik">
                     <p>Methodik:</p>
-                    {methodik1
-                          && <p className="cartitem">{props.methodik1}</p>
-                          }
+
+                      {designthinking===true
+                ? <p className="cartitem">{"Design Thinking"}</p>
+                : designsprint===true
+                    ? <p className="cartitem">{"Design Sprint"}</p>
+                    : leancanvas===true
+                        ? <p className="cartitem">{"Lean Canvas"}</p>
+                        : businessmodel===true
+                            ? <p className="cartitem">{"Business Model"}</p>
+                            : techtalk===true
+                                ? <p className="cartitem">{"Tech Talk"}</p>
+                                : ""
+                    }
+
                     </div>
 
                     <div className="allginfo">
                     <p>Allgemeine Infomation:</p>
+
+
+                        {deutsch===true
+                            ? <p className="cartitem">{"Deutsch"}</p>
+                            : englisch===true
+                                ? <p className="cartitem">{"Englisch"}</p>
+                                : anderesprache===true
+                                    ? <p className="cartitem">{"Andere Sprache"}</p>
+                                    : ""
+                            }
+
+                        {online===true
+                                ? <p className="cartitem">{"Online"}</p>
+                                : praesenz===true
+                                    ? <p className="cartitem">{"Präsenz"}</p>
+                                    : andereort===true
+                                        ? <p className="cartitem">{"Anderer Ort"}</p>
+                                        : ""
+                                }
+
+                        von={von}
+                        bis={bis}
+                        {teilnehmer}
+
                     </div>
 
                     <div className="umfang">
                     <p>Umfang:</p>
-                    {umfang1
-                           && <p className="cartitem">{props.umfang1}</p>
-                           }
-                    </div>
 
-                    <div className="grundbausteine">
-                    <p>Grundbausteine:</p>
+                    {paketS===true
+                    ? <p className="cartitem">{"Paket S"}</p>
+                    : paketM===true
+                        ? <p className="cartitem">{"Paket M"}</p>
+                        : paketL===true
+                            ? <p className="cartitem">{"Paket L"}</p>
+                            : ""
+                    }
                     </div>
 
                     <div className="konfiguration">
                     <p>Konfiguration:</p>
+
+                        {deepdive===true && <p className="cartitem">{"Deep Dive"}</p>}
+                        {brainstorming===true && <p className="cartitem">{"Brainstorming"}</p>}
+                        {gruppenarbeit===true && <p className="cartitem">{"Gruppenarbeit"}</p>}
+
+
                     </div>
 
                     <div className="zusatzleistungen">
+
                     <p>Zusatzleistungen:</p>
-                    {brainstorming1
-                        && <p className="cartitem">{props.brainstorming1}</p>
-                        }
+                        {catering===true && <p className="cartitem">{"Catering"}</p>}
+                        {technik===true && <p className="cartitem">{"Technik"}</p>}
+                        {movie===true && <p className="cartitem">{"After-Movie"}</p>}
 
-                   {deepdive1
-                        && <p className="cartitem">{props.deepdive1}</p>
-                        }
-
-                   {gruppenarbeit1
-                        && <p className="cartitem">{props.gruppenarbeit1}</p>
-                        }
                     </div>
 
                     <div className="dauer">
                     <p>Gesamtdauer: </p>
+                        {timecounter} Std.
                     </div>
 
                     <div className="preis">
                     <p>Preis:</p>
+                        {pricecounter} &euro;
                     </div>
 
             </div>
