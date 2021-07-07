@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import Kategorien from "./Kategorien";
 import "./Kontaktformular.css"
 import {TextField} from "@material-ui/core";
+import Modal from "./Modal";
 import Button from "@material-ui/core/Button";
 import info_Icon from "./info_Icon.png";
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -101,6 +102,7 @@ const handleChange = (event) => {
     let [pricecounter, setPriceCounter] = useContext(GlobalPrice)
     let [timecounter, setTimeCounter] = useContext(GlobalTime)
 
+    const [visible, setVisible] = React.useState(false);
 
 
 
@@ -195,21 +197,8 @@ const handleChange = (event) => {
                       </div>
             </form>
 
+                          <Modal />
 
-            <Button variant="contained"
-
-                style={{
-                    width: "120px",
-                    height: "40px",
-                    fontFamily: "PT Serif",
-                    fontStyle: "normal",
-                    backgroundColor:"lightgray",
-                    fontWeight: "bold",
-                    marginLeft: "1255px",
-                    marginTop: "-15px"
-                }}>
-            Absenden
-        </Button>
 
             <div className="infolabel"
                  style={{
