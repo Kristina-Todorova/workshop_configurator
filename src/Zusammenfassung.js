@@ -117,7 +117,7 @@ function Zusammenfassung(props) {
                         top: "239px",
                         background: "rgba(0, 173, 239, 0.25)",
                         marginLeft: "300px",
-                        marginTop:"-615px"
+                        marginTop:"-635px"
                         }}>
                         <img src={info_Icon} alt="info icon" width="45px" height="45px" style={{margin:"5px"}}/>
                        <p>Im Folgenden werden alle von Ihnen ausgewählten Leistungen noch einmal aufgeführt.  Bitte kontrollieren Sie vor dem Abschluss des Vorgangs, ob alle Segmente richtig angezeigt werden.  Im nächsten Schritt kann der Workshop angefragt werden.</p>

@@ -40,10 +40,12 @@ export default function Modal () {
         <div className="modal">
             <div
              onClick={openPopup}
-             className="overlay"></div>
+             className="overlay">
+
+            </div>
              <div className="modal-content">
-                <h2>Abgesendet</h2>
-                    <p>Der Workshop wurde erfolgreich gebucht! Vielen Dank!</p>
+                <h2>Vielen Dank!</h2>
+                    <p>Wir haben Ihre Anfrage erhalten und werden uns schnellstmöglich mit Ihnen in Verbindung setzen.</p>
                  <Button variant="contained"
                     className='close-modal'
                     onClick={openPopup}>
