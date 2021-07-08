@@ -1,6 +1,7 @@
 .zielworkshop {
         height:10px;
-        width:405px;
+        width:905px;
+        float:left;
 
         font-size:10px;
         text-align:left;
@@ -13,9 +14,25 @@
 
 }
 
+.row1 {
+        height:10px;
+        width:50%;
+        float:left;
+
+        font-size:10px;
+        text-align:left;
+
+        margin-left: 500px;
+        margin-top: -90px;
+        font-family: PT Serif;
+        font-style: normal;
+        font-weight: normal;
+
+}
+
 .fokusthema {
         height:10px;
-        width:405px;
+        width:905px;
 
         font-size:10px;
         text-align:left;
@@ -27,6 +44,23 @@
         font-weight: normal;
 
 }
+
+.row2 {
+        height:10px;
+        width:50%;
+        float:left;
+
+        font-size:10px;
+        text-align:left;
+
+        margin-left: 500px;
+        margin-top: 0px;
+        font-family: PT Serif;
+        font-style: normal;
+        font-weight: normal;
+
+}
+
 
 
 .methodik {
@@ -37,12 +71,29 @@
         text-align:left;
 
         margin-left: 300px;
-        margin-top: 0px;
+        margin-top: 10px;
         font-family: PT Serif;
         font-style: normal;
         font-weight: normal;
 
 }
+
+.row3 {
+        height:10px;
+        width:50%;
+        float:left;
+
+        font-size:10px;
+        text-align:left;
+
+        margin-left: 500px;
+        margin-top: 10px;
+        font-family: PT Serif;
+        font-style: normal;
+        font-weight: normal;
+
+}
+
 .allginfo{
         height:10px;
         width:405px;
@@ -57,6 +108,23 @@
         font-weight: normal;
 
 }
+
+.row4 {
+        height:10px;
+        width:50%;
+        float:left;
+
+        font-size:10px;
+        text-align:left;
+
+        margin-left: 500px;
+        margin-top: 0px;
+        font-family: PT Serif;
+        font-style: normal;
+        font-weight: normal;
+
+}
+
 .umfang{
         height:10px;
         width:405px;
@@ -71,6 +139,23 @@
         font-weight: normal;
 
 }
+
+.row5 {
+        height:10px;
+        width:50%;
+        float:left;
+
+        font-size:10px;
+        text-align:left;
+
+        margin-left: 500px;
+        margin-top: 10px;
+        font-family: PT Serif;
+        font-style: normal;
+        font-weight: normal;
+
+}
+
 .grundbausteine{
         height:10px;
         width:405px;
@@ -80,6 +165,22 @@
 
         margin-left: 300px;
         margin-top: 0px;
+        font-family: PT Serif;
+        font-style: normal;
+        font-weight: normal;
+
+}
+
+.row6 {
+        height:10px;
+        width:50%;
+        float:left;
+
+        font-size:10px;
+        text-align:left;
+
+        margin-left: 500px;
+        margin-top: 10px;
         font-family: PT Serif;
         font-style: normal;
         font-weight: normal;
@@ -101,6 +202,22 @@
 
 }
 
+.row7 {
+        height:10px;
+        width:50%;
+        float:left;
+
+        font-size:10px;
+        text-align:left;
+
+        margin-left: 500px;
+        margin-top: 10px;
+        font-family: PT Serif;
+        font-style: normal;
+        font-weight: normal;
+
+}
+
 .zusatzleistungen{
         height:10px;
         width:105px;
@@ -109,7 +226,23 @@
         text-align:left;
 
         margin-left: 300px;
-        margin-top: 0px;
+        margin-top: 50px;
+        font-family: PT Serif;
+        font-style: normal;
+        font-weight: normal;
+
+}
+
+.row8 {
+        height:10px;
+        width:50%;
+        float:left;
+
+        font-size:10px;
+        text-align:left;
+
+        margin-left: 500px;
+        margin-top: 10px;
         font-family: PT Serif;
         font-style: normal;
         font-weight: normal;
@@ -132,6 +265,23 @@
 
 }
 
+.row9 {
+        height:10px;
+        width:50%;
+        float:left;
+
+        font-size:10px;
+        text-align:left;
+
+        margin-left: 500px;
+        margin-top: 10px;
+        font-family: PT Serif;
+        font-style: normal;
+        font-weight: normal;
+
+}
+
+
 .preis{
         height:10px;
         width:105px;
@@ -140,10 +290,26 @@
         text-align:left;
 
         margin-left: 300px;
-        margin-top: 0px;
+        margin-top: 25px;
         font-weight:bold;
         font-family: PT Serif;
         font-style: normal;
 
+
+}
+
+.row10 {
+        height:10px;
+        width:50%;
+        float:left;
+
+        font-size:10px;
+        text-align:left;
+
+        margin-left: 500px;
+        margin-top: 10px;
+        font-family: PT Serif;
+        font-style: normal;
+        font-weight: normal;
 
 }
