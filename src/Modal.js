@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Modal.css";
 import Button from "@material-ui/core/Button";
+import {Link} from "react-router-dom";
 
 export default function Modal () {
 
@@ -46,11 +47,15 @@ export default function Modal () {
              <div className="modal-content">
                 <h2>Vielen Dank!</h2>
                     <p>Wir haben Ihre Anfrage erhalten und werden uns schnellstmöglich mit Ihnen in Verbindung setzen.</p>
+
+                 <Link to="/" style={{ textDecoration: 'none', color:'black' }}>
                  <Button variant="contained"
                     className='close-modal'
                     onClick={openPopup}>
                     Startseite
                     </Button>
+                 </Link>
+
 
             </div>
          </div>

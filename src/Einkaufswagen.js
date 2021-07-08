@@ -74,11 +74,11 @@ function Einkaufswagen(props) {
                 }
 
              {von
-                && <p className="cartitem">Von: {props.von} &nbsp;&nbsp;&nbsp; Bis: {props.bis}</p>
+                && <p className="cartitem">&nbsp;&nbsp;&nbsp;Von: {props.von} &nbsp;&nbsp;&nbsp; Bis: {props.bis}</p>
                 }
 
             {teilnehmer
-                && <p className="cartitem">{props.teilnehmer} Teilnehmer</p>
+                && <p className="cartitem">&nbsp;&nbsp;&nbsp;{props.teilnehmer} Teilnehmer</p>
                 }
 
            {umfang

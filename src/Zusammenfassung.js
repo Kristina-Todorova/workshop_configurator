@@ -45,13 +45,6 @@ import GlobalState from "./global/GlobalState";
 import GlobalTeilnehmer from "./global/GlobalTeilnehmer";
 
 import { makeStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
   table: {
@@ -180,19 +173,18 @@ function Zusammenfassung(props) {
                        <p>Im Folgenden werden alle von Ihnen ausgewählten Leistungen noch einmal aufgeführt.  Bitte kontrollieren Sie vor dem Abschluss des Vorgangs, ob alle Segmente richtig angezeigt werden.  Im nächsten Schritt kann der Workshop angefragt werden.</p>
                 </div>
 
-
-
                   <div className="zielworkshop">
                     <p>Ziel des Workshops:</p> </div>
+
                     <div className="row1">
                      {informative===true
-                        ? <p className="cartitem1">{"Informative Session"}</p>
+                        ? <p className="cartitem12">{"Informative Session"}</p>
                         : auftrag===true
-                            ? <p className="cartitem1">{"Ergebnisorientierte Session"}</p>
+                            ? <p className="cartitem12">{"Ergebnisorientierte Session"}</p>
                             : ergebnis===true
-                                ? <p className="cartitem1">{"Auftragsklärung"}</p>
+                                ? <p className="cartitem12">{"Auftragsklärung"}</p>
                                 : fort===true
-                                    ?<p className="cartitem1">{"Coaching/Training Session"}</p>
+                                    ?<p className="cartitem12">{"Coaching/Training Session"}</p>
                                         : <p className="leer">Ihr Warenkorb ist leer.</p>
                             }
                    </div>
@@ -201,19 +193,20 @@ function Zusammenfassung(props) {
                   <div className="fokusthema">
 
                     <p>Fokusthema:</p> </div>
-                    <div className="row2">
+
+                <div className="row2">
                     {digitalShift===true
-                ? <p className="cartitem">{"Digital Shift"}</p>
+                ? <p className="cartitemm">{"Digital Shift"}</p>
                 : futureSales===true
-                    ? <p className="cartitem">{"Future Sales"}</p>
+                    ? <p className="cartitemm">{"Future Sales"}</p>
                     : futureRetail===true
-                        ? <p className="cartitem">{"Future Retail"}</p>
+                        ? <p className="cartitemm">{"Future Retail"}</p>
                         : futureMobility===true
-                            ? <p className="cartitem">{"Future Mobility"}</p>
+                            ? <p className="cartitemm">{"Future Mobility"}</p>
                             : sustainability===true
-                                ? <p className="cartitem">{"Sustainability"}</p>
+                                ? <p className="cartitemm">{"Sustainability"}</p>
                                 : afterSales ===true
-                                    ? <p className="cartitem">{"After Sales"}</p>
+                                    ? <p className="cartitemm">{"After Sales"}</p>
                                     : ""
                     }
                     </div>
@@ -223,15 +216,15 @@ function Zusammenfassung(props) {
                     <p>Methodik:</p> </div>
                   <div className="row3">
                       {designthinking===true
-                ? <p className="cartitem">{"Design Thinking"}</p>
+                ? <p className="cartitemm">{"Design Thinking"}</p>
                 : designsprint===true
-                    ? <p className="cartitem">{"Design Sprint"}</p>
+                    ? <p className="cartitemm">{"Design Sprint"}</p>
                     : leancanvas===true
-                        ? <p className="cartitem">{"Lean Canvas"}</p>
+                        ? <p className="cartitemm">{"Lean Canvas"}</p>
                         : businessmodel===true
-                            ? <p className="cartitem">{"Business Model"}</p>
+                            ? <p className="cartitemm">{"Business Model"}</p>
                             : techtalk===true
-                                ? <p className="cartitem">{"Tech Talk"}</p>
+                                ? <p className="cartitemm">{"Tech Talk"}</p>
                                 : ""
                     }
 
@@ -242,29 +235,33 @@ function Zusammenfassung(props) {
                     <p>Allgemeine Infomation:</p></div>
                     <div className="row4">
                         {deutsch===true
-                            ? <p className="cartitem">{"Deutsch"}</p>
+                            ? <p className="cartitemm">{"Deutsch"}</p>
                             : englisch===true
-                                ? <p className="cartitem">{"Englisch"}</p>
+                                ? <p className="cartitemm">{"Englisch"}</p>
                                 : anderesprache===true
-                                    ? <p className="cartitem">{"Andere Sprache"}</p>
+                                    ? <p className="cartitemm">{"Andere Sprache"}</p>
                                     : ""
                             }
 
                         {online===true
-                                ? <p className="cartitem">{"Online"}</p>
+                                ? <p className="cartitemm">{"Online"}</p>
                                 : praesenz===true
-                                    ? <p className="cartitem">{"Präsenz"}</p>
+                                    ? <p className="cartitemm">{"Präsenz"}</p>
                                     : andereort===true
-                                        ? <p className="cartitem">{"Anderer Ort"}</p>
+                                        ? <p className="cartitemm">{"Anderer Ort"}</p>
                                         : ""
                                 }
 
-                        von={von}
-                        bis={bis}
+                        &nbsp;&nbsp; Von: {von}
+                        &nbsp;&nbsp;&nbsp; Bis:{bis}
                         <p>
-                        {teilnehmer}</p>
+                        &nbsp;&nbsp; {teilnehmer} Teilnehmer </p>
 
                     </div>
+
+
+
+            <div className="rightside"  >
 
                     <div className="umfang">
                     <p>Umfang:</p> </div>
@@ -272,11 +269,11 @@ function Zusammenfassung(props) {
                     <div className="row5">
 
                     {paketS===true
-                    ? <p className="cartitem">{"Paket S"}</p>
+                    ? <p className="cartitemm">{"Paket S"}</p>
                     : paketM===true
-                        ? <p className="cartitem">{"Paket M"}</p>
+                        ? <p className="cartitemm">{"Paket M"}</p>
                         : paketL===true
-                            ? <p className="cartitem">{"Paket L"}</p>
+                            ? <p className="cartitemm">{"Paket L"}</p>
                             : ""
                     }
                     </div>
@@ -285,9 +282,9 @@ function Zusammenfassung(props) {
                     <p>Konfiguration:</p> </div>
                     <div className="row6">
 
-                        {deepdive===true && <p className="cartitem">{"Deep Dive"}</p>}
-                        {brainstorming===true && <p className="cartitem">{"Brainstorming"}</p>}
-                        {gruppenarbeit===true && <p className="cartitem">{"Gruppenarbeit"}</p>}
+                        {deepdive===true && <p className="cartitemm">{"Deep Dive"}</p>}
+                        {brainstorming===true && <p className="cartitemm">{"Brainstorming"}</p>}
+                        {gruppenarbeit===true && <p className="cartitemm">{"Gruppenarbeit"}</p>}
 
 
                     </div>
@@ -297,19 +294,23 @@ function Zusammenfassung(props) {
                     <p>Zusatzleistungen:</p> </div>
 
                     <div className='row7'>
-                        {catering===true && <p className="cartitem">{"Catering"}</p>}
-                        {technik===true && <p className="cartitem">{"Technik"}</p>}
-                        {movie===true && <p className="cartitem">{"After-Movie"}</p>}
+                        {catering===true && <p className="cartitemm">{"Catering"}</p>}
+                        {technik===true && <p className="cartitemm">{"Technik"}</p>}
+                        {movie===true && <p className="cartitemm">{"After-Movie"}</p>}
 
                     </div>
 
-                    <div className="dauer">
+                </div>
+
+
+
+                <div className="dauer">
                     <p>Gesamtdauer: </p></div>
                     <div className="row8">
                         {timecounter} Std.
                     </div>
 
-                    <div className="preis">
+                <div className="preis">
                     <p>Preis:</p></div>
                     <div className='row9'>
                     <span>

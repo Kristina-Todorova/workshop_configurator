@@ -3,7 +3,6 @@ import Kategorien from "./Kategorien";
 import "./Kontaktformular.css"
 import {TextField} from "@material-ui/core";
 import Modal from "./Modal";
-import Button from "@material-ui/core/Button";
 import info_Icon from "./info_Icon.png";
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
