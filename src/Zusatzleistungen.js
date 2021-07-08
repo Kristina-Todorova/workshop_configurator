@@ -5,6 +5,7 @@ import Weiter from "./Weiter";
 import {Link} from "react-router-dom";
 import info_Icon from "./info_Icon.png";
 
+
 import GlobalState from "./global/GlobalState";
 import GlobalCatering from "./global/GlobalCatering";
 import GlobalTechnik from "./global/GlobalTechnik";
